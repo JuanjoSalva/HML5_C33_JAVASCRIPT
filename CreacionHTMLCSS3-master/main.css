@@ -1,0 +1,44 @@
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color:green;
+    font-weight:bold;
+    width: 80px;
+    height: 30px;
+}
+.cierre{
+    color:red;
+    font-weight: bold;
+}
+.cierre:hover{
+    cursor:pointer; cursor: hand
+}
+body{
+    background-color: rgb(198, 204, 219);
+}
+.actividad{
+    border:2px solid black;
+    
+}
+.Titulo:hover{
+    background-color:saddlebrown;
+    cursor:pointer; cursor: hand
+}
+@keyframes mostrar_actividades {
+    to { left: -100%; }
+    from  { left: 0%; }
+}
+
+@keyframes ocultar_actividades {
+    to { left: 0%; }
+    from { left: -100%; }
+}
+
+.imagen{
+    border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 5px;
+  width:700px;
+  height: 500px;
+}

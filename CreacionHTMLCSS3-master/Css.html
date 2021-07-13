@@ -1,0 +1,4125 @@
+<t¡<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSIniciar
+    <h1>Attributes</h1> Revisión 2020</title>
+
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+    <div class ="sticky">
+        <a href="index.html" style="color:white; text-decoration:none; font-size:24px">Volver</a>
+    </div>
+
+    <h1 onclick="mostrar('Selector')" class = "Titulo">CSS Selector</h1>
+    <div id = "Selector" style="display : none;  width:0px; transition: width 5s;">
+        <p onclick="cerrar('Selector')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+
+            Change the color of all &ltp&gt elements to "red".&lt/p&gtbr>
+            <pre>
+                &ltstyle&gt
+                    p{color:red}
+                &lt/style&gt
+                &ltp"&gtEste parrafo es de color rojo&lt/p&gt
+                &ltp"&gtEste es otro parrafo es de color rojo&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .p21{color:red}
+            </style>
+            <p class="p21">Este parrafo es de color rojo</p>
+            <p class="p21">Este es otro parrafo es de color rojo</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of the element with id="para1", to "red".</br>
+            <pre>
+                &ltstyle&gt
+                    #para1{color:red}
+                &lt/style&gt
+                &ltp id="para1"&gt Se cambia a color rojo por id&lt/p&gt
+                &ltp&gt Este tiene otro id y no cambia el color rojo&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                #para1{color:red}
+            </style>
+            <p id="para1"> Se cambia a color rojo por id</p>
+            <p> Este tiene otro id y no cambia el color rojo</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of all elements with the class "colortext", to "red".</br>
+            <pre></pre>
+                &ltstyle&gt
+                    #colortext{color:red}
+                &lt/style&gt
+                &ltp id="colortext"&gtCambia el color rojo con una clase&lt/p&gt
+                &ltp id="colortext"&gtCambia el color rojo con la misma clase&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            #colortext{color:red}
+            </style>
+            <p id="colortext">Cambia el color rojo con una clase</p>
+            <p id="colortext">Cambia el color rojo con la misma clase</p>
+            <p>Un parrafo que no tiene esa clase</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of all &ltp&gt and &lth1&gt elements, to "red". Group the selectors to minimize code.&lt/h1&gtbr>
+            <pre>
+                &ltstyle&gt
+                    p, h1{color:red}
+                &lt/style&gt
+                &lth1&gtCabecera roja&lt/h1&gt
+                &lth2&gtOtra cabecera que no es roja&lt/h2&gt
+                &ltp&gtParrafo rojo&lt/p&gt
+                &ltp&gtOtro parrafo rojo.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .h41{color:red}
+            </style>
+            <h4 class = "h41">Cabecera roja</h4>
+            <h5>Otra cabecera que no es roja</h5>
+            <p class = "h41">Parrafo rojo</p>
+            <p class = "h41">Otro parrafo rojo.</p></br>
+        </div>
+        <p onclick="cerrar('Selector')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('HOw')" class = "Titulo">CSS HOw to...</h1>
+    <div id = "HOw" style = "display: none">
+        <p onclick="cerrar('HOw')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add an external style sheet with the URL: "mystyle.css".</br>
+            <pre>
+            &ltLINK REL=StyleSheet HREF="mystyle.css" TYPE="text/css" MEDIA=screen&gt
+            </pre>
+            Example:</br></br>
+        </div>
+
+        <div class = "actividad">
+            Set "background-color: linen" for the page, using an internal style sheet.</br>
+            <pre>
+                &ltstyle&gt
+                    *{background-color: linen}
+                &lt/style&gt
+            </pre>
+            Example:
+            <style> .claseback{background-color: #FAF0E6}</style>
+            <div class = "claseback">
+                <p> Esto seria la cabecera</p>
+                <p> Esto seria el cuerpo</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set "background-color: linen" for the page, using an inline style sheet.</br>
+            <pre>
+                &ltbody  style="background-color: linen" &gt
+            </pre>
+            Example:
+            <style> .claseback{background-color: #FAF0E6}</style>
+            <div style="background-color: linen">
+                <p> Esto seria la cabecera</p>
+                <p> Esto seria el cuerpo</p>
+            </div>
+        </div class = "actividad">
+    <p onclick="cerrar('HOw')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Background')" class = "Titulo">CSS Background</h1>
+    <div id = "Background" style = "display: none">
+        <p onclick="cerrar('Background')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the background color for the page to "linen" and the background color for &lth1&gt to "lightblue".</br>
+            <pre>
+            &ltbody style="background-color: linen"&gt
+            &lth1 style="background-color: lightblue"&gtThis is a Heading&lt/h1&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            <pre>
+            Example:
+            <div style="background-color: linen">
+
+            <h1 style="background-color: lightblue">This is a Heading</h1>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Set "paper.gif" as the background image of the page.</br>
+            <pre>
+            &ltstyle&gt
+                *{background-image:url("paper.gif")}
+            &lt/style&gt
+            &lt/head&gt
+            &ltbody&gt
+
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .fondo{background-image:url("1.jpg")}
+            </style>
+            </head>
+            <body>
+            <div class="fondo">
+            <h5>This is a Heading</h5>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p></br>
+            </div>
+        </div>
+
+
+        <div class = "actividad">
+            Set "gradient_bg_vertical.png" as the background image of the page, and repeat it vertically only.</br>
+            <pre>
+            &ltstyle&gt
+                *{background-image:url("gradient_bg_vertical.png");
+                background-repeat: repeat-y;}
+            &lt/style&gt
+            &lt/head&gt
+            &ltbody&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .fondo1{background-image:url("1.jpg");
+                background-repeat: repeat-y;}
+            </style>
+            <div class="fondo1">
+            <h5>This is a Heading</h5>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Specify that the background image should be shown once, in the top right corner.</br>
+            <pre>
+            &lt/style&gt
+                body{
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            #top{
+            background-image: url("1.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;
+            }
+            </style>
+            <div id="top">
+            <h5>This is a Heading</h5>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p></br>
+            </div>
+        </div>
+    <p onclick="cerrar('Background')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Border')" class = "Titulo">CSS Border</h1>
+    <div id = "Border" style = "display: none">
+        <p onclick="cerrar('Border')" class = "cierre">cerrar</p>
+
+       <div class = "actividad">
+            Set a "4px", "dotted" border for &ltp&gt.</br>
+            <pre>
+                &ltstyle&gt
+                    p{border: 4px dotted}
+                &lt/style&gt
+                &lt/head&gt
+                 &ltbody&gt
+                    &lth5&gtThis is a Heading&lt/h5&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                 .borderp{border: 4px dotted}
+            </style>
+            <h5>This is a Heading</h5>
+            <p class = "borderp">This is a paragraph.</p></br>
+        </div>
+
+        <div class = "actividad">
+            Set the border color for &ltp&gt to "red".</br>
+            <pre>
+                &ltstyle&gt
+                    p{border:1px solid red}
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                    &lth5&gtThis is a Heading&lt/h5&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .borderp1{border:1px solid red}
+            </style>
+            <h5>This is a Heading</h5>
+            <p class = "borderp1">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            With the border property: Set the border for p to "10px", "solid" and "green".</br>
+            <pre>
+                &ltstyle&gt
+                    p{border:10px solid green}
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                    &lth5&gtThis is a Heading&lt/h5&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example
+            <style>
+                .borderp2{border:10px solid green}
+            </style>
+            <h5>This is a Heading</h5>
+            <p class = "borderp2">This is a paragraph.</p></br>
+        </div>
+    <p onclick="cerrar('Border')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('Margin')" class = "Titulo">CSS Margin</h1>
+    <div id = "Margin" style = "display: none">
+        <p onclick="cerrar('Margin')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the left margin of &lth5&gt to "20px".</br>
+            <pre>
+                &ltstyle&gt
+                    h5 {
+                            background-color: lightblue;
+                            margin-left: 20px
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            <style>
+                .h5m1 {
+                    background-color: lightblue;
+                    margin-left: 20px
+                }
+            </style>
+            Example:
+            <h4 >This is a Heading h4</h4>
+            <h5 class = "h5m1">This is a Heading h5</h5>
+            <p >This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Set all margins for &lth5&gt to "25px".</br>
+            <pre>
+                &ltstyle&gt
+                    h5 {
+                            background-color: lightblue;
+                            margin: 25px
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                    &lth4&gtThis is a Heading h4&lt/h4&gt
+                    &lth5&gtThis is a Heading h5&lt/h5&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5m25 {
+                    background-color: lightblue;
+                    margin: 25px
+                }
+            </style>
+            <h4 >This is a Heading h4</h4>
+            <h5 class = "h5m25">This is a Heading h5</h5>
+            <p >This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Use the margin property to set the top and bottom margins for &lth5&gt to "50px", and left and right margins to "25px".</br>
+            <pre>
+                &ltstyle&gt
+                    h5 {
+                            background-color: lightblue;
+                            margin-top: 50px
+                            margin-bottom: 50px
+                            margin-left: 25px
+                            margin-right: 25px
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5m3 {
+                    background-color: lightblue;
+                    margin-top:50px;
+                    margin-bottom:50px;
+                    margin-left:25px;
+                    margin-right:25px;
+                }
+            </style>
+            <h4 >This is a Heading h4</h4>
+            <h5 class ="h5m3">This is a Heading h5</h5>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Use the margin property to center align the &lth5&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    h5 {
+                        background-color: lightblue;
+                        width: 300px;
+                        margin: auto;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5m4 {
+                    background-color: lightblue;
+                    width: 300px;
+                    margin: auto;
+                }
+            </style>
+            <h4 >This is a Heading h4</h4>
+            <h5 class ="h5m4">This is a Heading h5</h5>
+            <p >This is a paragraph.</p>
+        </div>
+    <p onclick="cerrar('Margin')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Padding')" class = "Titulo">CSS Padding</h1>
+    <div id = "Padding" style = "display: none">
+        <p onclick="cerrar('Padding')" class = "cierre">cerrar</p>
+
+        <div  class = "actividad">
+            Set all paddings top for &ltp&gt to "30px".</p>br>
+            <pre>
+                &ltstyle&gt
+                    p {
+                        background-color: lightblue;
+                        padding-top:30px;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5pd1 {
+                    background-color: lightblue;
+                    padding-top:30px;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 >This is a Heading h5</h5>
+            <p class = "h5pd1">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Set all paddings for &ltp&gt to "50px".</p>br>
+            <pre>
+                &ltstyle&gt
+                    p {
+                        background-color: lightblue;
+                        padding:30px;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5pd2 {
+                    background-color: lightblue;
+                    padding:50px;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 >This is a Heading h5</h5>
+            <p class = "h5pd2">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Use the padding property to set the top and bottom paddings for &ltp&gt to "25px", and left and right paddings to "50px".</p>br>
+            <pre>
+                &ltstyle&gt
+                    .p {
+                        background-color: lightblue;
+                        padding-top:25px;
+                        padding-top:25px;
+                        padding-left:50px;
+                        padding-right:50px;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5p3 {
+                    background-color: lightblue;
+                    padding-top:25px;
+                    padding-bottom:25px;
+                    padding-left:50px;
+                    padding-right:50px;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <p  class = "h5p3">This is a paragraph.</p>
+        </div>
+    <p onclick="cerrar('Padding')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('HW')" class = "Titulo">CSS  Height/Width</h1>
+    <div id = "HW" style = "display: none">
+        <p onclick="cerrar('HW')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the height of &lth5&gt to "100px".</h1>br>
+            <pre>
+                &ltstyle&gt
+                    .h5 {
+                        background-color: lightblue;
+                        height:100px;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5hw1 {
+                    background-color: lightblue;
+                    height:100px;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class = "h5hw1">This is a Heading h5</h5>
+            <p >This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Set the height of &lth5&gt to "100px".</h1>br>
+            <pre>
+                &ltstyle&gt
+                    .h5 {
+                        background-color: lightblue;
+                        width :50%;
+                        }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5hw2 {
+                    background-color: lightblue;
+                    width :50%;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class = "h5hw2">This is a Heading h5</h5>
+            <p >This is a paragraph.</p>
+        </div>
+    <p onclick="cerrar('HW')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Box')" class = "Titulo">CSS  Box Model</h1>
+    <div id = "Box" style = "display: none">
+        <p onclick="cerrar('Box')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the width of the div to "200px".</pr>
+            <pre>
+                &ltstyle&gt
+                div {
+                  background-color: lightblue;
+                  width:200px;
+                }
+                &lt/style&gt
+                &ltdiv&gt
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .div1 {
+                background-color: lightblue;
+                width:200px;
+            }
+            </style>
+            <div class="div1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Set the padding of the div to "25px".</pr>
+            <pre>
+                &ltstyle&gt
+                div {
+                  background-color: lightblue;
+                  padding:25px;
+                }
+                &lt/style&gt
+                &ltdiv&gt
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .div2 {
+                background-color: lightblue;
+                padding:25px;
+            }
+            </style>
+            <div class="div2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Set the border of the div to "25px solid navy".</pr>
+            <pre>
+                &ltstyle&gt
+                div {
+                  background-color: lightblue;
+                  border: 25px solid navy;
+                }
+                &lt/style&gt
+                &ltdiv&gt
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .div3 {
+                background-color: lightblue;
+                border: 25px solid navy;
+            }
+            </style>
+            <div class="div3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Set the margin of the div to "25px".</pr>
+            <pre>
+                &ltstyle&gt
+                div {
+                  background-color: lightblue;
+                  margin: 25px;
+                }
+                &lt/style&gt
+                &ltdiv&gt
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .div4 {
+                background-color: lightblue;
+                margin: 25px;
+            }
+            </style>
+            <div class="div4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div></br>
+        </div>
+    <p onclick="cerrar('Box')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('Outline')" class = "Titulo">CSS Outline</h1>
+    <div id = "Outline" style = "display: none">
+        <p onclick="cerrar('Outline')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set a "solid", "5px" outline for &ltp&gt.</br>
+            <pre>
+            &ltstyle&gt
+                p{
+                    outline-width: 5px;
+                    outline-style: solid;
+                }
+            &lt/style&gt
+            &lth1&gtThis is a Heading&lt/h1&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            </pre>
+            Exmple:
+            <style>
+                .po1{
+                    outline-width: 5px;
+                    outline-style: solid;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <p class = "po1">This is a paragraph.</p></br>
+        </div>
+
+        <div class = "actividad">
+            Set the outline color for <p> to "green".</br>
+            <pre>
+            &ltstyle&gt
+                p{
+                    outline-width: 5px;
+                    outline-style: solid;
+                    outline-color:green;
+                }
+            &lt/style&gt
+            &lth1&gtThis is a Heading&lt/h1&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            </pre>
+            Exmple:
+            <style>
+                .po2{
+                    outline-width: 5px;
+                    outline-style: solid;
+                    outline-color:green;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <p class ="po2">This is a paragraph.</p></br>
+        </div>
+
+        <div class = "actividad">
+            With the outline property: Set the outline for p to "red", "dotted" and "10px".</br>
+            <pre>
+            &ltstyle&gt
+                p{
+                    outline-width: 5px;
+                    outline-style: solid;
+                    outline-color:green;
+                }
+            &lt/style&gt
+            &lth1&gtThis is a Heading&lt/h1&gt
+            &ltp&gtThis is a paragraph.&lt/p&gt
+            </pre>
+            Exmple:
+            <style>
+                .po3{
+                    outline-color:red;
+                    outline-style:dotted;
+                    outline-width:10px;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <p class ="po3">This is a paragraph.</p></br>
+        </div>
+    <p onclick="cerrar('Outline')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('Text')" class = "Titulo">CSS Text</h1>
+    <div id = "Text" style = "display: none">
+        <p onclick="cerrar('Text')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the text color for the page to "red", and the text color for &lth5&gt to "blue".</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    * {
+                        text-color:red;
+                        }
+                    h5{1
+                        text-color:blue;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .t1 {
+                    color:red
+                }
+                .t2 {
+                    color:blue
+                }
+            </style>
+            <h4 class = "t2">This is a Heading h4</h4>
+            <h5 class = "t1">This is a Heading h5</h5>
+            <p class = "t2">This is a paragraph.</p>
+            <p class = "t2">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Center align the &lth5&gt element.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    h5{
+                        text-align:center;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .th51{
+                        text-align:center;
+                    }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class = "th51">This is a Heading h5</h5>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Remove the underline from the link.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    a{
+                        text-decoration:none;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lta ref="hdefault.html"&gtCSS text tutorial&lt/a&gt
+                &lt/body&gt
+            </pre>
+            Example:
+
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <a style="text-decoration:none" href="default.html">CSS text tutorial</a>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Style text in &lth5&gt to uppercase letters, and text in &ltp&gt to capitalized letters.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    h5{
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        text-transform: capitalize;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .th52{
+                    text-transform: uppercase;
+                    }
+                .tp2{
+                    text-transform: capitalize;
+                    }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class = "th52">This is a Heading h5</h5>
+            <p class = "tp2">This is a paragraph.</p>
+            <p class = "tp2">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Indent the first line of the <p> element with 20px.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                p {
+                    text-indent: 20px;
+                }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .tp3{
+                    text-indent: 20px;
+                    }
+
+            </style>
+            <h4>This is a Heading h4</h4>
+            <p class = "tp3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+
+        <div class = "actividad">
+            Set the font family for the page to "Courier New", and the font family for &lth5&gt to "Verdana".</br>
+                <pre>
+                    &lthead&gt
+                    &ltstyle&gt
+                        body{
+                            font-family:Courier New;
+                        }
+                        h5{
+                            font-family:Verdana;
+                        }
+
+                    &lt/style&gt
+
+                    &lth4&gtThis is a Heading h4&lt/h4&gt
+                    &lth5&gtThis is a Heading h5&lt/h5&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                    &ltp&gtThis is a paragraph.&lt/p&gt
+                    &lt/body&gt
+                </pre>
+                Example:
+                <style>
+                    .tbod1{
+                        font-family:"Courier New";
+                    }
+                    .th53{
+                        font-family:"Verdana";
+                        }
+                </style>
+                <h4 class="tbod1">This is a Heading h4</h4>
+                <h5 class = "th53">This is a Heading h5</h5>
+                <p class="tbod1">This is a paragraph.</p>
+                <p class="tbod1">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Show &ltp&gt elements as "italic" text.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    p{
+                        font-style:italic;
+                    }
+
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .tp4{
+                font-style:italic;
+                    }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <p class="tp4">This is a paragraph.</p>
+            <p class="tp4">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Set the font size for the page to "20px", and the font size for &lth5&gt to "3em".</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    body{
+                        font-size:20px;
+                    }
+                    h5{
+                        font-size:3em;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .tb4{
+                    font-size:20px;
+                }
+                .th55{
+                    font-size:3em;
+                    }
+            </style>
+            <h4 class="tb4">This is a Heading h4</h4>
+            <h5 class="th55">This is a Heading h5</h5>
+            <p class="tb4">This is a paragraph.</p>
+            <p class="tb4">This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Show <p> elements as "bold" text.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    p{
+                        font-style:bold;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .tp6{
+                    font-weight:bold;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <p class="tp6">This is a paragraph.</p>
+            <p class="tp6">This is a paragraph.</p>
+        </div>
+    <p onclick="cerrar('Text')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Links')" class = "Titulo">CSS Links</h1>
+    <div id = "Links" style = "display: none">
+        <p onclick="cerrar('Links')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the color for links to "green".</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    a{
+                        color:green;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lta ref="hdefault.html"&gtCSS text tutorial&lt/a&gt
+                &lt/body&gt
+            </pre>
+            Example:
+
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <a style="color:green" href="default.html">CSS text tutorial</a>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Set the color for unvisited links to "red", and the color for visited links "blue"".</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    /* mouse over link */
+                    a:hover, a:link {
+                    color: red;
+                    }
+
+                    /* selected link */
+                    a:active, a:visited {
+                    color: blue;
+                    }
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lta ref="hdefault.html"&gtCSS text tutorial&lt/a&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            /* mouse over link */
+            <style>
+                a:hover, a:link {
+                color: red;
+                }
+
+                /* selected link */
+                a:active, a:visited {
+                color: blue;
+                }
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5>This is a Heading h5</h5>
+            <a href="https://www.w3schools.com">W3Schools.com</a>
+            <p>This is a paragraph.</p></br>
+        </div>
+    <p onclick="cerrar('Links')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('List')" class = "Titulo">CSS List</h1>
+    <div id = "List" style = "display: none">
+        <p onclick="cerrar('List')" class = "cierre">cerrar</p>
+        <div class = "actividad">
+            Set the list style for unordered lists to "square", and the list style for ordered lists to "upper-roman".</br>
+            <pre>
+            &ltstyle&gt&gt
+                ul{list-style:square}
+                ol{list-style:upper-roman}
+            &lt/style&gt
+            &ltpThis is an unordered list:&lt/p&gt
+            &ltul&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ul&gt
+
+            &ltp&gtThis is an ordered list:&lt/p&gt
+            &ltol&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ol&gt
+            </pre>
+            Example:
+            <style>
+            .ul1{list-style:square}
+            .ol1{list-style:upper-roman}
+            </style>
+
+            <p>This is an unordered list:</p>
+            <ul class = "ul1">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul>
+
+            <p>This is an ordered list:</p>
+            <ol class = "ol1">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ol></br>
+
+        </div>
+
+        <div class = "actividad">
+            Set the image "2.png" as the list item marker for the unordered list.</br>
+            <pre>
+            &ltstyle&gt&gt
+                ul{list-style-image: url('2.png');}
+            &lt/style&gt
+            &ltpThis is an unordered list:&lt/p&gt
+            &ltul&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ul&gt
+            </pre>
+            Example:
+            <style>
+            .ul2{list-style-image: url('2.png');}
+            </style>
+            <p>This is an unordered list:</p>
+            <ul class = "ul2">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul></br>
+        </div>
+
+        <div class = "actividad">
+            With the list-style property: Set the unordered list marker to "2.png", with a backup style of "circle", and display the markers inside the content flow.</br>
+            <pre>
+            &ltstyle&gt&gt
+                ul{list-style-image: url('x.png');
+                    list-style-type: circle;
+                    list-style-position: inside;
+                }
+            &lt/style&gt
+            &ltpThis is an unordered list:&lt/p&gt
+            &ltul&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ul&gt
+            </pre>
+            Example:
+            <style>
+            .ul3{list-style-image: url('x.png');
+                list-style-type: circle;
+                list-style-position: inside;
+            }
+            </style>
+            <p>This is an unordered list:</p>
+            <ul class = "ul3">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul></br>
+        </div>
+
+        <div class = "actividad">
+            Remove the bullets/markers from the list items.</br>
+            <pre>
+            &ltstyle&gt&gt
+                ul{ul{list-style-type: none;}
+                }
+            &lt/style&gt
+            &ltpThis is an unordered list:&lt/p&gt
+            &ltul&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ul&gt
+            </pre>
+            Example:
+            <style>
+            .ul5{list-style-type: none;}
+            </style>
+            <p>This is an unordered list:</p>
+            <ul class = "ul5">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+            </ul></br>
+        </div>
+    <p onclick="cerrar('List')" class = "cierre">cerrar</p>
+   </div>
+
+    <h1 onclick="mostrar('Tables')" class = "Titulo">CSS Tables</h1>
+    <div id = "Tables" style = "display: none">
+        <p onclick="cerrar('Tables')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the border to "2px solid green" for table, th and td elements.</br>
+            <pre>
+            &ltstyle&gt
+                table, td,  th{border:2px solid green;}
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab1{border:2px solid green;}
+            </style>
+            <table class = "tab1">
+                <tr>
+                    <th class = "tab1">Firstname</th>
+                    <th class = "tab1">Lastname</th>
+                </tr>
+                <tr>
+                    <td class = "tab1">Peter</td>
+                    <td class = "tab1">Griffin</td>
+                </tr>
+                <tr>
+                    <td class = "tab1">Lois</td>
+                    <td class = "tab1">Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+
+        <div class = "actividad">
+            Collapse the table borders into a single border.</br>
+            <pre>
+            &ltstyle&gt
+                table  {
+                    border-collapse: collapse;
+                }
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab2{border-collapse: collapse;}
+            </style>
+            <table class = "tab2">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+
+        <div class = "actividad">
+            Set the width of the table to "100%".</br>
+            <pre>
+            &ltstyle&gt
+                table  {
+                    width:100%;
+                }
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab3{width:100%;}
+            </style>
+            <table class = "tab3">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+
+        <div class = "actividad">
+            Set the text alignment in <td> elements to "right".</br>
+            <pre>
+            &ltstyle&gt
+                td  {
+                    text-align:right;
+                }
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab4{text-align:right;}
+            </style>
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                </tr>
+                <tr>
+                    <td class = "tab4">Peter</td>
+                    <td class = "tab4">Griffin</td>
+                </tr>
+                <tr>
+                    <td class = "tab4">Lois</td>
+                    <td class = "tab4">Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+
+        <div class = "actividad">
+            Set the padding in <th> elements to "15px".</br>
+            <pre>
+            &ltstyle&gt
+                th  {
+                    padding:15px;
+                }
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab5{padding:15px;}
+            </style>
+            <table>
+                <tr>
+                    <th class = "tab5"> Firstname</th>
+                    <th class = "tab5">Lastname</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+
+        <div class = "actividad">
+            Set the background color of <th> elements to "lightblue".</br>
+            <pre>
+            &ltstyle&gt
+                th  {
+                    background-color:lightblue;
+                }
+            &l/style&gt
+            &ltable&gt
+            &ltr&gt
+                &lth&gtFirstname&l/th&gt
+                &lth&gtLastname&l/th&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtPeter&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &ltr&gt
+                &ltd&gtLois&l/td&gt
+                &ltd&gtGriffin&l/td&gt
+            &l/tr&gt
+            &l/table&gt
+            Example:
+            <style>
+                .tab6{ background-color:lightblue;}
+            </style>
+            <table>
+                <tr>
+                    <th class = "tab6"> Firstname</th>
+                    <th class = "tab6">Lastname</th>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>Griffin</td>
+                </tr>
+                <tr>
+                    <td>Lois</td>
+                    <td>Griffin</td>
+                </tr>
+            </table></br>
+        </div>
+    <p onclick="cerrar('Tables')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('DV')" class = "Titulo">CSS Display/Visibility</h1>
+    <div id = "DV" style = "display: none">
+        <p onclick="cerrar('DV')" class = "cierre">cerrar</p>
+        <div class = "actividad">
+            Hide the &lth5&gt element. It should still take up the same space as before.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    h5{visibility:hidden;}
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5dv1{visibility:hidden;}
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class="h5dv1">This is a Heading h5</h5>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Hide the &lth5&gt element. It should not take up any space.</br>
+            <pre>
+                &lthead&gt
+                &ltstyle&gt
+                    h5{visibility:hidden;}
+                &lt/style&gt
+
+                &lth4&gtThis is a Heading h4&lt/h4&gt
+                &lth5&gtThis is a Heading h5&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .h5dv2{display: none;}
+            </style>
+            <h4>This is a Heading h4</h4>
+            <h5 class="h5dv2">This is a Heading h5</h5>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div class = "actividad">
+            Display the list items as inline elements.</br>
+            <pre>
+            &ltstyle&gt&gt
+                li {
+                    display: inline;
+                  }
+            &lt/style&gt
+            &ltpThis is an unordered list:&lt/p&gt
+            &ltul&gt
+                &ltli&gtCoffee&lt/li&gt
+                &ltli&gtTea&lt/li&gt
+                &ltli&gtCoca Cola&lt/li&gt
+            &lt/ul&gt
+            </pre>
+            Example:
+            <style>
+            .lidv3{display: inline;}
+            </style>
+            <p>This is an unordered list:</p>
+            <ul>
+            <li class = "lidv3">Coffee</li>
+            <li class = "lidv3">Tea</li>
+            <li class = "lidv3">Coca Cola</li>
+            </ul></br>
+        </div>
+
+        <div class = "actividad">
+            Display the &ltstrong&gt elements as block elements</br>
+            <pre>
+            &ltstyle>
+                strong{display: block;}
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a &ltstrong&gtparagraph&lt/strong&gt, with some words more &ltstrong&gtimportant&lt/strong&gt than others &lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .lidv4{display: block;}
+            </style>
+            <h5>This is a Heading</h5>
+            <p>This is a <strong class ="lidv4">paragraph</strong>, with some words more <strong class ="lidv4">important</strong> than others </p>
+            <p>This is another paragraph.</p>
+        </div>
+    <p onclick="cerrar('DV')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('Positioning')" class = "Titulo">CSS Positioning</h1>
+    <div id = "Positioning" style = "display: none">
+        <p onclick="cerrar('Positioning')" class = "cierre">cerrar</p>
+
+        <div class = "actividad" style = "height: 800px;">
+            Position the &lth5&gt element to always be 550px from the top, and 550px from the right, relative to the window/frame edges.</br>
+            <pre>
+            &ltstyle>
+            h5{position: fixed;
+                top: 550px;
+                right: 550px;}
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a &ltstrong&gtparagraph&lt/strong&gt, with some words more &ltstrong&gtimportant&lt/strong&gt than others &lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .pos1{position: fixed;
+                        top: 550px;
+                        right: 550px;}
+            </style>
+            <h5 class = "pos1">This is a Heading</h5>
+            <p>This is a <strong">paragraph</strong>, with some words more <strong>important</strong> than others </p>
+            <p>This is another paragraph.</p>
+
+        </div>
+
+        <div class = "actividad" >
+            Position the &lth5&gt element 20px left, and 30px down, relative to its normal position.</br>
+            <pre>
+            &ltstyle>
+                h5{position: relative;
+                left: 20px;
+                down: 30px;}
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp&gtThis is a &ltstrong&gtparagraph&lt/strong&gt, with some words more &ltstrong&gtimportant&lt/strong&gt than others &lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .pos2{position: relative;
+                left: 200px;
+                down: 500px;}
+            </style>
+            <h5 class = "pos2">This is a Heading</h5>
+            <p>This is a <strong">paragraph</strong>, with some words more <strong>important</strong> than others </p>
+            <p>This is another paragraph.</p>
+        </div>
+    <p onclick="cerrar('Positioning')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Overflow')" class = "Titulo">CSS Overflow</h1>
+    <div id = "Overflow" style = "display: none">
+        <p onclick="cerrar('Overflow')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add a scrollbar to the &ltdiv&gt element.</br>
+            <pre>
+            &ltstyle>
+                div{
+                    background-color: #eee;
+                    width: 200px;
+                    height: 70px;
+                    border: 1px dotted black;
+                    overflow: scroll;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv>
+            &ltp&gtIn my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.&lt/p&gt
+            &ltp&gt'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'&lt/p&gt
+            &lt/div&gt
+            </pre>
+            Example:
+            <style>
+                .overd1{
+                    background-color: #eee;
+                    width: 200px;
+                    height: 70px;
+                    border: 1px dotted black;
+                    overflow: scroll;
+                        }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "overd1">
+                <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+                <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+              </div></br>
+        </div>
+
+        <div class = "actividad"   style = "height: 800px;">
+            Specify that the overflowing text in the &ltdiv&gt element should not be visible, not even with scrolling.</br>
+            <pre>
+            &ltstyle>
+                div{
+                    background-color: lightblue;
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            &lt/div&gt
+            </pre>
+            Example:
+            <style>
+                .overd2{
+                    background-color: lightblue;
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                        }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "overd2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div></br>
+        </div>
+
+        <div class = "actividad">
+            Add a horizontal scrollbar to &ltdiv&gt.</br>
+            <pre>
+            &ltstyle>
+                div{
+                    background-color: #eee;
+                    width: 200px;
+                    height: 70px;
+                    border: 1px dotted black;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv>
+            &ltp&gtIn my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.&lt/p&gt
+            &ltp&gt'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'&lt/p&gt
+            &lt/div&gt
+            </pre>
+            Example:
+            <style>
+                .overd3{
+                    background-color: #eee;
+                    width: 200px;
+                    height: 70px;
+                    border: 1px dotted black;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                        }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "overd3">
+                <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+                <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+            </div></br>
+        </div>
+    <p onclick="cerrar('Overflow')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Align')" class = "Titulo">CSS Align</h1>
+    <div id = "Align" style = "display: none">
+        <p onclick="cerrar('Align')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Center align the &ltdiv&gt element using margins.</br>
+            <pre>
+            &ltstyle>
+                div{
+                    width: 300px;
+                    background-color: #b0e0e6;7
+                    margin:auto;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv>
+            &ltp&gtIn my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.&lt/p&gt
+            &ltp&gt'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'&lt/p&gt
+            &lt/div&gt
+            </pre>
+            Example:
+            <style>
+                .ali1{
+                    width: 300px;
+                    background-color: #b0e0e6;
+                    margin:auto;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "ali1">
+                <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+                <p>'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+            </div></br>
+        </div>
+
+        <div class = "actividad"   style = "height: 600px;">
+            Position the &ltdiv&gt element all the way to the right using absolute positioning.</br>
+            <pre>
+            &ltstyle>
+                div{
+                    position:absolute;
+                    width: 300px;
+                    background-color: #b0e0e6;
+                    right:0px;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+                &ltp&gtThis is a paragraph inside a div element.&lt/p&gt
+                &ltp&gtThis is another paragraph inside a div element.&lt/p&gt
+                &ltspan&gt&ltp&gtThis a paragraph inside a span element, inside a div element.&lt/p&gt&lt/span&gt
+            &lt/div&gt
+
+            &ltp&gtThis is a paragraph, not inside a div element.&lt/p&gt
+            &ltp&gtThis is another paragraph, not inside a div element.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .ali2{
+                    position:absolute;
+                    width: 300px;
+                    background-color: #b0e0e6;
+                    right:0px;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "ali2">
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+              </div>
+              
+              <p>This is a paragraph, not inside a div element.</p>
+              <p>This is another paragraph, not inside a div element.</p></br>
+        </div>
+    <p onclick="cerrar('Align')" class = "cierre">cerrar</p>
+   </div>
+
+   <h1 onclick="mostrar('Combinators')" class = "Titulo">CSS Combinators</h1>
+   <div id = "Combinators" style = "display: none">
+       <p onclick="cerrar('Combinators')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Change the color of all &ltp&gt elements, that are descendants of &ltdiv&gt elements, to "red".</br>
+            <pre>
+            &ltstyle>
+                div{
+                    color:red;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+                &ltp&gtThis is a paragraph inside a div element.&lt/p&gt
+                &ltp&gtThis is another paragraph inside a div element.&lt/p&gt
+                &ltspan&gt&ltp&gtThis a paragraph inside a span element, inside a div element.&lt/p&gt&lt/span&gt
+            &lt/div&gt
+
+            &ltp&gtThis is a paragraph, not inside a div element.&lt/p&gt
+            &ltp&gtThis is another paragraph, not inside a div element.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .com1{
+                    color:red;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div class = "com1">
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p>This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of all &ltp&gt elements, that are immediate children of &ltdiv&gt elements, to "red".</br>
+            <pre>
+            &ltstyle>
+                div > p {
+                    color: red;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+                &ltp&gtThis is a paragraph inside a div element.&lt/p&gt
+                &ltp&gtThis is another paragraph inside a div element.&lt/p&gt
+                &ltspan&gt&ltp&gtThis a paragraph inside a span element, inside a div element.&lt/p&gt&lt/span&gt
+            &lt/div&gt
+
+            &ltp&gtThis is a paragraph, not inside a div element.&lt/p&gt
+            &ltp&gtThis is another paragraph, not inside a div element.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .com2{
+                    color:red;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div>
+                <p class = "com2">This is a paragraph inside a div element.</p>
+                <p class = "com2">This is another paragraph inside a div element.</p>
+                <span><p >This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p>This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of &ltp&gt elements, that are the adjacent (immediately following) sibling of a &ltdiv&gt element, to "red".</br>
+            <pre>
+            &ltstyle>
+                div + p {
+                    color: red;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+                &ltp&gtThis is a paragraph inside a div element.&lt/p&gt
+                &ltp&gtThis is another paragraph inside a div element.&lt/p&gt
+                &ltspan&gt&ltp&gtThis a paragraph inside a span element, inside a div element.&lt/p&gt&lt/span&gt
+            &lt/div&gt
+
+            &ltp&gtThis is a paragraph, not inside a div element.&lt/p&gt
+            &ltp&gtThis is another paragraph, not inside a div element.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .com3{
+                    color:red;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p >This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p class = "com3">This is a paragraph, not inside a div element.</p>
+            <p>This is another paragraph, not inside a div element.</p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the color of &ltp&gt elements, that are the siblings of a &ltdiv&gt element, to "red".</br>
+            <pre>
+            &ltstyle>
+                div ~ p {
+                    color: red;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltdiv&gt
+                &ltp&gtThis is a paragraph inside a div element.&lt/p&gt
+                &ltp&gtThis is another paragraph inside a div element.&lt/p&gt
+                &ltspan&gt&ltp&gtThis a paragraph inside a span element, inside a div element.&lt/p&gt&lt/span&gt
+            &lt/div&gt
+
+            &ltp&gtThis is a paragraph, not inside a div element.&lt/p&gt
+            &ltp&gtThis is another paragraph, not inside a div element.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .com4{
+                    color:red;
+                }
+            </style>
+            <h5>This is a Heading</h5>
+            <div>
+                <p>This is a paragraph inside a div element.</p>
+                <p>This is another paragraph inside a div element.</p>
+                <span><p >This a paragraph inside a span element, inside a div element.</p></span>
+            </div>
+
+            <p class = "com4">This is a paragraph, not inside a div element.</p>
+            <p class = "com4">This is another paragraph, not inside a div element.</p></br>
+        </div>
+    <p onclick="cerrar('Combinators')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Pseudoclases')" class = "Titulo">CSS Pseudo-Classes </h1>
+    <div id = "Pseudoclases" style = "display: none">
+        <p onclick="cerrar('Pseudoclases')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the background color for visited and unvisited links to "lightblue", and the background color for the hover and active link states to "yellow".</br>
+            <pre>
+                &ltstyle&gt
+                a:link {
+                    background-color: lightblue;
+                  }
+                  a:visited {
+                    background-color: lightblue;
+                  }
+                  a:hover {
+                    background-color: yellow;
+                  }
+                  a:active {
+                    background-color: yellow;
+                  }
+                &lt/style&gt
+                &lth1&gtThis is a Heading&lt/h1&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gt&lta href="https://www.w3schools.com">W3Schools.com&lt/a&gt&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            a:link {
+            background-color: lightblue;
+            }
+            a:visited {
+            background-color: lightblue;
+            }
+            a:hover {
+            background-color: yellow;
+            }
+            a:active {
+            background-color: yellow;
+            }
+            </style>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+            <p><a href="https://www.w3schools.com">W3Schools.com</a></p></br>
+        </div>
+
+        <div class = "actividad">
+            Change the background color, when a user hovers over p elements, with the class "highlight", to "lightblue"</br>
+            <pre>
+                &ltstyle>
+                    p.highlight:hover{background-color:lightblue;}
+                &lt/style&gt
+                &lth5&gtThis is a Heading&lt/h5&gt
+                &ltp&gtThis is a &ltstrong&gtparagraph&lt/strong&gt, with some words more &ltstrong&gtimportant&lt/strong&gt than others &lt/p&gt
+                &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                p.highlight:hover{background-color:lightblue;}
+            </style>
+            <h5>This is a Heading</h5>
+            <p>This is a <strong>paragraph</strong>, with some words more <strong>important</strong> than others </p>
+            <p class = "highlight">This is another paragraph que cambiará cuando pase por encima.</p>
+        </div>
+
+        <div class = "actividad">
+            Set the background color of &ltp&gt elements, that are the first child of any element, to "lightblue".</br>
+            <pre>
+            &ltstyle>
+                p:first-child {
+                    background-color: lightblue;
+                }
+            &lt/style&gt
+            &lth5&gtThis is a Heading&lt/h5&gt
+            &ltp class = "transitions"&gtThis is a &ltstrong&gtparagraph&lt/strong&gt, with some words more &ltstrong&gtimportant&lt/strong&gt than others &lt/p&gt
+            &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                .transitions{background-color:lightblue;}
+            </style>
+            <h5>This is a Heading</h5>
+            <p class = "transitions">This is a <strong>paragraph</strong>, with some words more <strong>important</strong> than others </p>
+            <p>This is another paragraph que cambiará cuando pase por encima.</p>
+        </div>
+
+        <div class = "actividad">
+            Set the background color of &ltinput&gt elements that are in focus (clicked or active), to "lightblue".</br>
+            <pre>
+                &ltstyle&gt
+                    input:focus {
+                        background-color: lightblue;
+                        }
+                &lt/style&gt
+                &ltform action="/action_page.php" method="get"&gt
+                First name: &ltinput type="text" name="fname"&gt</br>
+                Last name: &ltinput type="text" name="lname"></br>
+                &ltinput type="submit" value="Submit">
+                &lt/form&gt
+            </pre>
+            Example:
+            <style>
+                input:focus {
+                    background-color: lightblue;
+                    }
+            </style>
+            <form action="/action_page.php" method="get">
+                First name: <input type="text" name="fname"><br>
+                Last name: <input type="text" name="lname"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    <p onclick="cerrar('Pseudoclases')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('PseudoElements')" class = "Titulo">CSS Pseudo Elements </h1>
+    <div id = "PseudoElements" style = "display: none">
+        <p onclick="cerrar('PseudoElements')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set text color to red, for the first line of the <p> element.</br>
+            <pre>
+                &ltstyle&gt
+                    p::first-line {
+                        color: red;
+                        }
+                        &lt/style&gt
+                        &ltp&gtIn my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'&ltp&gt
+            </pre>
+            Example:
+            <style>
+                .pelem1 {
+                    color: red;
+                    }
+            </style>
+            <p><div class = "pelem1">In my younger and more vulnerable years my father gave me some advice that I've been</div>turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told </br>me, 'just remember that all the people in this world haven't had the advantages that you've</br> had.'
+            </p>
+        </div>
+
+        <div class = "actividad">
+            Set text color to "red", and the text size to "xx-large", for the first letter of the &ltp&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    p::first-letter {
+                        color: red;
+                        font-size: xx-large;
+                        }
+                        &lt/style&gt
+                        &ltp&gtIn my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'&ltp&gt
+            </pre>
+            Example:
+            <style>
+                p.pelem2::first-letter {
+                    color: red;
+                    font-size: xx-large;
+                    }
+            </style>
+            <p class="pelem2">
+                In my younger and more vulnerable years my father gave me some advice that I've beenturning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told </br>me, 'just remember that all the people in this world haven't had the advantages that you've</br> had.'
+            </p>
+        </div>
+
+        <div class = "actividad">
+            Insert the image "1.jpg" before, and after &ltp&gt elements, using the ::before and ::after pseudo-elements</br>
+            <pre>
+                &ltstyle&gt
+                    p::before{
+                        content: url(smiley.gif);
+                    }
+                    p::after{
+                        content: url(smiley.gif);
+                    }
+                &lt/style&gt
+                &lth5&gtCabecera roja&lt/h5&gt
+                &lth2&gtOtra cabecera que no es roja&lt/h2&gt
+                &ltp&gtParrafo rojo&lt/p&gt
+                &ltp&gtOtro parrafo rojo.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                pelem3{
+                    content: url(1.jpg);
+                }
+            </style>
+            <h4>Cabecera roja</h4>
+            <h5>Otra cabecera que no es roja</h5>
+            <div class ="pelem3"></div>
+            <p class = "h41">Parrafo rojo</p>
+            <div class ="pelem3"></div>
+            <div class ="pelem3"></div>
+            <p class = "h41">Otro parrafo rojo.</p></br>
+            <div class ="pelem3"></div>
+        </div>
+    <p onclick="cerrar('PseudoElements')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Opacity')" class = "Titulo">CSS Opacity </h1>
+    <div id = "Opacity" style = "display: none">
+        <p onclick="cerrar('Opacity')" class = "cierre">cerrar</p>
+        <div class = "actividad">
+            Set the transparency/opacity of the &ltimg&gt element to "0.4".</br>
+            <pre>
+                &ltstyle&gt
+                    img{opacity:0.4;}
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="klematis.jpg" width="150" height="113"&gt
+            </pre>
+            Example:
+            <style>
+                .opa1{
+                    opacity:0.4;
+                }
+            </style>
+            <h4>Cabecera </h4>
+            <img class = "opa1" src="1.jpg" width="150" height="113">
+        </div>
+
+        <div class = "actividad">
+            Remove the transparency/opacity of the &ltimg&gt element when the user hovers over it with the mouse pointer.</br>
+            <pre>
+                &ltstyle&gt
+                    img:hover {
+                        opacity:1
+                    }
+                    img{
+                        opacity: 0.4;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="klematis.jpg" width="150" height="113"&gt
+            </pre>
+            Example:
+            <style>
+                .opa1{
+                    opacity:0.4;
+                }
+
+                img.opa2:hover{
+                    opacity:1
+                }
+            </style>
+            <h4>Cabecera </h4>
+            <img class = "opa1 opa2" src="1.jpg" width="150" height="113">
+        </div>
+    <p onclick="cerrar('Opacity')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('AttributeSelector')" class = "Titulo">CSS Attribute Selector  </h1>
+    <div id = "AttributeSelector" style = "display: none">
+        <p onclick="cerrar('AttributeSelector')" class = "cierre">cerrar</p>
+        <div class = "actividad">
+            Set the background-color to "lightblue" for elements with a "target" attribute.</br>
+            <pre>
+                &ltstyle&gt
+                    a[target]{background-color:lightblue; }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &lta href="https://www.w3schools.com"&gtw3schools.com&lt/a&gt
+                &lta href="http://www.disney.com" target="_blank"&gtdisney.com&lt/a&gt
+                &lta href="http://www.wikipedia.org" target="_top"&gtwikipedia.org&lt/a&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel1{background-color:lightblue; }
+            </style>
+            <h4>Cabecera </h4>
+            <a href="https://www.w3schools.com">w3schools.com</a>
+            <a class = "AtSel1" href="http://www.disney.com" target="_blank">disney.com</a>
+            <a class = "AtSel1" href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+        </div>
+
+        <div class = "actividad">
+            Set the background-color to "lightblue" for elements with an attribute like: target="_blank".</br>
+            <pre>
+                &ltstyle&gt
+                    a[target="_blank"] {
+                        background-color: lightblue;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &lta href="https://www.w3schools.com"&gtw3schools.com&lt/a&gt
+                &lta href="http://www.disney.com" target="_blank"&gtdisney.com&lt/a&gt
+                &lta href="http://www.wikipedia.org" target="_top"&gtwikipedia.org&lt/a&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel1{background-color:lightblue; }
+            </style>
+            <h4>Cabecera </h4>
+            <a href="https://www.w3schools.com">w3schools.com</a>
+            <a class = "AtSel1" href="http://www.disney.com" target="_blank">disney.com</a>
+            <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+        </div>
+
+        <div class = "actividad">
+            Set a border with the color "red", around elements with a "title" attribute containing the word "red".</br>
+            <pre>
+                &ltstyle&gt
+                    [title~="red"] {
+                        border: 5px solid red;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="1.jpg" title="two red flowers" width="107" height="90"&gt
+                &ltimg src="1.jpg" title="purple flower" width="107" height="80"&gt
+                &ltimg src="1.jpg" title="red flower" width="116" height="90"&gt
+                &ltimg src="1.jpg" title="two white flowers" width="120" height="90"&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel3{border: 5px solid red;}
+            </style>
+            <h4>Cabecera </h4>
+            <img class = "AtSel3" src="1.jpg" title="two red flowers" width="107" height="90">
+            <img src="1.jpg" title="purple flower" width="107" height="80">
+            <img class = "AtSel3" src="1.jpg" title="red flower" width="116" height="90">
+            <img src="1.jpg" title="two white flowers" width="120" height="90">
+        </div>
+
+        <div class = "actividad">
+            Set a border with the color "red", around elements with a "title" attribute starting with "red".</br>
+            <pre>
+                &ltstyle&gt
+                    [title^="red"] {
+                    border: 5px solid red;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="1.jpg" title="two red flowers" width="107" height="90"&gt
+                &ltimg src="1.jpg" title="purple flower" width="107" height="80"&gt
+                &ltimg src="1.jpg" title="red flower" width="116" height="90"&gt
+                &ltimg src="1.jpg" title="two white flowers" width="120" height="90"&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel3{border: 5px solid red;}
+            </style>
+            <h4>Cabecera </h4>
+            <img src="1.jpg" title="two red flowers" width="107" height="90">
+            <img src="1.jpg" title="purple flower" width="107" height="80">
+            <img class = "AtSel3" src="1.jpg" title="red flower" width="116" height="90">
+            <img src="1.jpg" title="two white flowers" width="120" height="90">
+        </div>
+
+        <div class = "actividad">
+            Set a border with the color "red", around elements with a "title" attribute ending with the word "flower" (not flowers).</br>
+            <pre>
+                &ltstyle&gt
+                    [title$="flower"] {
+                        border: 5px solid red;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="1.jpg" title="two red flowers" width="107" height="90"&gt
+                &ltimg src="1.jpg" title="purple flower" width="107" height="80"&gt
+                &ltimg src="1.jpg" title="red flower" width="116" height="90"&gt
+                &ltimg src="1.jpg" title="two white flowers" width="120" height="90"&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel3{border: 5px solid red;}
+            </style>
+            <h4>Cabecera </h4>
+            <img src="1.jpg" title="two red flowers" width="107" height="90">
+            <img class = "AtSel3" src="1.jpg" title="purple flower" width="107" height="80">
+            <img class = "AtSel3" src="1.jpg" title="red flower" width="116" height="90">
+            <img src="1.jpg" title="two white flowers" width="120" height="90">
+        </div>
+
+
+        <div class = "actividad">
+            Set a border with the color "red", around elements with a "title" attribute ending with the word "flower" (not flowers).</br>
+            <pre>
+                [title*="flow"] {
+                    border: 5px solid red;
+                }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltimg src="1.jpg" title="two red flowers" width="107" height="90"&gt
+                &ltimg src="1.jpg" title="purple flower" width="107" height="80"&gt
+                &ltimg src="1.jpg" title="red flower" width="116" height="90"&gt
+                &ltimg src="1.jpg" title="two white flowers" width="120" height="90"&gt
+
+            </pre>
+            Example:
+            <style>
+                .AtSel3{border: 5px solid red;}
+            </style>
+            <h4>Cabecera </h4>
+            <img class = "AtSel3" src="1.jpg" title="two red flowers" width="107" height="90">
+            <img class = "AtSel3" src="1.jpg" title="purple flower" width="107" height="80">
+            <img class = "AtSel3" src="1.jpg" title="red flower" width="116" height="90">
+            <img class = "AtSel3" src="1.jpg" title="two white flowers" width="120" height="90">
+        </div>
+    <p onclick="cerrar('AttributeSelector')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('RoundedCorners')" class = "Titulo">CSS Rounded Corners  </h1>
+    <div id = "RoundedCorners" style = "display: none">
+        <p onclick="cerrar('RoundedCorners')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Give the &ltdiv&gt element rounded corners (use the shorthand property and the value "25px")..</br>
+            <pre>
+                &ltstyle&gt
+                    div {
+                        border-radius: 25px;
+                        background: #73AD21;
+                        padding: 20px; 
+                        width: 200px;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltdiv&gtThis is a div element. It has some text.&lt/div&gt
+
+            </pre>
+            Example:
+            <style>
+                .attsel1 {
+                        border-radius: 25px;
+                        background: #73AD21;
+                        padding: 20px;
+                        width: 200px;
+                        }
+            </style>
+            <h4>Cabecera </h4>
+            <div class = "attsel1">This is a div element. It has some text.</div>
+        </div>
+
+        <div class = "actividad">
+            Give the &ltdiv&gt element a rounded corner (25px radius) on the bottom left side.</br>
+            <pre>
+                &ltstyle&gt
+
+                    div {
+                        border-bottom-left-radius: 25px;
+                        background: #73AD21;
+                        padding: 20px;
+                        width: 200px;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltdiv&gtThis is a div element. It has some text.&lt/div&gt
+            </pre>
+            Example:
+            <style>
+                .attsel2 {
+                        border-bottom-left-radius: 25px;
+                        background: #73AD21;
+                        padding: 20px;
+                        width: 200px;
+                        }
+            </style>
+            <h4>Cabecera </h4>
+            <div class = "attsel2">This is a div element. It has some text.</div>
+        </div>
+    <p onclick="cerrar('RoundedCorners')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('BorderImages')" class = "Titulo">CSS Border Images  </h1>
+    <div id = "BorderImages" style = "display: none">
+        <p onclick="cerrar('BorderImages')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Give the &ltdiv&gt element a rounded corner (25px radius) on the bottom left side.</br>
+            <pre>
+                &ltstyle&gt
+                    div {
+                        border: 10px solid transparent;
+                        border-image: url(1.jpg) 30 round;
+                    }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltdiv&gtThis is a div element. It has some text.&lt/div&gt
+
+            </pre>
+            Example:
+            <style>
+                .attsel3 {
+                    border: 10px solid transparent;
+                    border-image: url(1.jpg) 30 round;
+                        }
+            </style>
+            <h4>Cabecera </h4>
+            <div class = "attsel3">This is a div element. It has some text.</div></br>
+        </div>
+
+        <div class = "actividad">
+            Give the &ltdiv&gt element a rounded corner (25px radius) on the bottom left side.</br>
+            <pre>
+                &ltstyle&gt
+                div { 
+                    border: 10px solid transparent;
+                    border-image: url(border.png) 30 stretch;
+                }
+                &lt/style&gt
+
+                &lth5&gtCabecera &lt/h5&gt
+                &ltdiv&gtThis is a div element. It has some text.&lt/div&gt
+
+            </pre>
+            Example:
+            <style>
+                .attsel4 {
+                    border: 10px solid transparent;
+                    border-image: url(1.jpg) 30 stretch;
+                        }
+            </style>
+            <h4>Cabecera </h4>
+            <div class = "attsel4">This is a div element. It has some text.</div>
+        </div>
+    <p onclick="cerrar('BorderImages')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('Backgrounds')" class = "Titulo">CSS Backgrounds   </h1>
+    <div id = "Backgrounds" style = "display: none"style = "display: none">
+        <p onclick="cerrar('Backgrounds')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add a second background image ("2.jpg") to the &ltbody&gt element. Make sure that "1.jpg" is displayed on top of the current background image.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: url(2.jpg), url(1.jpg;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Back1 {
+                background-image: url(2.jpg), url(1.jpg);
+            }
+            </style>
+            </head>
+            <div class = "Back1">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Change the size of the background image to: width 100px, height 80px.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background: url(img_flwr.gif);
+                        bckground-size: 100px 80px;
+                        background-repeat: no-repeat;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Back2 {
+                background: url(1.jpg);
+                background-size: 100px 80px;
+                background-repeat: no-repeat;
+            }
+            </style>
+            </head>
+            <div class = "Back2">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Change the size of the background image so it always fits the entire page.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background: url(1.jpg) no-repeat center center fixed;
+                        background-size: cover;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Back3 {
+                background: url(1.jpg) no-repeat center center fixed;
+                background-size: cover;
+            }
+            </style>
+            </head>
+            <div class = "Back3">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Specify that the background image position should start from the upper left corner of the content-box.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        border: 10px solid black;
+                        padding: 35px;
+                        background: url(img_flwr.gif);
+                        background-repeat: no-repeat;
+                        background-origin: content-box;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Back4 {
+                border: 10px solid black;
+                padding: 35px;
+                background: url(1.jpg);
+                background-repeat: no-repeat;
+                background-origin: content-box;
+            }
+            </style>
+            </head>
+            <div class = "Back4">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Specify that the background image position should start from the upper left corner of the content-box.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        border: 10px dotted black;
+                        padding: 35px;
+                        background: lightblue;
+                        background-clip: padding-box;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Back5 {
+                border: 10px dotted black;
+                padding: 35px;
+                background: lightblue;
+                background-clip: padding-box;
+            }
+            </style>
+            </head>
+            <div class = "Back5">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+    <p onclick="cerrar('Backgrounds')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('BColors')" class = "Titulo">CSS Colors   </h1>
+    <div id = "BColors" style = "display: none">
+        <p onclick="cerrar('BColors')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set the opacity for the background color of the &lth5&gt element to "0.3" by using a RGBA color instead of RGB.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-color: rgba(0,255,0,0.3);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .BColor1 {
+                background-color: rgba(0,255,0,0.3);
+            }
+            </style>
+            </head>
+            <div class = "BColor1">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set the following HSL color as the background of the &lth5&gt element: Set the Hue to red (0), Saturation to 100%, and lightness to 50%.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-color: hsl(0,100%,50%);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .BColor2 {
+                background-color: hsl(0,100%,50%);
+            }
+            </style>
+            </head>
+            <div class = "BColor2">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set the opacity for the background color of the &lth5&gt element to "0.3" by using a HSLA color instead of HSL.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-color: hsla(0,100%,50%,0.3);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .BColor3 {
+                background-color: hsla(0,100%,50%,0.3);
+            }
+            </style>
+            </head>
+            <div class = "BColor3">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set the transparency/opacity of the &lth5&gt element to "0.4".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-color: red;
+                        opacity: 0.4;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .BColor4 {
+                background-color: red;
+                opacity: 0.4;
+            }
+            </style>
+            </head>
+            <div class = "BColor4">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+    <p onclick="cerrar('BColors')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Gradients')" class = "Titulo">CSS Gradients   </h1>
+    <div id = "Gradients" style = "display: none">
+        <p onclick="cerrar('Gradients')" class = "cierre">cerrar</p>
+
+        <div> class = "actividad"
+            Set a linear gradient background for the &ltdiv&gt element, going from the top to bottom, transitioning from "white" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: linear-gradient(white, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients1 {
+                background-image: linear-gradient(white, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients1">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a linear gradient background for the &ltdiv&gt element, going from the top left to the bottom right, transitioning from "white" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: linear-gradient(to bottom right, white, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients2 {
+                background-image: linear-gradient(to bottom right, white, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients2">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a linear gradient background for the &ltdiv&gt element, going at a 70 degree angle, transitioning from "white" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: linear-gradient(70deg, white, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients3 {
+                background-image: linear-gradient(70deg, white, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients3">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a linear gradient background for the &ltdiv&gt element, going from the top to bottom, transitioning from "white" to "red" to "blue" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: linear-gradient(white, red, blue, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients4 {
+                background-image: linear-gradient(white, red, blue, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients4">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a linear gradient background for the &ltdiv&gt element, going from the top to bottom, transitioning from "rgba(0,255,0,0.2)" to "rgba(0,255,0,1).</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: linear-gradient(rgba(0,255,0,0.2), rgba(0,255,0,1));
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients5 {
+                background-image: linear-gradient(rgba(0,255,0,0.2), rgba(0,255,0,1));
+            }
+            </style>
+            </head>
+            <div class = "Gradients5">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a radial gradient background for the &ltdiv&gt element, transitioning from "white" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: radial-gradient(white, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients6 {
+                background-image: radial-gradient(white, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients6">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a radial gradient background for the &ltdiv&gt element, with a circle shape, transitioning from "white" to "green".</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        background-image: radial-gradient(circle, white, green);
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltdiv style="height:200px"&gt&lt/div&gt
+            </pre>
+            Example:
+            <style>
+            .Gradients7 {
+                background-image: radial-gradient(circle, white, green);
+            }
+            </style>
+            </head>
+            <div class = "Gradients7">
+                <h5>This is a Heading</h5>
+                <div style="height:200px"></div>
+            </div>
+        </div>
+    <p onclick="cerrar('Gradients')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Shadows')" class = "Titulo">CSS Shadows Effects   </h1>
+    <div id = "Shadows" style = "display: none">
+        <p onclick="cerrar('Shadows')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Set a "2px" horizontal, and "2px" vertical, text shadow for the &lth5&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        text-shadow: 2px 2px;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Shadow1 {
+                text-shadow: 2px 2px;
+            }
+            </style>
+            </head>
+            <div class = "Shadow1">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Change the color of the text shadow to "green", and set a "5px" blur radius.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        text-shadow: 2px 2px 5px green;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5&gtThis is a Heading&lt/h5&gt
+                &ltp&gtThis is a paragraph.&lt/p&gt
+                &ltp&gtThis is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Shadow2 {
+                text-shadow: 2px 2px 5px green;
+            }
+            </style>
+            </head>
+            <div class = "Shadow2">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Add a new shadow (do not remove the current one) to the &lth5&gt element with: no horizontal or vertical shadow, 10px blur, and a red color.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        text-shadow: 2px 2px 5px green, 0 0 10px red;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Shadow3 {
+                text-shadow: 2px 2px 5px green, 0 0 10px red;
+            }
+            </style>
+            </head>
+            <div class = "Shadow3">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Set a "10px" horizontal, and "10px" vertical, box shadow for the &ltdiv&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        box-shadow: 10px 10px;
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Shadow4 {
+                box-shadow: 10px 10px;
+            }
+            </style>
+            </head>
+            <div class = "Shadow4" style="background-color: lightblue; width: 350px; padding: 15px;">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Change the color of the box shadow to "grey", and set a "5px" blur.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        box-shadow: 10px 10px 5px grey;
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .Shadow5 {
+                box-shadow: 10px 10px 5px grey;
+            }
+            </style>
+            </head>
+            <div class = "Shadow5" style="background-color: lightblue; width: 350px; padding: 15px;">
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+    <p onclick="cerrar('Shadows')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('TextEffects')" class = "Titulo">CSS Text Effects   </h1>
+    <div id = "TextEffects" style = "display: none" >
+        <p onclick="cerrar('TextEffects')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Specify that the overflowed content for the <p> element should be signaled with an ellipsis (...).</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        white-space: nowrap;
+                        width: 200px;
+                        border: 1px solid #000000;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This paragraph contains a very long word: supercalifragilisticexpialidocious.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .TxtE1 {
+                white-space: nowrap;
+                width: 200px;
+                border: 1px solid #000000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                }
+
+            </style>
+            </head>
+            <div class = "TxtE1" >
+                <h5>This is a Heading</h5>
+                <p>This paragraph contains a very long word: supercalifragilisticexpialidocious.</p></br>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Specify that text in the <p> element should wrap, even if it needs to split in the middle of a word.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        wwidth: 150px;
+                        border: 1px solid #000000;
+                        word-wrap: break-word;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This paragraph contains a very long word: supercalifragilisticexpialidocious.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .TxtE2 {
+                width: 150px; 
+                border: 1px solid #000000;
+                word-wrap: break-word;
+            }
+            </style>
+            </head>
+            <div class = "TxtE2" >
+                <h5>This is a Heading</h5>
+                <p>This paragraph contains a very long word: supercalifragilisticexpialidocious.</p></br>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Specify that text in the <p> element should wrap, even if it needs to split in the middle of a word.</br>
+            <pre>
+                &ltstyle&gt
+                    body {
+                        width: 150px; 
+                        border: 1px solid #000000;
+                        word-break: break-all;
+                    }
+
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This paragraph contains a very long word: supercalifragilisticexpialidocious.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+            .TxtE3 {
+                width: 150px; 
+                border: 1px solid #000000;
+                word-break: break-all;
+                }
+            </style>
+            </head>
+            <div class = "TxtE3" >
+                <h5>This is a Heading</h5>
+                <p>This paragraph contains a very long word: supercalifragilisticexpialidocious.</p></br>
+            </div>
+        </div>
+    <p onclick="cerrar('TextEffects')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('WebFonts')" class = "Titulo">CSS  Web Fonts  </h1>
+    <div id = "WebFonts" style = "display: none">
+        <p onclick="cerrar('WebFonts')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add a web font with the name "sansation" and the URL "sansation_light.woff".</br>
+            <pre>
+                &ltstyle&gt
+                    @font-face {
+                        font-family: sansation;
+                        src: url(sansation_light.woff);
+                    }
+
+                    body {
+                        font-family: sansation;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                @font-face {
+                    font-family: sansation;
+                    src: url(sansation_light.woff);
+                }
+
+                div.WebFonts1 {
+                    font-family: sansation;
+                }
+            </style>
+
+            <div class = "WebFonts1" >
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+
+        <div class = "actividad">
+            Add another font-face rule for bold characters of the "sansation" font. Use the URL "sansation_bold.woff".</br>
+            <pre>
+                &ltstyle&gt
+                    @font-face {
+                        font-family: sansation;
+                        src: url(sansation_light.woff);
+                    }
+
+                    @font-face {
+                        font-family: sansation;
+                        src: url(sansation_bold.woff);
+                        font-weight: bold;
+                    }
+
+                    body {
+                        font-family: sansation;
+                    }
+                &lt/style&gt
+                &lt/head&gt
+                &ltbody&gt
+
+                &lth5>This is a Heading&lt/h5&gt
+                &ltp>This is a paragraph.&lt/p&gt
+                &ltp>This is another paragraph.&lt/p&gt
+            </pre>
+            Example:
+            <style>
+                @font-face {
+                        font-family: sansation;
+                        src: url(sansation_light.woff);
+                }
+
+                @font-face {
+                    font-family: sansation;
+                    src: url(sansation_bold.woff);
+                    font-weight: bold;
+                }
+                div.WebFonts2 {
+                    font-family: sansation;
+                    font-weight: bold;
+                }
+            </style>
+            </head>
+            <div class = "WebFonts2" >
+                <h5>This is a Heading</h5>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+    <p onclick="cerrar('WebFonts')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('2DTransform')" class="Titulo">CSS  2D Transform </h1>
+    <div id = "2DTransform" style = "display: none">
+        <p onclick="cerrar('2DTransform')" class = "cierre">cerrar</p>
+
+        <div class = "actividad" style = "height: 800px;" >
+            With the transform property, move the &ltiv&gt element 100px to the right, and 200px down.</br>
+            <pre>
+                &ltstyle&gt
+                div {
+                    width: 100px;
+                    height: 100px;
+                    background-color: lightblue;
+                    border: 1px solid black;
+                    transform: translate(100px,200px);
+                }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+                .Transform1 {
+                    width: 100px;
+                    height: 100px;
+                    background-color: lightblue;
+                    border: 1px solid black;
+                    transform: translate(100px,200px);
+                }
+            </style>
+            <div class = "Transform1">
+
+            </div>
+        </div>
+
+        <div class = "actividad">
+            With the transform property, rotate the &ltiv&gt element 45 degrees.</br>
+            <pre>
+                &ltstyle&gt
+                    div{width: 100px;
+                    height: 100px;
+                    margin: 50px;
+                    background-color: lightblue;
+                    border: 1px solid black;
+                    transform: rotate(45deg);}
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform2 {
+                width: 100px;
+                height: 100px;
+                margin: 50px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: rotate(45deg);
+            }
+            </style>
+            <div class = "Transform2">
+
+            </div>
+        </div>
+
+        <div class = "actividad">
+            With the transform property, change the size of the &ltiv&gt to half its width, but double its height.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        margin: 50px;
+                        background-color: lightblue;
+                        border: 1px solid black;
+                        transform: scale(0.5,2);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform3 {
+                width: 100px;
+                height: 100px;
+                margin: 50px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: scale(0.5,2);
+            }
+            </style>
+            <div class = "Transform3">
+
+            </div>
+        </div>
+
+        <div class = "actividad">
+            With the transform property, skew the &ltiv&gt element 20 degrees along the X-axis, and 30 degrees along the Y-axis.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        margin: 50px;
+                        background-color: lightblue;
+                        border: 1px solid black;
+                        transform: skew(20deg, 30deg);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform4{
+                width: 100px;
+                height: 100px;
+                margin: 50px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: skew(20deg, 30deg);
+            }
+            </style>
+            </head>
+            <div class = "Transform4">
+
+            </div>
+        </div>
+    <p onclick="cerrar('2DTransform')" class = "cierre">cerrar</p>
+    </div>
+
+    <h1 onclick="mostrar('3DTransform')" class = "Titulo">CSS 3D Transform </h1>
+    <div id = "3DTransform" style = "display: none">
+        <p onclick="cerrar('3DTransform')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            With the transform property, rotate the &ltdiv&gt element 150deg around its X-axis.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background-color: lightblue;
+                        border: 1px solid black;
+                        transform: rotateX(150deg);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform5{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: rotateX(150deg);
+            }
+            </style>
+            </head>
+            <div class = "Transform5">This is a div element </div>
+        </div>
+
+        <div class = "actividad">
+            With the transform property, rotate the &ltdiv&gt element 120deg around its Y-axis.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background-color: lightblue;
+                        border: 1px solid black;
+                        transform: rotateY(120deg);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform6{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: rotateY(120deg);
+            }
+            </style>
+            </head>
+            <div class = "Transform6">This is a div element </div>
+        </div>
+
+        <div class = "actividad">
+            With the transform property, rotate the &ltdiv&gts element 90deg around its Z-axis.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background-color: lightblue;
+                        border: 1px solid black;
+                        transform: rotateZ(90deg);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transform7{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                border: 1px solid black;
+                transform: rotateZ(90deg);
+            }
+            </style>
+            </head>
+            <div class = "Transform7">This is a div element </div>
+        </div>
+    <p onclick="cerrar('3DTransform')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Transitions')" class = "Titulo">CSS Transitions </h1>
+    <div id = "Transitions" style = "display: none">
+        <p onclick="cerrar('Transitions')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add a 2 second transition effect for width changes of the &ltdiv&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        transition: width 2s;
+                    }
+                    div:hover {
+                        width: 300px;
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &ltp&gtHover over the div element above.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transitions1{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s;
+            }
+            div.Transitions1:hover{
+                width: 300px;
+            }
+            </style>
+            </head>
+            <div class = "Transitions1">This is a div element </div>
+            <p>Hover over the div element above.</p>
+        </div>
+
+
+        <div class = "actividad">
+            Specify that the transition of the &ltdiv&gt element should have a "ease-in-out" speed curve.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        transition: width 2s;
+                        transition-timing-function: ease-in-out;
+                    }
+                    div:hover {
+                        width: 300px;
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &ltp&gtHover over the div element above.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transitions2{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s;
+                transition-timing-function: ease-in-out;
+            }
+            div.Transitions2:hover{
+                width: 300px;
+            }
+            </style>
+            </head>
+            <div class = "Transitions2">This is a div element </div>
+            <p>Hover over the div element above.</p>
+        </div>
+
+        <div class = "actividad">
+            Specify that the transition of the &ltdiv&gt element should have a "0.5" second delay before starting.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        transition: width 2s;
+                        transition-delay: 0.5s;
+                    }
+                    div:hover {
+                        width: 300px;
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &ltp&gtHover over the div element above.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transitions3{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s;
+                transition-delay: 0.5s;
+            }
+            div.Transitions3:hover{
+                width: 300px;
+            }
+            </style>
+            </head>
+            <div class = "Transitions3">This is a div element </div>
+            <p>Hover over the div element above.</p>
+        </div>
+
+        <div class = "actividad">
+            Add a 2 second transition effect for background, and transform changes of the &ltdiv&gt element.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        transition: background 2s, transform 2s;
+                    }
+                    div:hover {
+                        background: blue;
+                        transform: rotate(180deg);
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &ltp&gtHover over the div element above.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transitions4{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: background 2s, transform 2s;
+            }
+            div.Transitions4:hover{
+                background: blue;
+                transform: rotate(180deg);
+            }
+            </style>
+            </head>
+            <div class = "Transitions4">This is a div element </div>
+            <p>Hover over the div element above.</p>
+        </div>
+
+        <div class = "actividad">
+            Using the transition shorthand property, specify width changes for the &ltdiv&gt element should have:
+                "2" second duration, "ease-in-out" speed curve, and a "0.5" second delay before starting.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background: red;
+                        transition: width 2s ease-in-out 0.5s;
+                    }
+                    div:hover {
+                        width: 400px;
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &ltp&gtHover over the div element above.&lt/p&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Transitions5{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: width 2s ease-in-out 0.5s;
+            }
+            div.Transitions5:hover{
+                width: 400px;
+            }
+            </style>
+            </head>
+            <div class = "Transitions5">This is a div element </div>
+            <p>Hover over the div element above.</p>
+        </div>
+    <p onclick="cerrar('Transitions')" class = "cierre">cerrar</p>
+    </div>
+
+
+    <h1 onclick="mostrar('Animation')" class = "Titulo">CSS Animation </h1>
+    <div id = "Animation" style = "display: none">
+        <p onclick="cerrar('Animation')" class = "cierre">cerrar</p>
+
+        <div class = "actividad">
+            Add a 2 second animation for the &ltdiv&gt element, which changes the color from red to blue. Call the animation "example".</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        background-color: red;
+                        animation-name: example1;
+                        animation-duration: 2s;
+                        animation-delay:3s;
+                        animation-iteration-count:infinite;
+                    }
+                    @keyframes example1 {
+                        from {background-color: red;}
+                        to {background-color: blue;}
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example1;
+                animation-duration: 2s;
+                animation-delay:3s;
+                animation-iteration-count:infinite;
+            }
+            @keyframes example1 {
+                from {background-color: red;}
+                to {background-color: blue;}
+            }
+            </style>
+            </head>
+            <div class = "Animation1">This is a div element </div>
+        </div>
+
+        <div class = "actividad">
+            Add the following 5 steps to the animation "example" (using 0%, 25%, 50%, 75%, and 100%):
+
+            0% - Set background color to "red", left position to "0px", top position to: "0px"
+            25% - Set background color to "blue", left position to "0px", top position to: "200px"
+            50% - Set background color to "green", left position to "200px", top position to: "200px"
+            75% - Set background color to "yellow", left position to "200px", top position to: "0px"
+            100% - Set background color to "red", left position to "0px", top position to: "0px".</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                        background-color: red;
+                        animation-name: example2;
+                        animation-duration: 4s;
+                        animation-delay:3s;
+                        animation-iteration-count:infinite;
+                    }
+                    @keyframes example2 {
+                        0%   {background-color: red; left:0px; top:0px;}
+                        25%  {background-color: blue; left:0px; top:200px;}
+                        50%  {background-color: green; left:200px; top:200px;}
+                        75%  {background-color: yellow; left:200px; top:0px;}
+                        100% {background-color: red; left:0px; top:0px;}
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation2{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: example2;
+                animation-duration: 4s;
+                animation-delay:3s;
+                animation-iteration-count:infinite;
+            }
+            @keyframes example2 {
+                0%   {background-color: red; left:0px; top:0px;}
+                25%  {background-color: blue; left:0px; top:200px;}
+                50%  {background-color: green; left:200px; top:200px;}
+                75%  {background-color: yellow; left:200px; top:0px;}
+                100% {background-color: red; left:0px; top:0px;}
+            }
+            </style>
+            </head>
+            <div class = "Animation2">This is a div element </div>
+        </div>
+
+        <div class = "actividad">
+            Specify that the animation of the &ltdiv&gt element should have a "1" second delay before starting.</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                        background-color: red;
+                        animation-name: example3;
+                        animation-duration: 2s;
+                        animation-delay: 1s;
+                        animation-delay:3s;
+                        animation-iteration-count:infinite;
+                    }
+                    @keyframes example3 {
+                        0%   {background-color: red; left:0px;}
+                        50%  {background-color: yellow; left:200px;}
+                        100% {background-color: red; left:0px;}
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation3{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: example3;
+                animation-duration: 2s;
+                animation-delay: 1s;
+                animation-iteration-count:infinite;
+            }
+            @keyframes example3 {
+                0%   {background-color: red; left:0px;}
+                50%  {background-color: yellow; left:200px;}
+                100% {background-color: red; left:0px;}
+            }
+            </style>
+            </head>
+            <div class = "Animation3">This is a div element </div>
+        </div>
+
+
+        <div class = "actividad">
+            Specify that the animation of the &ltiv&gt element should continue to loop for ever..</br>
+            <pre>
+                &ltstyle&gt
+                    div{
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                        background-color: red;
+                        animation-name: example4;
+                        animation-duration: 2s;
+                        animation-delay:3s;
+                        animation-iteration-count:infinite;
+                    }
+                    @keyframes example4 {
+                        0%   {background-color: red; left:0px;}
+                        50%  {background-color: yellow; left:200px;}
+                        100% {background-color: red; left:0px;}
+                    }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation4{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: example4;
+                animation-duration: 2s;
+                animation-delay:3s;
+                animation-iteration-count:infinite;
+            }
+            @keyframes example4 {
+                0%   {background-color: red; left:0px;}
+                50%  {background-color: yellow; left:200px;}
+                100% {background-color: red; left:0px;}
+            }
+            </style>
+            </head>
+            <div class = "Animation4">This is a div element </div>
+        </div>
+
+
+        <div class = "actividad">
+            Specify that the animation of the &ltdiv&gt element should alternate between running forwards and backwards.</br>
+            <pre>
+                &ltstyle&gt
+                div {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    background-color: red;
+                    animation-name: example5;
+                    animation-duration: 4s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+                
+                @keyframes example5 {
+                    0%   {background-color: red; left:0px; top:0px;}
+                    25%  {background-color: blue; left:0px; top:200px;}
+                    50%  {background-color: green; left:200px; top:200px;}
+                    75%  {background-color: yellow; left:200px; top:0px;}
+                    100% {background-color: red; left:0px; top:0px;}
+                }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation5{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: example5;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes example5 {
+                    0%   {background-color: red; left:0px; top:0px;}
+                    25%  {background-color: blue; left:0px; top:200px;}
+                    50%  {background-color: green; left:200px; top:200px;}
+                    75%  {background-color: yellow; left:200px; top:0px;}
+                    100% {background-color: red; left:0px; top:0px;}
+            }
+            </style>
+            </head>
+            <div class = "Animation5">This is a div element </div>
+        </div>
+
+
+        <div class = "actividad">
+            Specify that the animation of the &ltdiv&gt element should have a "ease-in-out" speed curve..</br>
+            <pre>
+                &ltstyle&gt
+                div {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    background-color: red;
+                    animation-name: example6;
+                    animation-duration: 4s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                }
+                
+                @keyframes example6 {
+                    0%   {background-color: red; left:0px;}
+                    50%  {background-color: yellow; left:200px;}
+                    100% {background-color: red; left:0px;}
+                }
+                &lt/style&gt
+                &ltbody&gt
+                &ltdiv&gt&lt/div&gt
+                &lt/body&gt
+            </pre>
+            Example:
+            <style>
+            .Animation6{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: example6;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            @keyframes example6 {
+                0%   {background-color: red; left:0px;}
+                50%  {background-color: yellow; left:200px;}
+                100% {background-color: red; left:0px;}
+            }
+            </style>
+            </head>
+            <div class = "Animation6">This is a div element </div>
+        </div>
+    <p onclick="cerrar('Animation')" class = "cierre">cerrar</p>
+    </div>
+
+    <script type="text/javascript" src="funciones.js"></script>
+
+</body>
+</html>
