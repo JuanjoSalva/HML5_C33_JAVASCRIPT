@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 128</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 128. objetivo de la pregunta:
+        Tú estás desarrollando una página unsando HTML5. Tú creas el siguiente marcado:
+
+        <input type="url" name = "website" required = "required"/>
+
+        Necesitas asegurar que el valor de la url introducido sea una URL segura. ¿Qué harías?:
+        A. Add the following attribute to the input tag: value="https://"
+        B. Add the following attribute to the input tag: pattern="https://.+"
+        C. Add the following attribute to the input tag: value="ssl"
+        D. Add the following attribute to the input tag: itemtype="secure"
+
+        Fuentes consultads:
+        https://www.w3schools.com/tags/att_input_pattern.asp
+
+        Respuesta:
+        B
+
+
+        Las cuatro van a validar que sea una url e tipo http://?.  Pero sólo la B valida que sea segura: Https:// y ademá
+        que tenga un '.'.
+    </xmp>
+    <p>Pruebas</p>
+
+    A</br>
+    <input type="url" id = "1" name = "website" required = "required" value="http://google.es"/>
+    <button onclick="validateForm(1)">Pobrar</button>
+
+
+    B</br>
+    <input type="url" id = "2"  name = "website" required = "required" pattern="https://.+"/>
+    <button onclick="validateForm(2)">Pobrar</button>
+
+
+    C</br>
+    <input type="url" id = "3"  name = "website" required = "required" value="ssl"/>
+    <button onclick="validateForm(3)">Pobrar</button>
+
+
+    D</br>
+    <input type="url" id = "4"  name = "website" required = "required" itemtype="secure"/>
+    <button onclick="validateForm(4)">Pobrar</button>
+
+
+    <script>
+        function validateForm(id) {
+
+            var inpObj;
+
+            switch(id){
+                case 1:
+                {
+                    inpObj = document.getElementById("1");
+                    break;
+                }
+                case 2:
+                {
+                    inpObj = document.getElementById("2");
+                    break;
+                }
+                case 3:
+                {
+                    inpObj = document.getElementById("3");
+                    break;
+                }
+                case 4:
+                {
+                    inpObj = document.getElementById("4");
+                    break;
+                }
+            }
+            if (!inpObj.checkValidity()) {
+                alert("Error en la validacion del campo URL");
+            }
+        }
+
+    </script>
+</body>
+</html>

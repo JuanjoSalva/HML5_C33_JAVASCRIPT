@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 271</title>
+    <script src="Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 271. objetivo de la pregunta:
+
+        Dado el sigueinte código:
+        <div id = "yellow" style ="background-color: yellow;">My Yellow Content</div>
+        <div id = "blue" style ="background-color: blue;">My Blue Content</div>
+        <div id = "red" style ="background-color: red;">My Red Content</div>
+
+        Usar javascript para ocultarel div azul.
+
+        /*A SI FUNCIONA*/
+        document.getElementById("blue").style.display = "none";
+
+        /*B NO FUNCIONA*/
+        $("#blue").css("visibility", "collapse");
+
+        /*c NO FUNCIONA, DEJA EL ESPACIO*/
+        document.getElementById("blue").style.visibility = "hidden";
+
+        /*D NO FUNCIONA PORQUE NO OCULTA NADA*/
+        $("#blue").css("display", "hidden");
+
+        /*E NO FUNCIONA PORQUE DEJA EL HUECO*/
+        document.getElementById("blue").style.visibility = "hidden";
+
+        Respuesta:
+        A
+
+
+        Fuentes consultados:
+
+        https://www.w3schools.com/JSREF/prop_style_display.asp
+
+
+
+    </xmp>
+
+    <div id = "yellow" style ="background-color: yellow;">My Yellow Content</div>
+    <div id = "blue" style ="background-color: blue;">My Blue Content</div>
+    <div id = "red" style ="background-color: red;">My Red Content</div>
+
+    <button onclick="ocultar()">Ocultar div azul</button>
+    <button onclick="mostrar()">Mostrar div azul</button>
+    <script>
+        function ocultar(){
+            /*A SI FUNCIONA*/
+            document.getElementById("blue").style.display = "none";
+
+            /*B NO FUNCIONA*/
+            /*$("#blue").css("visibility", "collapse");*/
+
+            /*c NO FUNCIONA, DEJA EL ESPACIO*/
+            /*document.getElementById("blue").style.visibility = "hidden";*/
+
+            /*D NO FUNCIONA PORQUE NO OCULTA NADA*/
+            //$("#blue").css("display", "hidden");
+
+            /*E NO FUNCIONA PORQUE DEJA EL HUECO*/
+            /*document.getElementById("blue").style.visibility = "hidden";*/
+        }
+
+        function mostrar(){
+            document.getElementById("blue").style.display = "block";
+            }
+    </script>
+</body>
+</html>

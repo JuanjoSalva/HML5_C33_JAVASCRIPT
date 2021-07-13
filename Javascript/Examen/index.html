@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Javascript</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+    <noscript>This page uses JavaScript. Please enable it in your browser</noscript>
+
+    <div class="equipo" title="This is my tooltip">
+        Equipo Azul
+    </div><br>
+
+    <!--  ESTO DE MIGUEL ANGEL INIO-->
+    <div class="tarea">
+        <p class="enunciado">
+            038	```	Escriba un programa JavaScript para encontrar todos los factores primos distintos de un entero dado.		R:24
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte número:</label>
+            <input type="number" id="num381" name = "numero" required autofocus style="width: 60px;" min="1" pattern="^[0-9]+" value=0>
+            <button onclick="Pract38(num381.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result38">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            039	```	```	Escriba un programa JavaScript para verificar si una fracción dada es apropiada o no. Nota: Hay dos
+            tipos de fracciones comunes, propias o impropias. Cuando el numerador y el denominador son positivos, la fracción
+            se llama propia si el numerador es menor que el denominador y, en caso contrario, impropia.		R:133
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte numerador:</label>
+            <input type="number" id="num391" name = "numero" required autofocus style="width: 60px;" min="1" pattern="^[0-9]+" value=0>
+            <label for="name">Inserte denominador:</label>
+            <input type="number" id="num392" name = "numero" required autofocus style="width: 60px;" min="1" pattern="^[0-9]+" value=0>
+            <button onclick="Pract39(num391.value, num392.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result39">Result</div>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            040	```	```	Escriba un programa JavaScript para cambiar los caracteres (minúsculas) en una cadena donde a se
+            convierte en z, b se convierte en y, c se convierte en x, ..., n se convierte en m, m se convierte en n, ... , z
+            se convierte en a.		R:134
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt401" size="20" name = "Cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract40(txt401.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="txt402">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            041	``````	Escriba un programa JavaScript para eliminar todos los caracteres de una cadena determinada que
+            aparezcan más de una vez.		R:135
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt411" size="20" name = "Cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract41(txt411.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="txt412">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            042	```	Escriba un programa JavaScript para reemplazar el primer dígito de una cadena
+            (debe contener al menos un dígito) con el carácter $.		R:136
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt421" size="20" name = "Cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract42(txt421.value.trim())" class = 'boton'>Try It</button>
+            <div class = "resultn" id="txt422">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            043	```	```	```	Escriba un programa JavaScript para probar si un entero dado es mayor que 15, devuelva el
+            número dado; de lo contrario, devuelva 15.		R:137
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name"> Introduzca número entero:</label>
+            <input type="number" id="numero" autofocus style="width: 50px;">
+            <button type="button" class = 'boton' onclick="obtenerResultado43()">Try it</button>
+            <div class = "resultn" id="resultados">Result</div>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            044	```	Escriba un programa JavaScript para invertir los bits de un entero corto sin signo de 16 bits dado.		R:138
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="number" id="num441" name = "numero" required autofocus style="width: 60px;" pattern="^[0-9]+" value=0>
+            <button onclick="Pract44(num441.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="txt442">Result</div>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            045	```	Escriba un programa JavaScript para encontrar la posición de un número redondeado más a la derecha en una matriz de enteros. Devuelve 0 si no hay ningún número redondo. Nota: Un número redondo se considera informalmente como un número entero que termina con uno o más ceros.
+        </p>
+        <div class="codigo">
+            <pre>
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            Introduzca número entero:
+            <input type="number" id="numero45" autofocus style="width: 80px;">
+            <button type="button"  onclick="AniadirNumero();">Añadir Número</button>
+            <button type="button" onclick="obtenerResultado45()" class = 'boton'>Obtener</button>
+            <br>
+            <button type="button"  onclick="reiniciar();">Reiniciar</button>
+            <div class = "resultn" id="resultados2">Result</div>
+        </div>
+    </div><hr>
+<!--  ESTO DE MIGUEL ANGEL  FIN-->
+
+
+<!--  ESTO DE JUAN RAMON  INICIO-->
+    <div class="tarea">
+        <p class="enunciado">
+            046	```	Escriba un ejercicio de JavaScript para obtener la extensión de un nombre de archivo.		R:14
+        </p>
+        <div class="codigo">
+            <pre>
+                const obtnerextension = function (){
+                    var pathfichero = document.getElementById("myFile").value;
+                    if (!(document.getElementById("myFile").value))
+                    {   alert ("selecciona un archivo");
+                        document.getElementById("myFile").click();
+                        return (false);
+                    }
+                    var posicionultimopunto = pathfichero.lastIndexOf(".");
+                    var resultado = pathfichero.substring(posicionultimopunto + 1);
+                    if (posicionultimopunto < 0) 
+                    {
+                        document.getElementById("divresultado").innerText ="El fichero seleccionado no tiene extensión";
+                    }
+                    else
+                    {    document.getElementById("divresultado").innerText ="La extensión del archivo es " + resultado;
+                    }
+                    /* visualizacion */
+                    document.getElementById("codigojavascript").innerHTML=  "<pre>" + obtnerextension + "</pre>";
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <input type="file" id="myFile" required><br>
+            <input type="button" id="btn" name="btn" value="Try it"  class = "boton" onclick="obtnerextension()"><br>
+            <div class = "resultn" id="divresultado46">Result</div>
+            <br>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+           47 ```	Escriba un programa JavaScript para comprobar si todos los dígitos de un número dado son iguales o no.		R:140
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion47 = function ()
+                {
+                    var resultado ="SI";
+                    document.getElementById("divresultado47").innerText="";
+                    document.getElementById("codigojavascript47").innerHTML="";
+        
+                    var numero = document.getElementById("entrada47").value;
+                    var patron = /^\d+$/; //Expresión regular para aceptar solo números enteros
+        
+                    if (patron.test(numero)) {
+                                   var caracter = numero.charAt(0);
+                        for (var i = 1; i< numero.length; i++) {
+                            var nuevocaracter = numero.charAt(i);
+                            if (caracter != nuevocaracter)
+                            {
+                                resultado="NO";
+                                        break;
+                            }
+                        }
+                    }else {
+                        alert("el valor del número debe ser entero positivo");
+                        numero.focus();
+                        return (false);
+                    }
+                    document.getElementById("divresultado47").innerText ="Los digitos "+ resultado + " son todos iguales";
+        
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <input type="number" min="0" max="99999999999" id="entrada47">
+            <input type="button" id="btn" name="btn" value="Try it" class = "boton" onclick="myfuncion47()"><br>
+            <div class = "resultn" id="divresultado47">Result</div>
+            <br>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            048	```	Escriba un programa de JavaScript para encontrar la cantidad de elementos que se presentan en ambos arreglos dados.		R:141
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion48 = function ()    {
+                    let arraynumeros1 = new Array();
+                    let arraynumeros2 = new Array();
+                    let n1 = Math.round( (Math.random () * 100));
+                    let n2 = Math.round( (Math.random () * 100));
+                    for (let i=0;i< n1; i ++){
+                        arraynumeros1.push (Math.round( (Math.random () * 100)));
+                    }
+
+                    for (let i=0;i< n2; i ++){
+                    arraynumeros2.push (Math.round( (Math.random () * 100)));
+                    }
+                    document.getElementById("divresultado48").innerText="";
+                    document.getElementById("divresultado48").innerHTML="Array 1: <br>" + arraynumeros1;
+                    document.getElementById("divresultado48").innerHTML+="<br>";
+                    document.getElementById("divresultado48").innerHTML+="Elementos de Array 1: " + arraynumeros1.length;
+                    document.getElementById("divresultado48").innerHTML+="<br>";
+                    document.getElementById("divresultado48").innerHTML+="Array 2: <br>" + arraynumeros2;
+                    document.getElementById("divresultado48").innerHTML+="<br>";
+                    document.getElementById("divresultado48").innerHTML+="Elementos de Array 2: " + arraynumeros2.length;
+                }
+            </pre>
+        </div>
+        <div class="resultado">
+            <input type="button" id="btn" name="btn" value="Try it"  class = "boton" onclick="myfuncion48()"><br>
+            <div class = "resultn" id="divresultado48">Result</div>
+            <br>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            049	```	Escriba un programa JavaScript para simplificar una ruta absoluta dada para un archivo en estilo Unix.		R:142
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion49 = function ()
+                {
+                const ruta = "/var/log/mysql/error.log";
+                let str =ruta;
+                document.getElementById("divresultado49").innerHTML= str + "<br>";
+                let posicionultimopunto =  str.lastIndexOf("/") ;
+                do {
+                    posicionultimopunto =  str.lastIndexOf("/") ;
+                    document.getElementById("divresultado49").innerHTML+=str.substring(posicionultimopunto + 1) + "<br>";
+                    str = str.substring(0,posicionultimopunto );
+                    } while (str!="" && posicionultimopunto >0);
+                        /* visualizacion */
+                        document.getElementById("codigojavascript49").innerHTML=  "<pre>" + myfuncion + "</pre>";
+                }
+            </pre>
+        </div>
+        <div class="resultado">
+            <input type="button" id="btn" name="btn" value="Try it" class = "boton" onclick="myfuncion49()"><br>
+                 <div class = "resultn" id="divresultado49">Result</div>
+            <br>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            050	```	Escriba un programa JavaScript para ordenar las cadenas de una matriz dada de cadenas en el orden de longitudes crecientes. Nota: No cambie el orden si las longitudes de dos cadenas  son iguales.		R:143
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion50 = function ()
+                {
+                    var arraycadenas = ["la mas larga","casa", "arbol", "caserio", "pepe", "roma", "a", "romo", "cero"];
+                    document.getElementById("divresultado50").innerHTML = arraycadenas + "<br>";
+                    arraycadenas.sort(function(a, b){return a.length-b.length});
+                    document.getElementById("divresultado50").innerHTML += arraycadenas;
+                    /* visualizacion */
+                    document.getElementById("codigojavascript50").innerHTML=  "<pre>" + myfuncion + "</pre>";
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <input type="button" id="btn" name="btn" value="Try it" class = "boton" onclick="myfuncion50()"><br>
+            <div class = "resultn" id="divresultado50">Result</div>
+            <br>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            051	```	Escriba un programa JavaScript para romper la dirección de una URL y poner su parte en una matriz. Nota: estructura de la URL: //.org [/] y es posible que no haya parte en la dirección.		R:144
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion51 = function (valor) {
+
+                    let url = document.getElementById("txturl51").value;
+                    let matriz = new Array();
+                    let url1 = url.substr(url.indexOf("://") + 3, url.length);
+                    matriz = url1.split("/");
+                    if (url.indexOf("://") != -1)
+                        matriz.splice(0, 0, url.substr(0, url.indexOf("://") + 3));
+                    /* visualizacion */
+                    for (let i = 0; i < matriz.length; i++) {
+                        let  li = document.createElement("li");
+                        li.innerText = matriz[i];
+                        document.getElementById("lista51").appendChild(li);
+                    }
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <input type="text" id="txturl51" style="width:80%" value="https://www.w3schools.com/js/js_array_methods.asp"> <br>
+            <input type="button" id="btn" name="btn" class = "boton" value="Try it" onclick="myfuncion51(0)"><br>
+            <div class = "resultn" id="divresultado51">
+                <ul id="lista51"></ul>
+            </div>
+            <br>
+
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            052	```	Escriba un programa JavaScript para encontrar el número entero máximo n tal que 1 + 2 + ... + n <= un número entero dado.		R:145
+        </p>
+        <div class="codigo">
+            <pre>
+                var elemento = Math.round(Math.random() * 1000);
+                var suma=0;
+                let elementos = new Array();
+                const myfuncion 52= function     ( valor)
+                {
+                    elementos.push(valor);
+                    suma = suma + (valor +1) ;
+                    if ( suma  &lt;= elemento)
+                    {
+                        valor++;
+                        myfuncion (valor);
+                    }
+                    else
+                    {
+                        document.getElementById("divresultado").innerHTML= "Número base: " +elemento  ;
+                        document.getElementById("divresultado").innerHTML+= elementos ; 
+                        document.getElementById("divresultado").innerHTML+="Número Máximo: " + valor ;
+                    }
+                }
+            </pre>
+
+        </div>
+
+        <div class="resultado">
+            <input type="button" id="btn" name="btn" class = "boton" value="Try it" onclick="myfuncion52(0)"><br>
+            <div class = "resultn" id="divresultado52">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            053	```	Escriba un programa JavaScript para calcular la suma de cubos de todos los enteros desde 1 hasta un entero dado.		R:146
+        </p>
+        <div class="codigo">
+            <pre>
+                const myfuncion53 = function  ( valor)        {7
+                    var elemento53 =  Math.round(Math.random() * 20) ;
+                    let suma53=0;
+                    let elementos53 = new Array();
+
+                    if (suma==0) {
+                        elementos53 = [];
+                        elemento53 =  Math.round(Math.random() * 20)
+                    }
+                    let cubo = valor*valor*valor;
+                    elementos53.push(cubo);
+                    suma53 = suma53 + cubo ;
+                    if ( valor  < elemento53)
+                    {
+                        valor++;
+                        myfuncion53 (valor);
+                    }
+                    else
+                        {
+                        document.getElementById("divresultado53").innerHTML= "Número base: " +elemento53  + "<br>";
+                        document.getElementById("divresultado53").innerHTML+= "cubos: " + elementos53 + "<br>";
+
+                        document.getElementById("divresultado53").innerHTML+="Número Máximo: " + suma53 + "<br>";
+                        }
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <input type="button" id="btn" name="btn" class = "boton" value="Try it" onclick="myfuncion53(0)"><br>
+            <div class = "resultn" id="divresultado53">Result</div>
+            <br>
+        </div>
+    </div><hr>
+<!--  ESTO DE JUAN RAMON  FIN-->
+
+
+<!-- ESTO ES DE JAVIER INICIO-->
+<div>
+    <p class="enunciado">
+        060	```	Escriba un programa JavaScript para calcular la diferencia absoluta entre un número especificado y 19. Devuelve el triple de su diferencia absoluta si el número especificado es mayor que 19.		R:17
+    </p>
+    <pre>
+    function <strong>CalcularNumero() </strong>
+    {
+        var result;
+        var mensaje = "Introduzca un número"
+        document.getElementById("ValEj60").innerHTML = "Solución: ";
+        while (valUsuario==undefined || valUsuario=="")
+        {
+            var valUsuario = prompt(mensaje);
+
+            //Si el usuario pulsa cancelar salimos
+            if(valUsuario == null | valUsuario ==  "") {
+                document.getElementById("ValEj60").innerHTML = "Solución: El usuario no seleccionó ningún valor." ;
+                break;
+            }
+
+            valUsuario = Number(valUsuario);
+            //Comprobamos que el usuario a introducido un numero
+            if(isNaN(valUsuario)){
+                valUsuario = "";
+                mensaje = "El valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+            }
+            else{
+                if(valUsuario - 19 > 0){result = Math.abs(valUsuario - 19) * 3;}
+                else{result = Math.abs(valUsuario - 19);}
+                document.getElementById("ValEj60").innerHTML = "Solución: " + result;
+                break;
+            }
+        }
+    }
+</pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="CalcularNumero()" />
+    <div class = "resultn" id="ValEj60">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+<div>
+    <p class="enunciado">
+        061	```	Escriba un programa JavaScript para verificar dos números dados y devolver verdadero si uno de los números es 50 o si su suma es 50.		R:18
+    </p>
+    <pre>
+        function <strong>Devolver50</strong>() 
+        {
+            var result;
+            var mensaje1 = "Introduzca el primer número";
+            var mensaje2 = "Introduzca el segundo número";
+            document.getElementById("ValEj61").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="" || valUsuario2 == null || valUsuario2 ==  "")
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null | valUsuario1 ==  "") {
+                    document.getElementById("ValEj61").innerHTML = "Solución: El usuario no seleccionó ningún valor." ;
+                    break;
+                }
+
+                valUsuario1 = Number(valUsuario1);
+
+                var valUsuario2 = prompt(mensaje2);
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario2 == null | valUsuario2 ==  "") {
+                    document.getElementById("ValEj61").innerHTML = "Solución: El usuario no seleccionó el segundo valor." ;
+                    break;
+                }
+
+                valUsuario2 = Number(valUsuario2);
+
+
+                //Comprobamos que el usuario a introducido un numero en las dos ocasiones
+                if(isNaN(valUsuario1)){
+                    valUsuario1 = "";
+                    mensaje = "El primer valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                }
+                else{
+                    if(isNaN(valUsuario2)){
+                        valUsuario2= "";
+                        mensaje = "El segundo valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                    }
+
+                    else{
+                        if(valUsuario1 + valUsuario2 == 50 | valUsuario1 == 50 | valUsuario2 == 50){result = "Verdadero";}
+                        else{result = "Falso";}
+                        document.getElementById("ValEj61").innerHTML = "Solución: " + result;
+                        break;
+                    }
+                }
+            }
+        }
+ </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="Devolver50()" />
+    <div class = "resultn" id="ValEj61">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+<div>
+    <p class="enunciado">
+        062	```	Escriba un programa JavaScript para verificar si un número entero está dentro de 20 de 100 o 400.		R:19
+    </p>
+    <pre>
+        function <strong>EstaEntre</strong>()
+        {
+            var result;
+            var mensaje1 = "Introduzca un número";
+            document.getElementById("ValEj62").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="")
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null | valUsuario1 ==  "") {
+                    document.getElementById("ValEj62").innerHTML = "Solución: El usuario no seleccionó ningún valor." ;
+                    break;
+                }
+
+                valUsuario1 = Number(valUsuario1);
+
+                //Comprobamos que el usuario a introducido un numero 
+                if(isNaN(valUsuario1)){
+                    valUsuario1 = "";
+                    mensaje = "El valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                }
+                else{
+                    if(valUsuario1 &lt;= 20){
+                        result = "Valor comprendido entre 0 y 20"
+                    }
+                    else if(valUsuario1>20 && valUsuario1&lt;=100){
+                        result = "Valor comprendido entre 21 y 100"
+                    }
+                    else if(valUsuario1>100 && valUsuario1&lt;=400){
+                        result = "Valor comprendido entre 101 y 400";
+                    }
+                    else{result = "Valor mayor de 400";}
+                }
+                document.getElementById("ValEj62").innerHTML = "Solución: " + result;
+                break;
+            }
+        }
+    </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="EstaEntre()" />
+    <div class = "resultn" id="ValEj62">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+<div id="Ejercicio63">
+    <p class="enunciado">
+        063	```	scriba un programa JavaScript para imprimir el contenido de la ventana actual.		R:2. E
+    </p>
+    <pre>
+        function <strong>Imprimir</strong>()
+        {
+            window.print();
+        }
+    </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="Imprimir('Ejercicio63')" />
+    <div class = "resultn" id="ValEj63">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+<div >
+    <p class="enunciado">
+        064	```	Escriba un programa JavaScript para verificar a partir de dos números enteros dados, si uno es positivo y otro negativo.		R:20
+    </p>
+    <pre>
+        function <strong>Evaluar</strong>()
+        {
+            var result;
+            var mensaje1 = "Introduzca el primer número";
+            var mensaje2 = "Introduzca el segundo número";
+            document.getElementById("ValEj64").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="" || valUsuario2 == null || valUsuario2 ==  "")
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null | valUsuario1 ==  "") {
+                    document.getElementById("ValEj64").innerHTML = "Solución: El usuario no seleccionó ningún valor." ;
+                    break;
+                }
+
+                valUsuario1 = Number(valUsuario1);
+
+                var valUsuario2 = prompt(mensaje2);
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario2 == null | valUsuario2 ==  "") {
+                    document.getElementById("ValEj64").innerHTML = "Solución: El usuario no seleccionó el segundo valor." ;
+                    break;
+                }
+
+                valUsuario2 = Number(valUsuario2);
+
+
+                //Comprobamos que el usuario a introducido un numero en las dos ocasiones
+                if(isNaN(valUsuario1)){
+                    valUsuario1 = "";
+                    mensaje = "El primer valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                }
+                else{
+                    if(isNaN(valUsuario2)){
+                        valUsuario2= "";
+                        mensaje = "El segundo valor introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                    }
+
+                    else{
+                        if(valUsuario1 >= 0 ){result = "El primer número introducido (" + valUsuario1 + ") es positivo ";}
+                        else{result = "El primer número introducido (" + valUsuario1 + ") es negativo ";}
+
+                        if(valUsuario2 >= 0 ){result += "y el segundo (" + valUsuario2 + ") es positivo";}
+                        else{result += "y el segundo (" + valUsuario2 + ") es negativo";}
+
+                        document.getElementById("ValEj64").innerHTML = "Solución: " + result;
+                        break;
+                    }
+                }
+            }
+        } 
+    </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="Evaluar()" />
+    <div class = "resultn" id="ValEj64">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+
+<div >
+    <p class="enunciado">
+        065	```	Escriba un programa JavaScript para crear una nueva cadena agregando "Py" delante de una cadena dada. Si la cadena dada comienza con "Py", devuelve la cadena original.		R:21
+    </p>
+    <pre>
+        function <strong>AddPy</strong>()
+        {
+            var result;
+            var mensaje1 = "Introduzca el primer número";
+            document.getElementById("ValEj65").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="")
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null | valUsuario1 ==  "") {
+                    document.getElementById("ValEj64").innerHTML = "Solución: El usuario no seleccionó ningún valor." ;
+                    break;}
+                
+                var patt1 = /\bPy/;
+                var posicion =  valUsuario1.search(patt1);
+                if (posicion == 0){
+                    result=valUsuario1;
+                    }
+                else{
+                    result="Py"+valUsuario1;
+                    }
+                document.getElementById("ValEj65").innerHTML = "Solución: " + result;
+                break;
+            }                  
+        } 
+    </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="AddPy()" />
+    <div class = "resultn" id="ValEj65">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+
+<div >
+    <p class="enunciado">
+        066	```	Escriba un programa JavaScript para eliminar un carácter en la posición especificada de una cadena dada y devolver la nueva cadena.		R:22
+    </p>
+    <pre>
+        function <strong>DelChar</strong>()
+        {
+            var result;
+            var cadena;
+            var mensaje1 = "Introduzca una cadena";
+            var mensaje2 = "Introduzca la posición del caracter que quiere eliminar";
+            document.getElementById("ValEj66").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="" || valUsuario2 == null || valUsuario2 ==  "")
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null || valUsuario1 ==  "") {
+                    document.getElementById("ValEj66").innerHTML = "Solución: El usuario no seleccionó ninguna cadena." ;
+                    break;
+                }
+                var valUsuario2 = prompt(mensaje2);
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario2 == null || valUsuario2 ==  "") {
+                document.getElementById("ValEj66").innerHTML = "Solución: El usuario no seleccionó ninguna posición." ;
+                break;
+                }
+
+                valUsuario2 = Number(valUsuario2);
+                if(isNaN(valUsuario2)){
+                        valUsuario2= "";
+                        mensaje = "El valor de la posición introducido no es valido vuelva a intentarlo. Cancelar para Salir";
+                    }
+
+                else{
+
+                    result = valUsuario1.slice(0,valUsuario2);
+                    result += valUsuario1.slice(valUsuario2 + 1,valUsuario1.length);
+
+                    document.getElementById("ValEj66").innerHTML = "Solución: " + result;
+                    break;
+                }
+            }
+        } 
+    </pre>
+
+    <input type="button" value="Try it" class = "boton"  name="Exe" onclick="DelChar()"/>
+    <div class = "resultn" id="ValEj66">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+
+
+<div >
+    <p class="enunciado">
+        	```	Escriba un programa JavaScript para crear una nueva cadena a partir de una cadena dada cambiando la posición del primer y último carácter. La longitud de la cadena debe ser mayor o igual a 1.		R:23
+    </p>
+    <pre>
+        function <strong>DelChar</strong>()
+        {
+            var result;
+            var mensaje1 = "Introduzca un texto";
+            document.getElementById("ValEj67").innerHTML = "Solución: ";
+            while (valUsuario1 == undefined || valUsuario1=="" )
+            {
+                if (valUsuario1 == undefined || valUsuario1 == ""){var valUsuario1 = prompt(mensaje1);}
+
+                //Si el usuario pulsa cancelar salimos
+                if(valUsuario1 == null || valUsuario1 ==  "") {
+                    document.getElementById("ValEj67").innerHTML = "Solución: El usuario no seleccionó ningún texto." ;
+                    break;
+                }
+                
+                result =valUsuario1.substr(valUsuario1.length-1,1) + valUsuario1.substr(1,valUsuario1.length-2) + valUsuario1.substr(0,1);
+
+                document.getElementById("ValEj67").innerHTML = "Solución: " + result;
+                break;
+            }
+        } 
+    </pre>
+
+    <input type="button" value="Try it" class = "boton" name="Exe" onclick="ReplaceString()"/>
+    <div class = "resultn" id="ValEj67">Result</div>
+    <br>
+    <br>
+    <hr>
+</div>
+<!--ESTO ES DE JAVIER FIN-->
+
+<!--  ESTO ES MIO INICIO-->
+
+    <div class="tarea">
+        <p class="enunciado">
+            068	```	Escriba un programa JavaScript para crear una nueva cadena a partir de una cadena dada con el primer carácter de la cadena dada agregado al principio y al final.		R:24
+        </p>
+        <div class="codigo">
+            <pre>
+                function Pract68(cadenaOrigen){
+                    document.getElementById("txt682").innerHTML = cadenaOrigen[0] + cadenaOrigen + cadenaOrigen[0];
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt681" size="20" name = "Cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract68(txt681.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="txt682">Result</div>
+        </div>
+    </div><hr>
+
+
+    <div class="tarea">
+        <p class="enunciado">
+            069	```	Escriba un programa JavaScript para comprobar si un número positivo dado es múltiplo de 3 o múltiplo de 7.		R:25
+        </p>
+        <div class="codigo">
+            <pre>
+                function Pract69(numeroOrigen){
+                    if (numeroOrigen % 3 === 0 || numeroOrigen % 7 === 0) {
+                        document.getElementById("result69").innerHTML = "Es divisible entre 3 o 7";
+                    }else{
+                        document.getElementById("result69").innerHTML = "No es divisble entre 3 ni entre 7";
+                    }
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte número:</label>
+            <input type="number" id="num691" name = "numero" required autofocus style="width: 60px;" min="1" pattern="^[0-9]+" value=0>
+            <button onclick="Pract69(num691.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result69">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            070	```	Escriba un programa JavaScript para crear una nueva cadena a partir de una cadena dada, tomando los últimos 3 caracteres y
+            agregándolos al frente y al dorso. La longitud de la cuerda debe ser 3 o más.		R:26
+        </p>
+
+        <div class="codigo">
+            <pre>
+                
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt701" size="20" min ="3" name = "cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract70(txt701.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result70">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            071	```	Escriba un programa JavaScript para verificar si una cadena comienza con 'Java' y falso en caso contrario.		R:27
+        </p>
+
+        <div class="codigo">
+            <pre>
+                function Pract71(cadenaOrigen){
+                    if (cadenaOrigen.substring(0,4) === 'Java') {
+                        document.getElementById("result71").innerHTML = "Si empieza por Java";
+                    }else{
+                        document.getElementById("result71").innerHTML = "No empieza por Java";
+                    }
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt711" size="20" min ="3" name = "cadena" placeholder = "Introduzca cadena" required>
+            <button onclick="Pract71(txt711.value)" class = 'boton'>Try It</button>
+            <div class = "resultn"  id="result71">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            072	```	Escriba un programa JavaScript para verificar si dos valores enteros dados están en el
+            rango 50..99 (inclusive). Devuelve verdadero si alguno de ellos está en dicho rango.		R:28
+        </p>
+
+        <div class="codigo">
+            <pre>
+                function Pract72(numeroOrigen1, numeroOrigen2){
+                    if ((numeroOrigen1 >= 50 && numeroOrigen1 <= 99) || ((numeroOrigen2 >= 50 && numeroOrigen2 <= 99))){
+                        document.getElementById("result72").innerHTML = "Al menos uno de los número está en el rango (50-99)";
+                    }else{
+                        document.getElementById("result72").innerHTML = "Ninguno de los números está en el rango (50-99)";
+                    }
+                }
+
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte 3 números:</label>
+                <input type="number" id="num721"  placeholder = "número" name = "numero1" required style="width: 60px;" value=0>
+                ,
+                <input type="number" id="num722" placeholder = "número" name = "numero2" required style="width: 60px;" value=0>
+                <button onclick="Pract72(num721.value, num722.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result72">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            073	```	Escriba un programa JavaScript para verificar si tres valores enteros dados están en el rango 50..99 (inclusive). Devuelve verdadero si uno o más de ellos están en dicho rango.		R:29
+        </p>
+
+        <div class="codigo">
+            <pre>
+                if ((numeroOrigen1 >= 50 && numeroOrigen1 <= 99) || (numeroOrigen2 >= 50 && numeroOrigen2 <= 99) || (numeroOrigen3 >= 50 && numeroOrigen3 <= 99)){
+                    document.getElementById("result73").innerHTML = "Al menos uno de los número está en el rango (50-99)";
+                }else{
+                    document.getElementById("result73").innerHTML = "Ninguno de los números está en el rango (50-99)";
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte 2 números:</label>
+                <input type="number" id="num731" size="3" placeholder = "número" name = "numero1" required style="width: 60px;" value=0>
+                ,
+                <input type="number" id="num732" size="3" placeholder = "número" name = "numero2" required style="width: 60px;" value=0>
+                ,
+                <input type="number" id="num733" size="3" placeholder = "nnúmero" name = "numero3" required style="width: 60px;" value=0>
+                <button onclick="Pract73(num731.value, num732.value, num733.value)" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result73">Result</div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            074	```	Escriba un programa JavaScript para obtener la fecha actual. Resultado  esperado :
+            mm-dd-aaaa, mm / dd / aaaa o dd-mm-aaaa, dd / mm / aaaa		R:3
+        </p>
+
+        <div class="codigo">
+            <pre>
+                function Pract74(){
+                    let fecha =new Date();
+                    let dia =fecha.getDate();
+                    let mes = fecha.getMonth();
+                    let year =fecha.getFullYear();
+                
+                    /*mm-dd-aaaa*/
+                    document.getElementById("result741").innerHTML = mes + '-' + dia + '-' + year;
+                    /*mm/dd/aaaa o dd-mm-aaaa*/
+                    document.getElementById("result742").innerHTML = mes + '/' + dia + '/' + year + '        ' + dia + '-' + mes + '-' + year;
+                    /*dd/mm/aaaa*/
+                    document.getElementById("result743").innerHTML = dia + '/' + mes + '/' + year;
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <button onclick="Pract74()" class = 'boton'>Try It</button>
+            <div class = "resultn" id="result741">Result</div>
+            <div class = "resultn" id="result742"></div>
+            <div class = "resultn" id="result743"></div>
+        </div>
+    </div><hr>
+
+    <div class="tarea">
+        <p class="enunciado">
+            075	```	Escriba un programa JavaScript para verificar si una cadena "Script" se presenta en la quinta posición (índice 4) en una cadena dada, si "Script" se presenta en la cadena, devuelva la cadena sin "Script"; de lo contrario, devuelva la original.		R:30
+        </p>
+
+        <div class="codigo">
+            <pre>
+                function Pract75(cadenaOriginal){
+                    const Cadena = "Script";
+                    if (cadenaOriginal.includes(Cadena,4)){
+                        document.getElementById("result75").innerHTML = cadenaOriginal.substring(0,4) + cadenaOriginal.substring(4 + Cadena.length,cadenaOriginal.length);
+                    }else{
+                        document.getElementById("result75").innerHTML = cadenaOriginal;
+                    }
+                }
+            </pre>
+        </div>
+
+        <div class="resultado">
+            <label for="name">Inserte cadena:</label>
+            <input type="text" id="txt751" placeholder="Introduzca cadena" min ="3" >
+            <button onclick="Pract75(txt751.value)" class = 'boton'>Try It</button>
+            <div class = "resultn"  id="result75">Result</div>
+        </div>
+    </div><hr>
+<!--  ESTO ES MIO FIN-->
+
+    <script type="text/javascript" src="funciones.js"></script>
+
+</body>
+</html>
+
+
+
+
+

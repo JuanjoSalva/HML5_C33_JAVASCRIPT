@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 16</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 16. objetivo de la pregunta:
+        Estamos creando un objeto en javascript que representa al customer
+
+        Necesitamos extender el objeto customer para añadir GetCommission() method.
+        Necesitamos que todas las instancias de customer implementen este nuevo método
+        Qué sentencia escogemos?
+
+
+        ""Teniendo en cuenta que se el Objeto se ha creado con una clase.""
+
+
+        /*A. NO ES:Customer1.GetCommission is not a function*/
+        Customer.apply.GetCommission = function(){
+            alert('payroll')
+        }
+
+         /*B. NO ES Unexpected token '.'*/
+         Customer.prototype.GetCommission = function Customer.GetCommission(){
+            alert('payroll')
+        }
+
+
+        /*C. No ES. Customer1.GetCommission is not a function*/
+        ustomer.GetCommission = function(){
+            alert('payroll');
+        }
+
+
+        /*D. */
+        Customer.prototype.GetCommission = function(){
+            alert('payroll');
+        }
+
+
+
+        Respuesta:
+        D
+
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/JSREF/jsref_prototype_array.asp
+        https://www.w3schools.com/js/js_function_apply.asp
+
+
+
+
+        Customer.prototype.GetCommission = function(){
+    </xmp>
+    <p>
+        <p>
+            Si se ha mostrado el alert es que funciona el método nuevo porque es el que muestra la alerta
+        </p>
+    </p>
+    <script>
+         class Customer {
+             constructor(){
+                this.nombre = ['Bob', 'Smith'];
+                this.edad = 32;
+                this.genero = 'masculino';
+                this.intereses = ['música', 'esquí'];
+             }
+            bio(){
+                alert(this.nombre[0] + '' + this.nombre[1] + ' tiene ' + this.edad + ' años. Le gusta ' + this.intereses[0] + ' y ' + this.intereses[1] + '.');
+            };
+
+            saludo() {
+                alert('Hola, Soy '+ this.nombre[0] + '. ');
+            };
+         }
+
+
+            /*A. NO ES:Customer1.GetCommission is not a function*/
+            /*Customer.apply.GetCommission = function(){
+                alert('payroll')
+            }*/
+
+             /*B. NO ES Unexpected token '.'*/
+             /*Customer.prototype.GetCommission = function Customer.GetCommission(){
+                alert('payroll')
+            }*/
+
+
+            /*C. No ES. Customer1.GetCommission is not a function*/
+            /*ustomer.GetCommission = function(){
+                alert('payroll');
+            }*/
+
+
+            /*D. */
+            Customer.prototype.GetCommission = function(){
+                alert('payroll');
+            }
+
+
+            Customer1= new Customer();
+            Customer1.GetCommission();
+
+
+
+    </script>
+</body>
+</html>

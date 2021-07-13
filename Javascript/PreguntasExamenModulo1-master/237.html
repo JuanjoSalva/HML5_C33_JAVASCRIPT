@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 237</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 237. objetivo de la pregunta:
+
+        En una pagina con un elemento canvas
+        var canvas = document.getElementById('myCanvas');
+
+        El texto del canvas debe rotar 90º cuando el usuario haga click en un boton de la página
+
+        /*A. ESTÁ MAL ESCRITO*/
+        canvas.style.transform = “rotation(90deg)”;
+
+        /*B. NO FUNCIONA*/
+        canvas.transform(90);
+
+        /*C. NO FUNCIONA*/
+        canvas.content.rotate(90);
+
+        /*D. SI ES */
+        mycanvas2.style.transform = "rotate(90deg)";
+
+        
+        Respuesta:
+        D
+
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/jsref/prop_style_transform.asp
+
+
+        mycanvas2.style.transform = "rotate(90deg)";
+
+    </xmp>
+    <p>
+        <button onclick="prueba()">
+            Cambiar direccion de texto
+        </button>
+    </p>
+
+
+    <canvas id="myCanvas" width="200px" height="100px"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+
+        function prueba(){
+            var mycanvas2 = document.getElementById('myCanvas');
+
+            /*A. ESTÁ MAL ESCRITO*/
+            //canvas.style.transform = “rotation(90deg)”;
+
+            /*B. NO FUNCIONA*/
+            /*canvas.transform(90);*/
+
+            /*C. NO FUNCIONA*/
+            /*canvas.content.rotate(90);*/
+
+            /*D. SI ES */
+            mycanvas2.style.transform = "rotate(90deg)";
+        }
+    </script>
+</body>
+</html>

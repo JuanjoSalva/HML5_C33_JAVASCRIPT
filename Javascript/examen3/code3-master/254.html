@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 254</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 254. objetivo de la pregunta:
+
+        Web que debe abrir una conexion websocket a sample-host:
+        retornar el estado de la conexión
+
+        Fuentes consultads:
+        https://www.html5rocks.com/es/tutorials/websockets/basics/
+
+        Respuesta:
+        es drag and drop
+
+
+        function prueba(){
+            /*ESTA ES LA FORMACION CORRECTA*/
+            var host = "wss://echo.websocket.org";
+            socket = new WebSocket(host);
+            socket.onopen = function (openEvent){
+            /*FIN*/
+            }
+        }
+    </xmp>
+
+    <button onclick="prueba()">Pobrar Conexión</button>
+    estado: <div id= "serverStatus"></div>
+    <script>
+        function prueba(){
+             /*ESTA ES LA FORMACION CORRECTA*/
+            var host = "wss://echo.websocket.org";
+            socket = new WebSocket(host);
+            socket.onopen = function (openEvent){
+            /*FIN*/
+            document.getElementById("serverStatus").innerHTML = 'WebSocket Status: Socket Open';
+            }
+        }
+    </script>
+</body>
+</html>

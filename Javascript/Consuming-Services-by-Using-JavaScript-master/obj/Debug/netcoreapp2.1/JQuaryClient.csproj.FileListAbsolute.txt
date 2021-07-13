@@ -1,0 +1,17 @@
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\appsettings.json
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\JQuaryClient.deps.json
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\JQuaryClient.runtimeconfig.json
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\JQuaryClient.runtimeconfig.dev.json
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\JQuaryClient.dll
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\bin\Debug\netcoreapp2.1\JQuaryClient.pdb
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.csprojAssemblyReference.cache
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.AssemblyInfoInputs.cache
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.AssemblyInfo.cs
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.csproj.CoreCompileInputs.cache
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.RazorAssemblyInfo.cache
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.RazorAssemblyInfo.cs
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.RazorTargetAssemblyInfo.cache
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.dll
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.pdb
+E:\JUANJO\CURSO2020\MODULO4_AZURE\20487D\AllFiles\Mod03\DemoFiles\JavaScriptClient\Starter\obj\Debug\netcoreapp2.1\JQuaryClient.genruntimeconfig.cache

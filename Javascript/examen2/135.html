@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 135</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 135. objetivo de la pregunta:
+
+        En una pagina con un elemento canvas
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext("2d");
+
+        El texto del canvas debe rotar 90º cuando el usuario haga click en un boton de la página
+
+        A. context.transform(90);
+        B. context.content.getRotation(90);
+        C. context.rotate(90);
+        D. context.content.rotate (90);
+
+
+        Respuesta:
+        C
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/tags/canvas_rotate.asp
+
+    </xmp>
+
+<p style = "color:red">
+    Está mal. He creado un nuevo metodo, el Boton E, que gira 90º.
+</p>
+
+    <p>
+        <button onclick="A()">
+            Código A
+        </button>
+        <button onclick="B()">
+            Código B
+        </button>
+        <button onclick="C()">
+            Código C
+        </button>
+        <button onclick="D()">
+            Código D
+        </button>
+        <button onclick="E()">
+            Código E
+        </button>
+    </p>
+
+    <!--canvas id="myCanvas" width="600px" height="500px"></canvas-->
+    <canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+    <br>
+    <script>
+
+var degree = true;
+        function A(){
+            var c = document.getElementById("myCanvas");
+            var context = c.getContext("2d");
+            context.font = "30px Arial";
+            context.size = "40px";
+            context.fillText("Hello World", 10, 50);
+            context.transform(90);
+
+        }
+
+        function B(){
+            var c = document.getElementById("myCanvas");
+            var context = c.getContext("2d");
+            context.font = "30px Arial";
+            context.size = "40px";
+            context.fillText("Hello World", 10, 50);
+            context.content.getRotation(90);
+
+        }
+
+        function C(){
+            var c = document.getElementById("myCanvas");
+                    var context = c.getContext("2d");
+                    context.font = "30px Arial";
+                    context.size = "40px";
+                    context.fillText("Hello World", 10, 50);
+                    context.rotate(90);
+        }
+
+        function D(){
+            var c = document.getElementById("myCanvas");
+                    var context = c.getContext("2d");
+                    context.font = "30px Arial";
+                    context.size = "40px";
+                    context.fillText("Hello World", 10, 50);
+                    context.content.rotate = "rotate(90deg)";
+        }
+
+        function E(){
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            canvas.width='300';
+            canvas.height='150';
+            canvas.style.border="solid";
+
+            context.fillStyle = "yellow";
+            context.fillRect(0, 0, 250, 100)
+            degree = degree ? false : true;
+            canvas.style.transform =  degree ? "rotate(0deg)":"rotate(90deg)";
+
+        }
+
+    </script>
+</body>
+</html>

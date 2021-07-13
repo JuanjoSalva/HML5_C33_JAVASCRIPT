@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 305</title>
+
+</head>
+<body>
+    <xmp>
+
+        Pregunta 288. objetivo de la pregunta:
+        Dadas 2 funciones, asegurar que la función arrayContainsOnlyBigEnough devuelve True si el valor de cada elemento del arrayObj es mayor que 10.
+        Cambiar los target por código de la prueba:
+
+        function isBigEnough(element, index, array){
+            return element > 10;
+        }
+
+        function arrayContainsOnlyBigEnough(arrayObj){
+            return Target 1.Target 2(Target 3);
+        }
+
+        target1: arrayObj
+        target2: each
+        target3: every
+        target4: isBigEnough
+        target5: map
+
+        Fuentes consultads:
+        PROPIA EXPERNCIA--> Manejo de array
+
+        https://www.w3schools.com/jsref/jsref_every.asp
+
+        Respuesta:
+         es de drag & drop
+
+        function isBigEnough(element, index, array){
+            return element > 10;
+        }
+        function arrayContainsOnlyBigEnough(arrayObj){
+            /*ESTA ES LA FORMACIÓN CORRECTA  PORQUE OTRA DARÍA ERROR*/
+            return arrayObj.every(isBigEnough);
+        }
+    </xmp>
+
+    <input type="number" id="numero" min = 0 value = 0 autofocus style="width: 80px;">
+    <button type="button"  onclick="AniadirNumero();">Añadir Número</button>
+    <button type="button"  onclick="reiniciar();">Reiniciar</button>
+    <br> <br>
+
+    <div id = "elArray">Añadir números al array. Si todos son mayores de 10 devolverá true, si no devolverá false</div>
+    <br> <br>
+    <button id = "prueba" onclick="prueba()" >Ver si son mayores de 10</button>
+    <div id = "result">Result</div>
+    <script>
+        var arrayObj = [];
+        document.getElementById("elArray").innerHTML= "El array es: "+arrayObj;
+
+        document.getElementById("result").innerHTML="";
+        function isBigEnough(element, index, array){
+            return element > 10;
+        }
+
+        function arrayContainsOnlyBigEnough(arrayObj){
+            /*ESTA ES LA FORMACIÓN CORRECTA  PORQUE OTRA DARÍA ERROR*/
+            return arrayObj.every(isBigEnough);
+
+        }
+
+        function prueba(){
+            document.getElementById("result").innerHTML=arrayContainsOnlyBigEnough(arrayObj);
+        }
+
+        function reiniciar(){
+            arrayObj = [];
+
+            document.getElementById("numero").value = "0";
+            document.getElementById("numero").focus();
+
+            document.getElementById("elArray").innerHTML= "El array es: ";
+        }
+
+        function AniadirNumero(){
+            let numero = document.getElementById("numero").value;
+            numeroAux = numero *1;
+            if (!Number.isInteger(numeroAux))
+            {
+                alert("El número introducido no es un valor entero");
+                return false;
+            }
+            arrayObj.push(numero);
+            document.getElementById("numero").value = "0";
+            document.getElementById("numero").focus();
+
+            document.getElementById("elArray").innerHTML= "El array es: "+arrayObj
+        }
+
+    </script>
+</body>
+</html>

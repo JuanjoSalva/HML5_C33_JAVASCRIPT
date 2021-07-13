@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        /*Se define la clase. En este caso sí se meten los atributos y los métodos*/
+        class Account {
+            /*constructor con atributos*/
+            constructor(id, name){
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTransaction =0;
+            }
+
+            /*métodos*/
+            deposit(amount){
+                this.balance += amount;
+                this.numTransaction ++;
+            }
+
+            widthdraw(amount){
+                this.balance -= amount;
+                this.numTransaction ++;
+            }
+        }
+
+        /*También admite el prototype para añadir funciones*/
+        Account.prototype.transactions= function(){
+                return this.numTransaction;
+            }
+        let acc1 = new Account(1, "Jonh");
+        let acc2 = new Account(2, "Mary");
+
+        acc1.deposit(1230);
+        acc1.widthdraw(230);
+        acc2.deposit(5000);
+        acc2.widthdraw(340);
+
+        alert(acc1.name + " , Transaciones: " + acc1.transactions() + " .Balance: " + this.balance);
+        alert(acc2.name + " , Transaciones: " + acc1.transactions() + " .Balance: " + this.balance);
+    </script>
+</body>
+</html>

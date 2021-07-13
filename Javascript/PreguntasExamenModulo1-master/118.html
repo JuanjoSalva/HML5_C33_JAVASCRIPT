@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 118</title>
+    <script src="Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 118. objetivo de la pregunta:
+
+    Tenemos una  web que consume un servicio web. proporciona tipos de cambio de moneda. Los visitantes ingresan el tipo de moneda en la página web y presionan el botón Enviar.
+    El servicio web devuelve el tipo de cambio actual. Debe asegurarse de que la página web siempre muestre la información más actualizada.
+    ¿Cómo debe completar el código relevante?
+
+        Fuentes consultads:
+
+        https://api.jquery.com/jquery.ajax/
+        https://demos.jquerymobile.com/1.0a2/experiments/api-viewer/docs/jQuery.ajax/index.html
+
+        Respuesta:
+        Drag&Drop
+
+
+            function getExchangeRate(){
+
+                $.ajax(
+                        {
+                            cache:false, type:'GET', url:"CurrencyConverter.asmx/GetExchangeRate",
+                            data:{
+                                    'currencyType': getCurrencyType()
+                                },
+                            dataType:'json', success:
+                            function(result){
+                                    currencyRate=result;
+                            }
+                        }
+                );
+            }
+
+            function getCurrencyType(){
+                return "EUR";
+            }
+    </xmp>
+
+    <p style = "color: green">
+        Para probarlo hay que ejecutar el siguiente proyecto:
+        <a href="https://github.com/JuanjoSalva/AsmxQ118.git">Proyecto en GitHub</a>
+    </p>
+
+    <p>
+        Allí hemos creado un servidor asmx con una función: GetExchangeRate que devuleve el valor de la moneda que le pasamos
+    </p>
+    <p>
+        En nuestra página hay un texto, (id= "currencyType"), donde introducimos el nombre de la moneda: EUR, USD.
+        Está validado con expresion regular que admite  letras. Cuando pulsamos el botón
+        llamamos a una funcion javascript que a su vez hace una llamada AJAX, al servidor, con las siguientes propiedades:
+        <ul>
+            <li>url = "http://localhost:1349/CurrencyConverter.asmx/GetExchangeRate";</li>
+            <li>cache: false</li>
+            <li>data: { 'CurrencyType': getCurrencyType() },</li>
+        </ul>
+
+        Esto es, llama al servior a asmx: http://localhost:1349/CurrencyConverter, invocando a la funcion GetExchangeRate. Y nos devuelve un json que pasamos a string y pintamos en la página
+
+        Para la prueba habría que abrir el proyecto/solucion en el visual studio y:
+        <ol>
+<li>Ejecuta el fichero CurrencyConverter.asmx y verificar la url del navegador que se abre. En nuestro caso: http://localhost:1349/CurrencyConverter.asmx</li>
+<li>Abrir el fichero CallingAsxm.html</li>
+<li>Verificar que la variable url, de la funcion getExchangeRate, es la que hemos obtenido en el paso 1. En caso contrario cambiarla.</li>
+<li>Ejecutar el fichero CallingAsxm.html</li>
+<li>Introducir un valor en la caja de texto EUR o USD</li>
+<li> Comprobar que nos devuelve el valor de la moneda</li>
+        </ol>
+    </p>
+
+</body>
+</html>

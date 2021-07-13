@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 152</title>
+
+    <script src="Jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 152. objetivo de la pregunta:
+        Hay que poner un color de fondo al primer article de cada section. Que sentencia es la correcta?
+
+        /*A NO ES PORQUE SELECCIONA LOS ARTICLES QUE SON PRIMERO HIJOS DENTRO DE CADA SECTION, Y EL PRIMER HIJO ES EL H1*/
+        $ ("section article:first-child").css("background-color", "#f2f2f2");
+
+        /*B NO ES PORQUE ESTE SELECCIONA LOS SECTION QUE SEAN PRIMER HIJO*/
+        $ ("section:first-child").css ( "background-color", "#f2f2f2");
+
+        /*C SI ES PORQUE SELECCIONA LOS PRIMEROS ARTICLE DE SU PADRE.
+        $("article:first-of-type").css("background-color", "#f2f2f2");
+
+        /*D NO ES PORQUE SELECCIONA EL PRIMER SECTION DE SU PADRE*/
+        $ ("section:first-of-type").css("background-color", "#f2f2f2");
+
+
+        <section id="news">
+            <h1>World News</h1>
+            <article id="news1">Artcile que no es primer hijo del section</article>
+            <article id="news2">Artcile que no es primer hijo del section</article>
+            <article id="news3">Artcile que no es primer hijo del section</article>
+        </section>
+        <section id="sports">
+            <article id="sports1">Artcile que sí es primer hijo del section</article>
+            <article id="sports2">Artcile que no es primer hijo del section</article>
+            <article id="sports3">Artcile que no es primer hijo del section</article>
+        </section>
+
+
+
+        Respuesta:
+        C
+
+        Fuentes consultads:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type
+
+
+
+        $("article:first-of-type").css("background-color", "#f2f2f2");
+    </xmp>
+
+    <section id="news">
+        <h1>World News</h1>
+        <article id="news1">Artcile que no es primer hijo del section</article>
+        <article id="news2">Artcile que no es primer hijo del section</article>
+        <article id="news3">Artcile que no es primer hijo del section</article>
+    </section>
+    <section id="sports">
+        <article id="sports1">Artcile que sí es primer hijo del section</article>
+        <article id="sports2">Artcile que no es primer hijo del section</article>
+        <article id="sports3">Artcile que no es primer hijo del section</article>
+    </section>
+
+    <button onclick="color()">Colorear Fondo</button>
+    <script >
+        function color(){
+
+            /*A NO ES PORQUE SELECCIONA LOS ARTICLES QUE SON PRIMERO HIJOS DENTRO DE CADA SECTION, Y EL PRIMER HIJO ES EL H1*/
+            /*$ ("section article:first-child").css("background-color", "#f2f2f2");*/
+
+            /*B NO ES PORQUE ESTE SELECCIONA LOS SECTION QUE SEAN PRIMER HIJO*/
+            /*$ ("section:first-child").css ( "background-color", "#f2f2f2");*/
+
+            /*C SI ES PORQUE SELECCIONA LOS PRIMEROS ARTICLE DE SU PADRE. */
+            $("article:first-of-type").css("background-color", "#f2f2f2");
+
+            /*D NO ES PORQUE SELECCIONA EL PRIMER SECTION DE SU PADRE*/
+            /*$ ("section:first-of-type").css("background-color", "#f2f2f2");*/
+
+        }
+    </script>
+</body>
+</html>

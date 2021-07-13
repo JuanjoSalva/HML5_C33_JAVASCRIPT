@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 67</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 67. objetivo de la pregunta:
+
+        Estás desarrollando una página web para corredores que se inscriban en una carrera.
+        La página incluye un control deslizante que permite a los usuarios ingresar su edad.
+        Tienes los siguientes requisitos:
+        -Todos los corredores deben ingresar su edad.
+        -No se deben aceptar solicitudes de corredores menores de 18 años ni mayores de 90 años.
+        -El control deslizante debe establecerse en la edad promedio (37) de todos los corredores registrados cuando se abre la página por primera vez.
+
+        ¿Qué deberías hacer?
+
+
+        Fuentes consultads:
+        https://www.w3schools.com/Tags/att_input_type_range.asp#:~:text=The%20%3Cinput%20type%3D%22range,accepted%20with%20the%20attributes%20below.
+
+
+        Respuesta:
+        Drag&Drop
+
+        <input type="range" min=18 max=90 step=5 value=37 required/>
+
+
+
+    </xmp>
+    <p style = "color:red">
+        No es del todo correcto porque hay un step = 5 que no piden en los requisitos. Esto hace que el avance vaya de 5 en 5. Yo
+        usaria la validacion propia de los input como el ejemplo del final del documento
+    </p>
+
+    <p>
+        <input type="range" min=18 max=90 step=5 value=37 required/>
+    </p>
+
+
+    <input type = "number" min=18 max=90 value = 18 requiered>
+
+    <script>
+
+    </script>
+</body>

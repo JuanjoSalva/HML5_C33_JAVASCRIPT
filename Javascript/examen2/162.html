@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 162</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 162. objetivo de la pregunta:
+        Está creando una función personalizada. Pasa un objeto llamado testObj a la función como parámetro. Tú
+        no use la herencia a través de las funciones. La función debe establecer si testObj hereda de otro objeto
+        llamado parentObj. Debe asegurarse de que la función se realice según lo requerido.
+        ¿Qué método u operador debería agregar a la función?
+
+        A. parentObj.instanceof(testObj)
+        B. testObj.isPrototypeOf(parentObj)
+        C. testObj.instanceof(parentObj)
+        D. parentObj.isPrototypeOf(testObj)
+
+        Respuesta:
+        B
+
+
+        Fuentes consultads:
+
+
+    </xmp>
+
+    <p style = "color:green">La primera y la tercera da error</p>
+    <p style = "color:green">La última no da error porque sintácticamente esstá bien. Pero hace lo contrario</p>
+    </br></br>
+    <p>
+        Probamos. Definimos la clase rectagulo con las propiedades alto y ancho. Definimos un objeto de tipo Object.
+        Cada botón llama a la funcion y cada uno intenta hacer al objeto genérico, "pasado", del tipo rectámngulo.
+        Luego le cambiamos la altura al objeto genérico y después lo mostramos ese valor por pantalla.
+    </p>
+
+    <button onclick="funcion_personalizada(1)">Probar A</button></br></br>
+    <button onclick="funcion_personalizada(2)">Probar B</button></br></br>
+    <button onclick="funcion_personalizada(3)">Probar C</button></br></br>
+    <button onclick="funcion_personalizada(4)">Probar D</button></br></br>
+
+    <script>
+
+        class Rectangle {
+            constructor(height, width) {
+                this.alto = height;
+                this.ancho = width;
+            }
+        }
+        const rectangulo = new Rectangle();
+        const testObj  = new Object();
+
+        function funcion_personalizada (opcion){
+            try{
+                switch(opcion){
+                    case 1:{
+                        rectangulo.instanceof(testObj)
+                        //testObj.alto = 200;
+                        alert("propiedad: " + testObj.alto);
+                        break;
+                    }
+                    case 2:{
+                        testObj.isPrototypeOf(rectangulo);
+                        //testObj.alto = 200;
+                        alert("propiedad: " + testObj.alto)
+                        break;
+                    }
+                    case 3:{
+                        testObj.instanceof(rectangulo)
+                        //testObj.alto = 200;
+                        alert("propiedad: " + testObj.alto);
+                        break;
+                    }
+                    case 4:{
+                        rectangulo.isPrototypeOf(testObj)
+                        //testObj.alto = 200;
+                        //testObj.hola = "hola";
+                        alert("propiedad: " + testObj.alto);
+                        //alert("hola: " + testObj.hola);
+                        break;
+                    }
+                }
+            }catch(e){
+                alert("esta opción da error. Error: " + e.message);
+            }
+
+        }
+
+    </script>
+</body>
+</html>

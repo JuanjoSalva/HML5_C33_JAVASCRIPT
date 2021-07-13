@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 43</title>
+
+    <style>
+        a:link {
+        color: red;
+      }
+      
+      /* visited link */
+      a:visited {
+        color: green;
+      }
+      
+      /* mouse over link */
+      a:hover {
+        color: hotpink;
+      }
+      
+      /* selected link */
+      a:active {
+        color: blue;
+      }
+      </style>
+
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 43. objetivo de la pregunta:
+        You are developing a web page by using HTML5 and CSS3.
+        Hyperlinks on the page must be rendered with a style that reflects the last user action performed.
+        You need to style the four anchor elements in the document.
+        In what order should you specify the four anchor selectors? (To answer, move the appropriate anchor
+        selectors from the list of CSS codes to the answer area and arrange them in the correct order.)
+        Select and Place:
+
+        A:Link
+        B:visited
+        C:hover
+        D:active
+
+        Respuesta:
+        A:Link
+        B:visited
+        C:hover
+        D:active
+
+        Fuentes consultads:
+        https://www.w3schools.com/css/css_link.asp
+
+    </xmp>
+
+    <p>
+        Probamos.
+        Para probar hemo creador estilo para este link de abajo.</br>
+        -Link:red</br>
+        -visited: green</br>
+        -hover: hotpink</br>
+        -active: blue</br></br></br>
+        <a href="#" target="_blank">This is a link</a>
+    </p>
+
+    <button onclick = "prueba1()">Prueba A</button></br></br>
+
+    <script>
+        function prueba1(){
+            let counter =0;
+            let restantes = 200;
+            while (counter<=200){
+                counter ++;
+                restantes --;
+                if (!(counter % 25)){
+                    alert("procesados:"+ counter + " y restantes: " + restantes);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

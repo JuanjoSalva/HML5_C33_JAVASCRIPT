@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 162</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 162. objetivo de la pregunta:
+        Está creando una función personalizada. Pasa un objeto llamado testObj a la función como parámetro. Tú
+        no use la herencia a través de las funciones. La función debe establecer si testObj hereda de otro objeto
+        llamado parentObj. Debe asegurarse de que la función se realice según lo requerido.
+        ¿Qué método u operador debería agregar a la función?
+
+        A. parentObj.instanceof(testObj)
+        B. testObj.isPrototypeOf(parentObj)
+        C. testObj.instanceof(parentObj)
+        D. parentObj.isPrototypeOf(testObj)
+
+        Respuesta:
+        B
+
+
+        Fuentes consultads:
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
+
+    </xmp>
+
+    <p style = "color:red">La primera y la tercera da error</p>
+    <p style = "color:red">La segunda y tercera no dan error pero devuelven false, porque no estamos preguntando correctamente</p>
+    </br></br>
+
+    <p style= "color:red">Creo que ninguna es correcta y propongo la E, que debería sacar true porque son del mimos prototipo</p>
+    <p>    Probamos. Definimos las clase GrandFather, ParentObj y TestObj. Después decimos que
+        el prototipo de la clase ParentObj es el del prototipo GrandFather y que la clase TestObj es de ParentObj.
+        Por último creamos un objeto de TestObj y vamos a preguntar si la todsa las clase son del mismo  tipo
+        GrandFather, ya que alfinal todas son de ese prototipo.
+        Cada botón llama a una sentencia que intenta hacer la pregunta. La A y la C son incorrectas porque no es sintácticamente
+        correcto. Y entre la B y la D, que son sintácticamente correctas, la D no es porque no pregunta si la clase TestObj es del
+        prototipo del objeto creado: parentnode si no si la clase ParentObj es del prototipo de un objeto no creado.
+
+
+        La diferencia entre  isPrototypeOf e instanceof es qué son y cómo los usa. isPrototypeOf es una función disponible en el objeto Object.prototype, te permite probar si un objeto específico está en la cadena de prototipos de otro, ya que este método está definido en Object.prototype, está disponible para todos los objetos.
+        instanceof es un operador y espera dos operandos, un objeto y una función Constructor, probará si la propiedad del prototipo de la función pasada existe en la cadena del objeto (a través de la operación interna [[HasInstance]] (V), disponible solo en Objetos de función).
+    </p>
+
+    <button onclick="funcion_personalizada(1)">Probar A</button></br></br>
+    <button onclick="funcion_personalizada(2)">Probar B</button></br></br>
+    <button onclick="funcion_personalizada(3)">Probar C</button></br></br>
+    <button onclick="funcion_personalizada(4)">Probar D</button></br></br>
+    <button onclick="funcion_personalizada(5)">Probar E</button></br></br>
+
+    <script>
+
+        /*function ParentObj() {}
+        function TestObj() {}
+
+        TestObj.prototype = Object.create(ParentObj.prototype);
+        var TestObj = new ParentObj();*/
+
+
+
+        function GranParent() {}
+        function ParentObj() {}
+        function TestObj() {}
+        ParentObj.prototype = Object.create(GranParent.prototype);
+        TestObj.prototype = Object.create(ParentObj.prototype);
+        var testObj = new TestObj();
+
+
+
+        function funcion_personalizada (opcion){
+            try{
+                switch(opcion){
+                    case 1:{
+                        alert(parentObj.instanceof(testObj));
+                        break;
+                    }
+                    case 2:{
+                        alert(ParentObj.isPrototypeOf(testObj));
+                        break;
+                        break;
+                    }
+                    case 3:{
+                        alert(TestObj.instanceof(parentObj));
+                        break;
+                    }
+                    case 4:{
+                        alert(testObj.isPrototypeOf(parentObj));
+                        break;
+                    }
+                    case 5:{
+                        alert('La clase TestObj pertenece al mismo conjunto de Prototipos que testObj: ' + TestObj.prototype.isPrototypeOf(testObj)); // true
+                        alert('La clase ParentObj pertenece al mismo conjunto de Prototipos que testObj: ' + ParentObj.prototype.isPrototypeOf(testObj)); // true
+                        alert('La clase GranParent pertenece al mismo conjunto de Prototipos que testObj: ' + GranParent.prototype.isPrototypeOf(testObj)); // true
+                        alert('La clase Object pertenece al mismo conjunto de Prototipos que testObj: ' + Object.prototype.isPrototypeOf(testObj)); // true
+                        break;
+                    }
+                }
+            }catch(e){
+                alert("esta opción da error. Error: " + e.message);
+            }
+        }
+    </script>
+</body>
+</html>

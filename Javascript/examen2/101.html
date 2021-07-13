@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns = "http://www3.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 101</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 101. objetivo de la pregunta:
+
+        Está desarrollando una aplicación para una tienda minorista. La aplicación se utilizará en dispositivos móviles para
+        proporcionar direcciones en tiempo real a la tienda.
+        Tienes los siguientes requisitos:
+        -La aplicación debe encontrar la ubicación de un usuario.
+        -A medida que el usuario se mueve, la aplicación debe actualizar la pantalla con la nueva ubicación.
+        -A medida que el usuario se mueve, la aplicación debe mostrar la velocidad del usuario.
+        -Necesita desarrollar la aplicación para cumplir con los requisitos.
+        ¿Qué segmento o segmentos de código debería utilizar?
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/html/html5_geolocation.asp
+
+        Respuesta:
+        Drag$Drop
+
+
+        <script>
+            navigator.geolocation.watchPosition(locSuccess, locFail);
+            function locSuccess(position){
+                var spd=position.coords.speed;
+            }
+            function locFail(){
+    
+            }
+        </script>
+
+    </xmp>
+    <p style = "color:green">
+        Permitir conocer la ubicación y darle 4 segundos que responda
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <div id="mapholder"></div>
+    <DIV ID="GoogleMap2" STYLE="width:600px; height:400px;"></DIV>
+
+    <script>
+        var x = document.getElementById("demo");
+        var x2 = document.getElementById("demo2");
+        var img = new Image();
+        x2.appendChild(img);
+
+        var Coordinates = document.getElementById("GoogleMap2");
+
+        navigator.geolocation.watchPosition(locSuccess, locFail);
+
+        FindCoordinates();
+
+        function locSuccess(position){
+            var spd=position.coords.speed;
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+        }
+
+        function locFail(){
+            alert("error en la localizacion");
+        }
+
+
+        function FindCoordinates() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(LocalMap, ShowError);
+            } else {
+                Coordinates.innerHTML = "This browser does not support Geolocation.";
+            }
+        }
+
+
+        function LocalMap(position) {
+            var LocalMapProp= {
+                center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude), zoom:17,
+            };
+            var map=new google.maps.Map(document.getElementById("GoogleMap2"),LocalMapProp);
+        }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<SCRIPT SRC="https://maps.googleapis.com/maps/api/js?key=InserKeyHere"> </SCRIPT>
+
+</body>
+</html>

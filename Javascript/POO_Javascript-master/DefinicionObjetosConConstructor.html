@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Nuestro constructor de Objeto Account*/
+        Account = function(id, name){
+            this.id = id;
+            this.name= name;
+            this.balance =0;
+            this.numTransaction =0;
+
+            /*No es buena práctica porque por cada objeto se crea una copia de la función que usara ese objeto. Mientras
+            que si lo haces por prototype se crea una sola función compartida poor todos los objetos*/
+            /*function deposit(amount){
+                this.balance += amount;
+            }*/
+        }
+
+
+/*esta es la buen apráctica. Los atributos arriba en el constructir. Y los métodos abajo con el Prototipo*/
+        Account.prototype = {
+            widthdraw: function(amount){
+                this.balance -= amount;
+                this.numTransaction ++;
+            },
+            deposit: function(amount){
+                this.balance += amount;
+                this.numTransaction ++;
+            },
+            transactions: function(){
+                return this.numTransaction;
+            }
+        }
+
+        /*La construccion después del constructor y de los prototype, porque si no no los conocerá*/
+        let acc1 = new Account(1, "Jonh");
+        let acc2 = new Account(2, "Mary");
+
+        acc1.deposit(1230);
+        acc1.widthdraw(230);
+        acc2.deposit(5000);
+        acc2.widthdraw(340);
+
+alert(acc1.name + " , Transaciones: " + acc1.transactions());
+alert(acc2.name + " , Transaciones: " + acc1.transactions());
+    </script>
+</body>
+</html>

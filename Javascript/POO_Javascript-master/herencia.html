@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1-CONSTRUCTOR BASE
+        const Person = function(name, age){
+            this.name = name;
+            this.age = age;
+        }
+
+        //2- AMPLOIAR CON PROTOTYPE ESA DEFINICION INICIAL
+        Person.prototype = {
+            haveBirthday: function(){
+                this.age++;
+            }
+        }
+
+        //3. IMPLEMENTAR UNA HERENCIA POR ENCADENAMIENTO DE PROTOTIPO
+        const Student = function (name,age, subject){
+            this.name = name;
+            this.age = age;
+            this.subject = subject;
+        }
+
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+
+        //Creamos nuestro primer estudiante
+        let aStudent = new Student("Carlos", 31, "Matemáticas");
+        aStudent.haveBirthday();
+
+        let bStudent = new Student("Miriam", 32, "Biología")
+        bStudent.haveBirthday();
+
+        alert ("Nombre: " + aStudent.name+ " .Edad: " + aStudent.age + " ,Subject: " + aStudent.subject);
+        alert ("Nombre: " + bStudent.name+ " .Edad: " + bStudent.age + " ,Subject: " + aStudent.subject);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 140</title>
+
+    <script src = "Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 140. objetivo de la pregunta:
+        Tú estas desarrollando un aplicación HTML5. El usuario debe meter un código de acceso que
+        solo puede usarlo una vez. Debe enmascararse con cacteres
+
+        Desarrollas una aplicación HTML5. Proporciona a los usuarios un código de acceso numérico que solo se puede
+        usar una vez. Los usuarios deben ingresar el código de acceso numérico en el formulario de inicio de sesión de
+        la aplicación. Los caracteres numéricos debe enmascararse con caracteres.
+        Debe implementar el elemento de formulario para que los usuarios ingresen el código.
+        ¿Qué elemento HTML debería utilizar?
+        A. <input type = "password" required autocomplete="off"/>
+        B. <input type = "input"  autocomplete="off" required/>
+        C. <input type = "password" style="visibility:hidden;" required>
+        D. <input type = "button" value = "password" required/>
+
+
+        Respuesta:
+            A
+
+        Para introducir códigos que sean enmascarados con caracteres debe ser type="password", así que sólo pueden
+        ser correctas la A y la C. Y de esas la C no es porque el style="visibility:hidden;" oculta el campo y no pidría escribir
+        y por tanto no podría enmascarse la contraseña con caracteres.
+
+        Fuentes consultads:
+        https://www.w3schools.com/tags/att_input_type_password.asp
+
+    </xmp>
+    <p>
+        A. <input type = "password" required autocomplete="off"/></html></br></br>
+        B. <input type = "input"  autocomplete="off" required/></br></br>
+        C. <input type = "password" style="visibility:hidden;" required></br></br>
+        D. <input type = "button" value = "password" required/></br></br>
+
+    </p>
+
+
+    <script>
+
+        function validate1(){
+            var value = $("#txtValue").text();
+            var regex = /^\d+$/;
+            if (!regex.test(value) || name == "")
+                alert("please enter valid value");
+                return;
+        }
+
+
+    </script>
+</body>
+</html

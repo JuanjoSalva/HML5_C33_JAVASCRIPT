@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 26</title>
+
+    <script src = "Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 26. objetivo de la pregunta:
+        Está desarrollando una aplicación web que consume servicios de una aplicación de terceros. Un Web Worker
+        procesa las solicitudes de aplicaciones de terceros en segundo plano. Una página de la aplicación crea una instancia del
+        proceso de trabajador web. Debe establecer comunicaciones bidireccionales entre el proceso del trabajador web y la página.
+        ¿Qué dos acciones lograrán este objetivo? Cada respuesta correcta presenta una solución completa.
+
+
+        A. From the web worker, use the onconnect event handler of the main page to capture events.
+        B. From the main page, use the onmessage event handler of the web worker to capture events.
+        C. From the web worker, use the onmessage event handler of the main page to capture events.
+        D. From the main page, use the onconnect event handler of the web worker to capture events.
+
+        Respuesta:
+            BC
+
+
+        La A y la D no son porque no existe el evento onconnect en el WebWorker.
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/html/html5_serversentevents.asp
+        https://www.w3schools.com/html/html5_webworkers.asp
+        https://www.html5rocks.com/en/tutorials/workers/basics/
+        https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+
+
+        Data is sent between workers and the main thread via a system of messages — both sides send their messages using the postMessage() method, and respond to messages via the onmessage event handler (the message is contained within the Message event's data attribute.) The data is copied rather than shared.
+
+        When postMessage() is called from the main page, our worker handles that message by defining an
+            onmessage handler for the message event.
+        Server-Sent Events - One Way Messaging A server-sent event is when a web page automatically gets updates from a server.
+        Receive Server-Sent Event Notifications The EventSource object is used to receive server-sent event notifications:
+
+        Example
+            var source = new EventSource("demo_sse.php");
+            source.onmessage = function(event) {
+                document.getElementById("result").innerHTML += event.data + "<br>";
+            };
+
+
+</xmp>
+    <p>
+        <input id="txtValue" type="text" />
+        <button onclick="validate1()">Opcion A</button>
+        <button onclick="validate2()">Opcion B</button>
+        <button onclick="validate3()">Opcion C</button>
+        <button onclick="validate4()">Opcion D</button>
+        <button onclick="validate5()">Mi Opcion</button>
+    </p>
+
+
+    <script>
+        function validate1(){
+            var source = new EventSource("/html/demo_sse.php");
+            source.onmessage = function(event) {
+                document.getElementById("result").innerHTML += event.data + "<br>";
+            };
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html

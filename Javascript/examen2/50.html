@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 50</title>
+
+    <script src="Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 50. objetivo de la pregunta:
+        Estas desarrollando una web qu eincluye este html:
+        <input id="txtValue" type="text" />
+
+        El usaurio debe meter un código de país consistente de 3 caracteres del alfabeto inglés.
+        Que código elegirías:
+
+        /*A ESTE NO ES PORQUE LOS INPUT NO TIENEN TEXT SINO VALUE DE HECHO NO SALE VALOR EN EL ALERT QUE HE PUESTO.
+        QUE AQUÍ NO SE CONOCE*/
+        function validate1(){
+            var name = $("#txtValue").text();
+            alert('valor: ' +name);
+            If (name == null ||  name == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*B ESTE NO ES PORQUE LOS INPUT NO TIENEN TEXT SINO VALUE  DE HECHO NO SALE VALOR EN EL ALERT QUE HE PUESTO*/
+        function validate2(){
+            var value = $("#txtValue").text();
+            alert('valor: ' +value);
+            var regex = /^[\d\,\.]*S/;
+            if (!regex.test(value) || name == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*C ESTE SI PORQUE RECOGE BIEN EL VALOR Y COMPARA CON LA EXP.REGULAR: 3 CARACTERES DE LA A-Z EMPEZANDO DESDE EL PRINCIPIO DE LA LINEA*/
+        function validate3(){
+            var value = $("#txtValue").val();
+            alert('valor: ' +value);
+            var regex = /^[A-Za-z]{3}/;
+            if (!regex.test(value) || value == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*D ESTE NO PORQUE SOLO VALIDA QUE ESTÉ RELLENO*/
+        function validate4(){
+            var name = $("#txtValue").val();
+            alert('valor: ' + name);
+            if (name == null ||  name == "")
+                alert("please enter valid value");
+                return;
+
+        }
+
+
+        Respuesta:
+        C
+
+
+
+        Fuentes consultads:
+        https://www.w3schools.com/JSREF/jsref_regexp_ncaret.asp
+        https://regexr.com/
+
+    </xmp>
+
+    <p style = "color:red">
+    Lo que no hace es asegurarse que sean sólo 3 letras, puedes meter más, pero al menos 3. Yo he añadido la opción: "Opcion Mia". Que
+    te valida que metas 3 letras, ni más ni menos
+    </p>
+
+    <p>
+        <input id="txtValue" type="text" />
+        <button onclick="validate1()">Opcion A</button>
+        <button onclick="validate2()">Opcion B</button>
+        <button onclick="validate3()">Opcion C</button>
+        <button onclick="validate4()">Opcion D</button>
+        <button onclick="validate5()">Opcion Mia</button>
+    </p>
+
+
+    <script>
+        /*A ESTE NO ES PORQUE LOS INPUT NO TIENEN TEXT SINO VALUE DE HECHO NO SALE VALOR EN EL ALERT QUE HE PUESTO.
+        QUE AQUÍ NO SE CONOCE*/
+        function validate1(){
+            var name = $("#txtValue").text();
+            alert('valor: ' +name);
+            If (name == null ||  name == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*B ESTE NO ES PORQUE LOS INPUT NO TIENEN TEXT SINO VALUE  DE HECHO NO SALE VALOR EN EL ALERT QUE HE PUESTO*/
+        function validate2(){
+            var value = $("#txtValue").text();
+            alert('valor: ' +value);
+            var regex = /^[\d\,\.]*S/;
+            if (!regex.test(value) || name == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*C ESTE SI PORQUE RECOGE BIEN EL VALOR Y COMPARA CON LA EXP.REGULAR: 3 CARACTERES DE LA A-Z EMPEZANDO DESDE EL PRINCIPIO DE LA LINEA*/
+        function validate3(){
+            var value = $("#txtValue").val();
+            alert('valor: ' +value);
+            var regex = /^[A-Za-z]{3}/;
+            if (!regex.test(value) || value == "")
+                alert("please enter valid value");
+                return;
+        }
+
+        /*D ESTE NO PORQUE SOLO VALIDA QUE ESTÉ RELLENO*/
+        function validate4(){
+            var name = $("#txtValue").val();
+            alert('valor: ' + name);
+            if (name == null ||  name == "")
+                alert("please enter valid value");
+                return;
+
+        }
+
+        /*Esta es mi opción porque no me gusta ninguna de las de arriba. Aquí nos aseguramos que son Letras y que son
+        3, ni más ni menos*/
+        function validate5(){
+            var value = $("#txtValue").val();
+            alert('valor: ' +value);
+            var regex = /^[a-zA-Z]{3,3}$/;
+            if (!regex.test(value) || value == "")
+                alert("please enter valid value");
+                return;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 288</title>
+    <script src="Jquery.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 288. objetivo de la pregunta:
+
+        Dado un string:
+        var objstr = '[1,2,3,4]';
+
+        Convertirlo en array
+        /*A NO ES PORQUE CONVIERTE A STRING*/
+        var jsObject = JSON.stringify(objStr);
+
+        /*B NO ES PORQUE VALUE OF ES PARA OBTENER VALORES DE UN ARRAY, NO PARA PARSEAR */
+        var jsObject = Array.valueOf(objStr);
+
+        /*C NO ES*/
+        var jsObject = $.makeArray(objStr);
+
+        /*D  SÍ ES, PERO NO CONSIGO HACERLO FUNCIONAR*/
+        var jsObject = $.parseJSON(objstr);
+
+        Respuesta:
+        D
+
+
+        Fuentes consultadas:
+
+        https://api.jquery.com/jquery.parsejson/
+        https://www.w3schools.com/JSREF/jsref_valueof_array.asp
+        https://api.jquery.com/jQuery.makeArray/
+
+
+        Para Probar, primero pinto el string  y al dar al botón pinto el tamaño del objeto array y su contenido, con metodos de array.
+    </xmp>
+
+    <button onclick="prueba()">Convertir en array</button>
+    <div id="solucion"></div>
+    <script>
+        var  objstr = "[1,2,3,4]";
+        document.getElementById("solucion").innerHTML = "string: " + objstr;
+
+
+        function prueba(){
+
+            /*A NO ES PORQUE CONVIERTE A STRING*/
+            //var jsObject = JSON.stringify(objStr);
+
+            /*B NO ES PORQUE VALUE OF ES PARA OBTENER VALORES DE UN ARRAY, NO PARA PARSEAR */
+            //var jsObject = Array.valueOf(objStr);
+
+            /*C NO ES*/
+            //var jsObject = $.makeArray(objStr);
+
+            /*D  SÍ ES, PERO NO CONSIGO HACERLO FUNCIONAR*/
+            var jsObject = $.parseJSON(objstr);
+
+            document.getElementById("solucion").innerHTML = "Solución deprecada. Tamaño de array: " + jsObject.length + " .Contenido es: " + jsObject;
+
+        }
+    </script>
+</body>
+</html>

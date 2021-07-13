@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 174</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 174. objetivo de la pregunta:
+        Está desarrollando una aplicación que procesa información sobre pedidos. Se procesan miles de pedidos
+        diario. La aplicación incluye el siguiente segmento de código.
+
+        var counter = 0;
+        while (process()){
+            counter ++;
+            updateStatus();
+        }
+
+        La aplicación debe:
+        - Mostrar el número de pedidos procesados ​​y el número de pedidos restantes.
+        - Actualizar la pantalla por cada 25 registro procesados.
+        - Desarrollar la aplicación para cumplir con estos requisitos.
+
+        ¿Qué línea de código debería insertar en la línea 04?
+
+        A. if (!(counter % 25))
+        B. if (counter == 25)
+        C. if (counter >> 25 == 0)
+        D. if (counter << 25 == 0)
+
+        Respuesta:
+        A
+
+
+        - % (Módulo) Calcula el resto entero de dividir 2 números. Cada 25, (25, 50, 75, 100...), el resto de divir
+            entre 25 es 0.
+        Incorrecto:
+            counter == 25.   Funciona la primera vez porque el numero de registros procesados es 25 y se muestra.
+                Pero para los siguinetes 25 no porque serán 50, no 25.
+            >> (Desplazamiento a la derecha de propagación de signo) Desplaza el primer operando en representación
+                binaria el número de bits al a la derecha especificada en el segundo operando, descartando los bits
+                desplazados.
+            << (Desplazamiento a la izquierda) Desplaza su primer operando en representación binaria
+
+
+        Fuentes consultads:
+        https://www.w3schools.com/js/js_arithmetic.asp
+        https://www.w3schools.com/js/js_bitwise.asp
+
+    </xmp>
+
+    <p>
+        Probamos. Total pedidos 200
+    </p>
+
+    <button onclick = "prueba1()">Prueba A</button></br></br>
+    <button onclick = "prueba2()">Prueba B</button></br></br>
+    <button onclick = "prueba3()">Prueba C</button></br></br>
+    <button onclick = "prueba4()">Prueba D</button></br></br>
+
+    <script>
+        function prueba1(){
+            let counter =0;
+            let restantes = 200;
+            while (counter<=200){
+                counter ++;
+                restantes --;
+                if (!(counter % 25)){
+                    alert("procesados:"+ counter + " y restantes: " + restantes);
+                }
+            }
+        }
+        function prueba2(){
+            let counter=0;
+            let restantes = 200;
+            while (counter<=200){
+                counter ++;
+                restantes --;
+                if (counter == 25){
+                    alert("procesados:"+ counter + " y restantes: " + restantes);
+                }
+            }
+        }
+        function prueba3(){
+            let counter=0;
+            let restantes = 20;
+            while (counter<=20){
+                counter ++;
+                restantes --;
+                if (counter >> 25 == 0){
+                    alert("procesados:"+ counter + " y restantes: " + restantes);
+                }
+            }
+        }
+        function prueba4(){
+            let counter=0;
+            let restantes = 200;
+            while (counter<=200){
+                counter ++;
+                restantes --;
+                if (counter << 25 == 0){
+                    alert("procesados:"+ counter + " y restantes: " + restantes);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

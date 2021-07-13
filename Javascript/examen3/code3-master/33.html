@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 33</title>
+
+
+    <link href="33.css"   rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 33. objetivo de la pregunta:4
+
+        Estanos creando una web, Los estilos de las páginas se derivan de cinco hojas de estilo. Los estilos no se están aplicando correctamente a las páginas de la aplicación.
+        Debe aplicar los estilos de mayor prioridad a menor prioridad. ¿En qué orden debería utilizar las cinco hojas de estilo?
+
+        Fuentes consultads:
+        https://www.briefmenow.org/microsoft/which-order-will-the-five-style-sheets-be-applied/
+
+        Respuesta:
+        Drag&Drop
+
+    </xmp>
+    <p>
+        <table border="1">
+                <tr>
+                    <td>
+                     User important styles sheets
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     Author important style sheets
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     Author normal style sheet
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        User normal style sheets
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        User agent style sheets
+                    </td>
+                </tr>
+        </table>
+    </p>
+
+
+    <p>La que menos importa es la User Agent que es una hoja de estilo básica que el navegador tiene y que le da un estilo predeterminado a
+        cualquier cumento</p>
+    <p> Author es la hoja de estilo que crea el desarrollador, ya sea embebido o fichero externo  </p>
+    <P> User, es estilo que el propio usuario o lector puede dar a la página gracias al navegador. En Edge no se puede porque no soporta esta
+        característica. Pero en En el navegador Firefox se pueden definir las regla estilo de usuario en un archivo llamado "userContent.css"
+        que se encuentra en la carpeta "Firefox", del perfil de usuario que estemos utilizando. En el caso del Chrome instalando el plugin
+        Stylish. Para ello he creado un estilo con como indico abajo</P>
+
+
+        <p>Ejemplo con foto porque el estilo de usuairo está en mi ordenador:</p>
+        <p>Para author y user</p>
+        <!--div id = "css3" class = "css3" style = "color:red">
+            Este tiene css inline color:red y css user color:blue
+        </div>
+        <div id = "css4" class = "css4" style = "color:red" !important>
+            Este tiene css inline color:red important y css user color:blue
+        </div>
+        <div id = "css5" class = "css5" style = "color:red">
+            Este tiene css inline color:red y css user important color:blue
+        </div>
+        <div id = "css6" class = "css6" style = "color:red !important">
+            Este tiene css inline color:red important y css user important color:blue
+        </div-->
+        <img src = "autor.PNG">
+
+
+        <p>Ejemplo de código ejecutado en cada ordenador</p>
+    <p> Para el author, diferencias entre estilo inline o externo, con y sin importrant</p>
+
+    <p>Entre css inline y css externo</p>
+    <div id = "css" style = "color:red">
+        Este tiene css inline color:red y css esterno color:blue
+    </div>
+    <div id = "csse" style = "color:red">
+        Este tiene css inline color:red y css esterno color:blue
+    </div>
+
+
+    <p>Entre css inline y css externo important</p>
+    <div id = "css1" style = "color:red">
+        Este tiene css inline color:red y css esterno color:blue
+    </div>
+    <div id = "csse1_important" style = "color:red">
+        Este tiene css inline color:red y css esterno color:blue e important
+    </div>
+
+
+    <p>Entre css inline important y css externo important</p>
+    <p></p>
+    <div id = "css2" style = "color:red !important">
+        Este tiene css inline color:red y css esterno color:blue  e important
+    </div>
+    </div>
+    <div id = "csse2_important" style = "color:red">
+        Este tiene css inline color:red e important y css esterno color:blue  e important
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+</html>

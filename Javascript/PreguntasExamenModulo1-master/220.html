@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 220</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 220. objetivo de la pregunta:
+
+        Dado este código:
+
+        function NewOrder(orderId,orderDtae){
+            this.orderId = orderId;
+            this.orderDate = orderDtae;
+        }
+        Necesitamos añadir una propiedad a la definición de la función
+
+        /*A NO LO CREA */
+        NewOrder["newProperty"] = "newProperty";
+
+        /*B ESTA SÏ ES*/
+        NewOrder.prototype.newProperty = "newProperty";
+
+        /*C ESTA NO, PORQUE  Cannot set property 'newProperty' of undefined*/
+        this.NewOrder.newProperty = "newProperty";
+
+        /*D NO LO CREA*/
+        NewOrder.newProperty = "newProperty";
+
+        
+        Respuesta:
+        B
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/JSREF/jsref_prototype_array.asp
+
+
+     </xmp>
+
+    <p>Para probar, llamo a una funcion que muestra un alert con la propiedad añadida: "newProperty". Luego le doy valor a la propiedad: "HOLA; FUNCIONO" y muestro
+        el valor de esa propiedad: alert(miObjeto.newProperty) </p>
+    <p>
+        <button onclick="anadirpropiedad()">Añadir Propiedad</button>
+    </p>
+
+    <script>
+        function NewOrder(orderId,orderDtae){
+
+
+            this.orderId = orderId;
+            this.orderDate = orderDtae;
+
+            /*A NO LO CREA */
+            //NewOrder["newProperty"] = "newProperty";
+
+            /*B ESTA SÏ ES*/
+            NewOrder.prototype.newProperty = "newProperty";
+
+            /*C ESTA NO, PORQUE  Cannot set property 'newProperty' of undefined*/
+            //this.NewOrder.newProperty = "newProperty";
+
+            /*D NO LO CREA*/
+            //ewOrder.newProperty = "newProperty";
+        }
+
+
+        let miObjeto = new NewOrder(1,2);
+
+        function anadirpropiedad(){
+            alert(miObjeto.newProperty);
+            miObjeto.newProperty = "HOLA; FUNCIONO";
+            alert(miObjeto.newProperty);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 186</title>
+    <script src ="Jquery.js" type ="text/javascript"></script>
+    <style>
+        a {
+            font-size:5rem;
+        }
+
+        /*A  NO ES PORQUE LA TRANSICION SERÍA AL CAMBIAR Y AL VOLVER, AUNQUE ÉSTE NO HAGA NADA*/
+        /*.menuitem:hover{
+            color:yellow;
+            opacity: 100;
+            transition-timing-function: ease-in;
+        }*/
+
+        /*B NO ES. PORQUE, DIRECTAMENTE, AFECTA AL COLOR DE FONDO Y NO AL TEXTO*/
+        /*.menuitem:hover{
+            background-color:yellow;
+            transition-duration: 5s;
+        }*/
+
+        /*C NO ES.  PORQUE LO QUE HACE ES CAMBIAR EL COLOR PROGRESIVAMENTE, A LO LARGO DE 5S. PERO AL ORIGINAL VUELVE SIN PROGRESION EN CUANTO QUITAMOS EL RATÓN*/
+        /*.menuitem:hover{
+            color:yellow;
+            transition-property: color;
+            transition-duration: 5s;
+        }*/
+
+        /*D NO ES.  PORQUE LO QUE HACE ES CAMBIAR EL COLOR PROGRESIVAMENTE, A LO LARGO DE 5S. PERO AL ORIGINAL VUELVE SIN PROGRESION EN CUANTO QUITAMOS EL RATÓN*/
+        .menuitem:hover{
+            color:yellow;
+            transition-duration:5s;
+        }
+
+        /*MI OPCION ES ESTA CON UN JQUERY AL FINAL. ME FALTARÍA QUITAR LA TRANSICIÓN SIEMPRE QUE SALTARA EL HOVER*/
+        .menuitem1:hover{
+            /*transition-duration: none;*/
+            /*animation-play-state: paused;*/
+            /*animation-play-state: unset;*/
+            color:yellow;
+            transition: none;
+       }
+
+    </style>
+
+
+</head>
+<body>
+
+      <xmp>
+
+        Pregunta 186. objetivo de la pregunta:
+
+        Modificar el estilo del menu de una web:
+        - cambiar el color del texto los items cuando el usuario pase el ratón por encima.
+        - el color original debe volver cuando pasen 5 segundos.
+
+        A.
+            menuitem:hover{
+                color:yellow
+                opacity: 100
+                transition-timing-function:ease-in;
+            }
+
+        B.
+        menuitem:hover{
+            background-color:yellow
+            transition-duration:5s;
+        }
+
+        C.
+            menuitem:hover{
+                color:yellow
+                transition-property:color;
+                transition-duration:5s;
+            }
+
+        D.
+        menuitem:hover{
+            color:yellow
+            opacity: 100
+            transition-duration:5s;
+        }
+
+        Respuesta:
+        D
+
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/cssref/sel_hover.asp
+
+
+
+        Pero yo he puesto este código que creo que se aceca más. Pero lo hace la primera vez, el resto ya avanza despacio y vuleve despacio.
+        $(document).ready(function(){
+            $("a").mouseleave(
+                    function(){
+                        $("a").css("transition", "color 3s");
+                    }
+            );
+        });
+
+    </xmp>
+
+<p style = "color:red">Yo lo veo mal. Lo que pasa con este ejercicio es que te piden que el color original debe volver
+    cuando pasen 5 segundos.En principio creo que eso es un delay al quitar el ratón del link. Pero aquí las
+    opciones son de duration. En la solucion que dan en el pdf dura 5 segundos la transcion de cambio de
+    color, pero es al pasar el ratón por encima, no al volver al original. Los primeros link que he puesto
+    son como el pdf dice. En los segundos, yo he intentado hacer que la transicion de vuelta al color original sea
+    de 5 segundos. Y funciona la primera vez. El resto de veces ya no funciona  porque se queda con la propiedad de la
+    transicion. He intentado quitarsela en el hover, pero no lo he conseguido</p>
+
+    <p>Estos primeros según examnen</p>
+    <nav>
+        <a href="#" class = "menuitem" id="a1">Item1</a>
+        <a href="#" class = "menuitem">Item2</a>
+        <a href="#" class = "menuitem">Item3</a>
+        <a href="#" class = "menuitem">Item4</a>
+    </nav>
+
+
+    <p>Estos según mi código</p>
+    <nav>
+        <a href="#" class = "menuitem1" id="a2">Item1</a>
+        <a href="#" class = "menuitem1">Item2</a>
+        <a href="#" class = "menuitem1">Item3</a>
+        <a href="#" class = "menuitem1">Item4</a>
+    </nav>
+
+    <p>cuando pases el ratón por encima de cada item cambiara el color del texto y volverá al color original tras 5 segundos, una vez quites el ratón</p>
+
+
+    <script>
+
+
+       $(document).ready(function(){
+            $("a.menuitem1").mouseleave(
+                    function(){
+                        $("a.menuitem1").css("transition", "color 5s");
+                    }
+            );
+        });
+
+
+
+    </script>
+
+</body>
+</html>

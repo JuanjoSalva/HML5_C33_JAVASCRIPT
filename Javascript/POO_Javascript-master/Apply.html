@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Apply</title>
+</head>
+<body>
+    <script>
+        const Point = function(x, y) {
+    this.x = x;
+    this.y = y;
+}
+  
+Point.prototype.moveBy = function(deltaX, deltaY) {
+    this.x += deltaX;
+    this.y += deltaY;
+}
+  
+Point.prototype.moveTo = function(otherPoint) {
+    this.x = otherPoint.x;
+    this.y = otherPoint.y;
+}
+
+const p1= new Point(100, 200);
+p1.moveBy(10, 20);
+  
+const p2= new Point(25, 50);
+p2.moveTo(p1);
+alert("p2.x: " + p2.x + " p2.y: " + p2.y);
+function SetColor(color) {
+    this.color = color;
+}
+
+const p3= new Point(100, 200);
+
+SetColor.apply(p3, ["red"]);
+alert(p3.color); // Displays "red"
+    </script>
+</body>
+</html>

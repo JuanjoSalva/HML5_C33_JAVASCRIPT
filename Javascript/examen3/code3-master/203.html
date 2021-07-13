@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 203</title>
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 203. objetivo de la pregunta:
+
+        Tenemos 2 arrays: uno de empleados y otro de clientes. Concatenarlos para tener en uno sólo, Contactos, todos los elementos.
+
+        /*SÍ ES*/
+        A. Concat
+
+        /*B  NO ES, PORQUE EL JOIN INSERTA TODOS LOS ELEMENTOS DEL ARRAY EMPLEADOS PARA CADA ELEMENTO DEL ARRAY CLIENTE, COMBINATORIA*/
+        B. Join
+
+        /*C  NO ES. EN ESTE CASO SÍ SE HAN VOLCADO LOS DATOS DE EMPLEADOS SOBRE CLIENTES, PERO LA ASIGNACION DEL ARRAY RESULTANTE A LA VARIABLE
+        CONTACTOS NO ES CORRECTA, DEBERÍAMOS USAR EL METODO SLICE() O RECORRERLO. ASÍ SÍ FUNCIONARÍA: clientes.push(empleados);
+        var contactos = clientes.slice();*/
+        C. Push
+
+        /*D NO ES. EL METODO SPLICE AÑADE/ELIMINA ELEMENTOS DE UN ARRAY, MODIFICANDO ÉSTE, Y DEVUELVE COMO SALIDA UN ARRAY CON LOS ELEMENTOS
+        ELIMINADOS. LOS INSERTA A PARTIR DEL INDICE QUE PASAMOS COMO PRIMER PARAMETRO Y BORRA TANTOS ELEMENTOS COMO INDIQUEMOS EN EL SEGUNDO
+        PARAMETRO. EN ESTE CASO NO ESTAMOS PASANDO INDICE DE ADD NI DE DELETE CON LO QUE NO HACE NADA SOBRE EL ARRAY CLIENTES.
+        ADEMÁS PARA ASIGNAR UN ARRAY A UNA VARIABLE NO SE HACE CON EL IGUAL SI NO CON EL METODO SLICE() O RECORRIENDO. PARA QUE ESTE FUNCIONARA
+        SERÍA ASÍ:  clientes.splice(0,0,empleados); var contactos =clientes.slice();*/
+        D. Splice
+
+        
+        Respuesta:
+        A
+
+
+        Fuentes consultads:
+
+        https://www.w3schools.com/jsref/jsref_concat_array.asp
+
+
+
+        var contactos = clientes.concat(empleados);
+
+    </xmp>
+
+    <div id= "empleados" style = "background :'blue';">empleados</div></br>
+    <div id= "clientes">clientes</div></br>
+    <div id= "contactos"><b>Array de Contactos: </b></div></br>
+
+    <button onclick="concatenar()">Concatenar</button>
+
+    <script>
+         var clientes = ["cliente1","cliente2","cliente3","cliente4"];
+         var empleados = ["empleado1","empleado2","empleado3","empleado4"];
+
+         document.getElementById("empleados").innerHTML = "<b>Array de Empleados: </b>" +  empleados;
+         document.getElementById("clientes").innerHTML = "<b>Array de Clientes: </b>" +  clientes;
+
+        function concatenar(){
+            document.getElementById("contactos").innerHTML = "";
+            /*A SÍ ES*/
+            var contactos = clientes.concat(empleados);
+
+            /*B  NO ES, PORQUE EL JOIN INSERTA TODOS LOS ELEMENTOS DEL ARRAY EMPLEADOS PARA CADA ELEMENTO DEL ARRAY CLIENTE, COMBINATORIA*/
+            /*var contactos = clientes.join(empleados);*/
+
+            /*C  NO ES. EN ESTE CASO SÍ SE HAN VOLCADO LOS DATOS DE EMPLEADOS SOBRE CLIENTES, PERO LA ASIGNACION DEL ARRAY RESULTANTE A LA VARIABLE
+            CONTACTOS NO ES CORRECTA, DEBERÍAMOS USAR EL METODO SLICE() O RECORRERLO. ASÍ SÍ FUNCIONARÍA: clientes.push(empleados);
+            var contactos = clientes.slice();*/
+            /*var contactos = clientes.push(empleados);*/
+
+
+            /*D NO ES. EL METODO SPLICE AÑADE/ELIMINA ELEMENTOS DE UN ARRAY, MODIFICANDO ÉSTE, Y DEVUELVE COMO SALIDA UN ARRAY CON LOS ELEMENTOS
+            ELIMINADOS. LOS INSERTA A PARTIR DEL INDICE QUE PASAMOS COMO PRIMER PARAMETRO Y BORRA TANTOS ELEMENTOS COMO INDIQUEMOS EN EL SEGUNDO
+            PARAMETRO. EN ESTE CASO NO ESTAMOS PASANDO INDICE DE ADD NI DE DELETE CON LO QUE NO HACE NADA SOBRE EL ARRAY CLIENTES.
+            ADEMÁS PARA ASIGNAR UN ARRAY A UNA VARIABLE NO SE HACE CON EL IGUAL SI NO CON EL METODO SLICE() O RECORRIENDO. PARA QUE ESTE FUNCIONARA
+            SERÍA ASÍ:  clientes.splice(0,0,empleados); var contactos =clientes.slice();*/
+            /*var contactos = clientes.splice(empleados);*/
+
+            document.getElementById("contactos").innerHTML = "<b>Array de Contactos: </b>" + contactos;
+
+        }
+    </script>
+</body>
+</html>

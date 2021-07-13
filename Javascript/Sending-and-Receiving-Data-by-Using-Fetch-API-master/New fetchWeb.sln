@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New fetchWeb", "New fetchWeb\New fetchWeb.csproj", "{79D00833-C000-4D69-9AED-686BE3E35DD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED84D170-8944-4E5E-998E-19C677DFB342}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79D00833-C000-4D69-9AED-686BE3E35DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D00833-C000-4D69-9AED-686BE3E35DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D00833-C000-4D69-9AED-686BE3E35DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D00833-C000-4D69-9AED-686BE3E35DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A16D2C35-305B-40C6-B370-8CF88312D3F6}
+	EndGlobalSection
+EndGlobal

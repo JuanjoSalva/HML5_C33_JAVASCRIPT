@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(198, 204, 219);
+}
+
+.enunciado{
+    font-weight: bold;
+}
+
+.codigo{
+
+}
+
+.resultado{
+
+}
+
+.resultn{
+    font-weight: bold;
+    color:blue;
+}
+
+.equipo{
+    color:white;
+    background-color: blue;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.boton{
+    color:white;
+    background-color:blue;
+}

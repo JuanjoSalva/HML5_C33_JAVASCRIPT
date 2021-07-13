@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 111</title>
+
+
+</head>
+<body>
+
+    <xmp>
+
+        Pregunta 111. objetivo de la pregunta:
+
+Tenemos una web con un formulario que tiene un campo que permite al usuario meter el mes de su nacimiento
+¿Qué sentencia es la correcta?
+
+
+     <!--A. ESTE NO ES PORQUE ES PARA CAMPOS DETIPO HORA-->
+     <input type="time" options="month" />
+
+     <!--B. ESTE NO ES PORQUE ES PARA CAMPOS DETIPO TELEFONO-->
+    <input type="tel" min="1" max="12" />
+
+    <!--C.ESTE ES-->
+    <input type="range" min="1" max="12" />
+
+    <!--D.ESTE NO ES PORQUE ES PARA SELECCIONAR MES DEL AÑO EN CURSO:  CALENDARIO DE MESES ANUALES-->
+    <input type="month" itemscope="numeric" />
+
+    <!--E.ESTE NO ES PORQUE ES PARA SELECCIONAR FECHA COMPLETA_: CALENDARIO MENSUAL-->
+    <input type="date" data-role="month" />
+
+    
+    Respuesta:
+    C
+
+
+        Fuentes consultads:
+        https://www.w3schools.com/html/html_form_input_types.asp
+
+
+        <input type="range" min="1" max="12" />
+    </xmp>
+
+<p style = "color:red">
+    como no me gusta mucho el objeto este del range he puesto esta opción
+</p>
+
+   <form>
+    <!--A. ESTE NO ES PORQUE ES PARA CAMPOS DETIPO HORA-->
+     <input type="time" options="month" />
+
+     <!--B. ESTE NO ES PORQUE ES PARA CAMPOS DETIPO TELEFONO-->
+    <input type="tel" min="1" max="12" />
+
+    <!--C.ESTE ES-->
+    <input type="range" min="1" max="12" />
+
+    <!--D.ESTE NO ES PORQUE ES PARA SELECCIONAR MES DEL AÑO EN CURSO:  CALENDARIO DE MESES ANUALES-->
+    <input type="month" itemscope="numeric" />
+
+    <!--E.ESTE NO ES PORQUE ES PARA SELECCIONAR FECHA COMPLETA_: CALENDARIO MENSUAL-->
+    <input type="date" data-role="month" />
+
+    <p>
+        <!-- ESTA ES OTRA OPCION MÁS BONITA-->
+        Esta es más bonita aunque no es del exámen:
+    </p>
+    <p>
+        <input type="range" min="1" max="12" value="1" onchange="updateTextInput(this.value);">
+        <div id="textInput" value="">1</div>
+
+    </p>
+   </form>
+
+   <script>
+        function updateTextInput(val) {
+        document.getElementById('textInput').innerText=val;
+        }
+    </script>
+
+</body>
+</html>
