@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" manifest="appcache.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache handler</title>
+    <script>
+        function onUpdateReady() {
+            alert('found new version!');
+        }
+        window.applicationCache.addEventListener('updateready', onUpdateReady);
+        if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+            onUpdateReady();
+        }
+        applicationCache.addEventListener("error", function () {
+            alert("Error while downloading resources to the application cache");
+        }, true);
+
+        s="";
+        function onlineStatus() {
+            let s = document.getElementById("statusDiv");
+            s.innerHTML = "Online.";
+        }
+        function offlineStatus() {
+            let s = document.getElementById("statusDiv");
+            s.innerHTML = "Offline.";
+        }
+        onload = function () {
+            if (navigator.onLine) {
+                onlineStatus();
+            } else {
+                offlineStatus();
+            }
+            window.addEventListener("online", onlineStatus, true);
+            window.addEventListener("offline", offlineStatus, true);
+        } 
+    </script>
+</head>
+<body>
+    <div id="statusDiv"></div>
+    <p>Esta es una actualización de la página</p>
+
+</body>
+
+</html>

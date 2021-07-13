@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- LG Optimus L70 Portraid -->    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performing 2D Transformations</title>
+    <style>
+        div {
+            font-family: verdana, arial;
+            font-size: small;
+            width: 290px;
+            height:80px;
+            background-color:blueviolet;
+            color: whitesmoke;
+            border-radius: 5px;
+        }
+
+        .translate1 {
+            transform: translate(60px);
+            -ms-transform: translate(60px);
+            -webkit-transform: translate(60px);
+            -moz-transform: translate(60px);
+            -o-transform: translate(60px);
+        }
+
+        .translate2 {
+            transform: translate(-60px);
+            -ms-transform: translate(-60px);
+            -webkit-transform: translate(-60px);
+            -moz-transform: translate(-60px);
+            -o-transform: translate(-60px);
+        }
+
+        .translate3 {
+            transform: translate(20%);
+            -ms-transform: translate(20%);
+            -webkit-transform: translate(20%);
+            -moz-transform: translate(20%);
+            -o-transform: translate(20%);
+        }
+
+        .translate4 {
+            transform: translate(-20%);
+            -ms-transform: translate(-20%);
+            -webkit-transform: translate(-20%);
+            -moz-transform: translate(-20%);
+            -o-transform: translate(-20%);
+        }
+
+        .translate5 {
+            transform: translate(400px, 20px);
+            -ms-transform: translate(400px, 20px);
+            -webkit-transform: translate(400px, 20px);
+            -moz-transform: translate(400px, 20px);
+            -o-transform: translate(400px, 20px);
+        }
+
+        .translate6 {
+            transform: translateX(10px);
+            -ms-transform: translateX(10px);
+            -webkit-transform: translateX(10px);
+            -moz-transform: translateX(10px);
+            -o-transform: translateX(10px);
+        }
+
+        .translate7 {
+            transform: translateY(10px);
+            -ms-transform: translateY(10px);
+            -webkit-transform: translateY(10px);
+            -moz-transform: translateY(10px);
+            -o-transform: translateY(10px);
+        }
+    </style>
+    <script>
+        var applyTranslating = (translate) => {
+            var divToTranslate = document.querySelector("div");
+            divToTranslate.className = translate;
+            var css3content = "";
+            switch (translate) {
+                case "translate1":
+                    css3content = "transform: translate(60px);\n";
+                    css3content += "-ms-transform: translate(60px);\n";
+                    css3content += "-webkit-transform: translate(60px);\n";
+                    css3content += "-moz-transform: translate(60px);\n";
+                    css3content += "-o-transform: translate(60px);\n";
+                    break;
+                case "translate2":
+                    css3content = "transform: translate(-60px);\n";
+                    css3content += "-ms-transform: translate(-60px);\n";
+                    css3content += "-webkit-transform: translate(-60px);\n";
+                    css3content += "-moz-transform: translate(-60px);\n";
+                    css3content += "-o-traate(-60px);\n";
+                    break;
+                case "translate3":
+                    css3content = "transform: translate(20%);\n";
+                    css3content += "-ms-transform: translate(20%);\n";
+                    css3content += "-webkit-transform: translate(20%);\n";
+                    css3content += "-moz-transform: translate(20%);\n";
+                    css3content += "-o-transform: translate(20%);\n";
+                    break;
+                case "translate4":
+                    css3content = "transform: translate(-20%);\n";
+                    css3content += "-ms-transform: translate(-20%);\n";
+                    css3content += "-webkit-transform: translate(-20%);\n";
+                    css3content += "-moz-transform: translate(-20%);\n";
+                    css3content += "-o-traate(-20%);\n";
+                    break;
+                case "translate5":
+                    css3content = "transform: translate(400px, 20px);\n";
+                    css3content += "-ms-transform: translate(400px, 20px);\n";
+                    css3content += "-webkit-transform: translate(400px, 20px);\n";
+                    css3content += "-moz-transform: translate(400px, 20px);\n";
+                    css3content += "-o-transform: translate(400px, 20px);\n";
+                    break;
+                case "translate6":
+                    css3content = "transform: translateX(10px);\n";
+                    css3content += "-ms-transform: translateX(10px);\n";
+                    css3content += "-webkit-transform: translateX(10px);\n";
+                    css3content += "-moz-transform: translateX(10px);\n";
+                    css3content += "-o-transform: translateX(10px);\n";
+                    break;
+                default:
+                    css3content += "transform: translateY(10px);\n";
+                    css3content += "-ms-transform: translateY(10px);\n";
+                    css3content += "-webkit-transform: translateY(10px);\n";
+                    css3content += "-moz-transform: translateY(10px);\n";
+                    css3content += "-o-transform: translateY(10px);\n";
+                    break;
+            }
+            divToTranslate.innerText = css3content;
+        }
+    </script>
+</head>
+
+<body>
+    <div>Esto comenzará a cambiar</div> <br /> <br />
+    <footer>
+        <button onclick="applyTranslating('translate1')">Translate 1</button> 
+        <button onclick="applyTranslating('translate2')">Translate 2</button> 
+        <button onclick="applyTranslating('translate3')">Translate 3</button> <br />
+        <button onclick="applyTranslating('translate4')">Translate 4</button> 
+        <button onclick="applyTranslating('translate5')">Translate 5</button> 
+        <button onclick="applyTranslating('translate6')">Translate 6</button> <br />
+        <button onclick="applyTranslating('translate7')">Translate 7</button> <br />
+    </footer>
+</body>
+
+</html>

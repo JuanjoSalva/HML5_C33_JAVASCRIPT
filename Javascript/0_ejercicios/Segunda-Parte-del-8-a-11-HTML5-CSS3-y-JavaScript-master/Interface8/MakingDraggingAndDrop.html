@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Dragging and drop</title>
+</head>
+
+<body>
+    <div contenteditable="true" draggable="true" ondrag="handleDrag(event)">
+        <b>Some content</b> to be dragged.
+    </div>
+    <input ondragover="handleDragOver(event)" ondrop="handleDrop(event)" />
+    <script type="text/javascript">
+        function handleDrag(event) {
+            event.dataTransfer.effectAllowed = "copy";
+            event.dataTransfer.setData("text/plain", event.target.innerHTML);
+        }
+        function handleDragOver(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "copy"; // Display a "copy" cursor
+        }
+        function handleDrop(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.target.innerHTML = e.dataTransfer.getData("text/plain");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The Session Storage</h1>
+
+    <p>El almacenamiento de sesiones "Session Storage" es un mecanismo de persistencia del navegador que puede almacenar datos de texto en
+        el dispositivo que ejecuta el navegador. Como su nombre lo indica, los datos guardados en este storage tienen la misma
+        duración de la sesión actual del usuario.</p>
+
+    <button onclick="removeStorage()">Remove Storage Items</button> <br />
+    <button onclick="saveStoreItem()">Save Date data in storage Items</button>
+    <button onclick="listStorageItem()">List data from storage items</button>
+
+    <p id="demo"></p>
+
+    <div id="myList"></div>
+
+    <script>
+        window.addEventListener("storage", myFunction);
+
+        function myFunction(event) {
+            document.getElementById("demo").innerHTML = "A change was made in the storage area";
+        }
+
+        function changeValue() {
+            var x = window.open("", "myWindow", "width=200,height=100");
+            x.localStorage.setItem("mytime", Date.now());
+            x.close();
+        }
+
+        let removeStorage = () => {
+            for (let i = 0; i < sessionStorage.length; i++) {
+                sessionStorage.removeItem(sessionStorage.key(i));
+            }
+        }
+        let saveStoreItem = () => {
+            sessionStorage.setItem("myDate", Date.now().toString());
+            //sessionStorage["myDate" = Date.now().toString();
+            //sessionStorage.myKey = "myDate", Date.now().toString();
+        }
+        let listStorageItem = () => {
+            var listDiv = document.getElementById("myList");
+            listDiv.innerHTML = "";
+            for (var i = 0; i < sessionStorage.length; i++) {
+                listDiv.innerHTML += "<br />" + sessionStorage.key(i) + ":" + sessionStorage.getItem(sessionStorage.key(i));
+            }
+        }
+    </script>
+</body>
+
+</html>

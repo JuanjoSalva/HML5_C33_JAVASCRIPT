@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura de un fichero plano.txt</title>
+    <script>
+        let CargarFicheroPlano = () => {
+            const theFileElem = document.getElementById("theTextFile");
+            if (theFileElem.files.length != 0 && theFileElem.files[0].type.match(/text.*/)) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const elContenidoDelFichero = document.getElementById("theMessageArea");
+                    elContenidoDelFichero.value = e.target.result;
+                };
+                reader.onerror = (e) => {
+                    alert("No ha sido posible cargar el fichero de texto plano");
+                }
+                reader.readAsText(theFileElem.files[0]);
+            }
+            else 
+                alert("Por favor seleccione un fichero de texto plano");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="file" id="theTextFile" onchange="CargarFicheroPlano()"></input>
+    <textarea id="theMessageArea" rows="30" cols="40">
+
+    </textarea>
+</body>
+
+</html>

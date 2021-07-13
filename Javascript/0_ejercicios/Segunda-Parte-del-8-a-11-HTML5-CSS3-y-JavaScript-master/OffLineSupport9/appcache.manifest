@@ -1,0 +1,9 @@
+CACHE MANIFEST
+CACHE:
+CacheHandler.html
+IndexDb.html
+StorageHandler.html
+NETWORK:
+login
+# alternatives paths
+FALLBACK:

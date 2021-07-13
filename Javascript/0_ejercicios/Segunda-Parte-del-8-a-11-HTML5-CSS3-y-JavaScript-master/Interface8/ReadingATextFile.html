@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading a Text File</title>
+</head>
+
+<body>
+    <input type="file" id="theTextFile" onchange="onLoadTextFile()" />
+    <textarea id="theMessageArea" rows="30" cols="40"></textarea>
+    <script type="text/javascript">
+        function onLoadTextFile() {
+            const theFileElem = document.getElementById("theTextFile");
+            // Get the File object selected by the user, and make sure it is a text file.
+            if (theFileElem.files.length != 0 && theFileElem.files[0].type.match(/text.*/)) {
+                // Create a FileReader and handle the onload and onerror events.
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const theMessageAreaElem = document.getElementById("theMessageArea");
+                    theMessageAreaElem.value = e.target.result;
+                };
+                reader.onerror = function (e) {
+                    alert("Cannot load text file");
+                };
+                // Read text file (the second parameter is optional - the default encoding is "UTF-8").
+                reader.readAsText(theFileElem.files[0], "ISO-8859-1");
+            } else {
+                alert("Please select a text file");
+            }
+        }
+    </script>
+</body>
+
+</html>

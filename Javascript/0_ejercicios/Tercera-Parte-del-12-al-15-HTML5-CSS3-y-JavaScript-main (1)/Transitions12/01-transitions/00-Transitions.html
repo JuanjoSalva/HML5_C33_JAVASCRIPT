@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Wellcome to transition in CSS3</title>
+    <style>
+        div {
+            width: 400px;
+            height: 60px;
+            background-color: yellow; /*Simple transitions */
+            transition: width 2s, height 2s, font-size 2s, background-color 3750ms;
+        }
+        
+
+        div:hover {
+            color: white;
+            width: 600px;
+            height: 80px;
+            font-size: large;
+            background-color: red
+        }
+
+        .parrafo {
+            width: 400px;
+            height: 60px; /* Complex transitions  */
+            transition-property: width, height;
+            transition-duration: 2s, 2s;
+            transition-timing-function: linear;
+            /*ease-out; OR ease-in OR ease-in-out OR linear OR ease */
+            transition-delay: 0.5s;
+            color: red;
+        }
+
+             
+        .parrafo:hover {
+            width: 600px;
+            height: 80px;
+            font-size: large;
+            background-color: red;
+            color: white;
+        }
+
+        p {  border-style: solid;
+             border-color: blueviolet;}
+    </style>
+        <script>
+            function onLoad()
+            {
+                initMessage();
+                const divElements = document.querySelectorAll("div");
+                for (let i = 0; i < divElements.length; i++) {
+                    divElements[i].addEventListener("transitionend",onTransitionend,true);
+                }
+                const pElements = document.querySelectorAll("p");
+                for (let i = 0; i < pElements.length; i++) {
+                    pElements[i].addEventListener("transitionend",onTransitionend,true);
+                }
+            }
+
+            function onTransitionend(e) {
+                messages.add(new Option(e.currentTarget.localName + " " + e.propertyName + ", elapsedTime " + e.elapsedTime));
+            }
+
+            var initMessage = () => {
+                messages.innerHTML = "";
+                messages.add(new Option("-- Expand to view the transitioned events --"));
+            }
+        </script>
+</head>
+
+<body onload="onLoad();">
+    <div>
+        <b>Hello World Transitions</b>
+    </div>
+    <p class="parrafo">More transitions!!</p>
+    <select id="messages"></select> <br/>
+    <button class="boton" onclick="initMessage();">Clear list of transitioned events</button>
+</body>
+
+</html>

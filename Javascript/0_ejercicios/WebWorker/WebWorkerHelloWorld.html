@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Hello World</title>
+    <style type="text/css">
+        body {
+            padding-top: 18px;
+        }
+
+        .output-cont {
+            margin-left: 12%;
+            margin-top: 28px;
+        }
+
+        .output-cont h2 {
+            width: 150px;
+            height: 95%;
+        }
+
+        .output-cont button {
+            padding: 3px 7px;
+            font-size: 1.3rem;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <h2>Validating the browser compatibility of Web Browsers</h2>
+        <div id="yes"></div>
+        <div id="No"></div>
+        <button onclick="worker_demo();">Compatibility Test</button>
+
+        <div class="output-cont"><button onclick="testWork()">start worker</button>
+            <h2 id="wOutput"></h2><button onclick="stopWorker()">terminate </button>
+        </div>
+        <br />
+        <div class="output-cont"><button onclick="test()">start blocking thread</button>
+            <h2 id="mainThreadOutput"></h2>
+        </div>
+        <br />
+        <div class="output-cont"><button onclick="alert('page responsive!')">test responsiveness</button></div>
+
+        <script type="text/javascript">
+            function worker_demo() {
+                if (typeof (Worker) !== "undefined") {
+                    document.getElementById("yes").innerHTML = " Browser Supports";
+                }
+                else {
+                    document.getElementById("NO").innerHTML = "Browser Not Supporting the workers";
+                }
+            }
+            var worker;
+            function testWork() {
+                if (typeof (Worker) !== "undefined") {
+                    if (typeof (worker) == "undefined") {
+                        worker = new Worker("demo.js");
+                    }
+                    worker.onmessage = function (event) {
+                        document.getElementById("wOutput").innerHTML = event.data;
+                    };
+                } else {
+                    document.getElementById("wOutput").innerHTML = "Web Workers are unsupported";
+                }
+            }
+            function stopWorker() {
+                worker.terminate();
+                worker = undefined;
+            }
+            function test() {
+                for (var j = 0; j < 1000000; j++) {
+                    document.getElementById("mainThreadOutput").innerHTML = "Main Thread Counter: " + j;
+                }
+            }
+        </script>
+    </body>
+</body>
+
+</html>

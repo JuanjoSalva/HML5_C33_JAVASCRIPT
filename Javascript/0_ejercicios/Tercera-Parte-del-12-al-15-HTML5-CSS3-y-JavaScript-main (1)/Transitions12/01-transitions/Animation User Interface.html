@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preguntas 186 y 232-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation User Interfaces</title>
+    <style>
+        img {
+            width: 500px;
+            height: 400px;
+            src: url("../Azure is comming");
+            /*transition-property: width,height; /*,border-style;*/
+            /*transition-duration: 2s,1s; /*,3s;*/
+            /*transition-timing-function: ease-in;
+            /*transition-delay: 2s;*/
+        }
+        img:hover 
+        {
+            transition-property: width,height;
+            transition-duration: 2s,1s;
+            transition-timing-function: ease-in;
+            width:750px;
+            height: 600px;
+            border-style: solid;
+        }
+    </style>    
+    <script>
+        var helloWorld = () => {
+            alert("Hello World");
+        }
+    </script>
+</head>
+<body>
+    <img src="../Azure is comming.png" alt="Azure is comming" onclick="helloWorld()">
+</body>
+</html>

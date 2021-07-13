@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: pink;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+@media print {
+    footer {display:none;}
+}
+</style>
+</head>
+<body>
+
+<h1>The @media Rule</h1>
+
+<p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "yellow".</p>
+<footer style="background-color:orange;">
+<p>Implementing the footer with it </p>
+</footer>
+
+</body>
+</html>
