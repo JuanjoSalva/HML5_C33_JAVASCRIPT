@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Fetch Async Await</title>
+</head>
+
+<body>
+    <script>
+        const url = "https://randomuser.me/api/?results=4";
+        let getResponse = async () => {
+            let response = await fetch(url);
+            let json = await response.json();
+            console.log(json);
+        };
+        getResponse();
+    </script>
+</body>
+
+</html>

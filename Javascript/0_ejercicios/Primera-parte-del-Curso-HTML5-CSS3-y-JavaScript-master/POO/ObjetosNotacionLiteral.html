@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Notacion Literal</title>
+</head>
+
+<body>
+    <script>
+        const employee3 = {
+            name: "Mary Jones",
+            age: 42,
+            salary: 20000,
+
+            payRise: function (amount) {
+                this.salary += amount;
+                return this.salary;
+            },
+
+            displayDetails: function () {
+                alert(this.name + " is " + this.age + " and earns " + this.salary);
+            }
+        };
+        employee3.Antiguedad = 12;
+    </script>
+</body>
+
+</html>

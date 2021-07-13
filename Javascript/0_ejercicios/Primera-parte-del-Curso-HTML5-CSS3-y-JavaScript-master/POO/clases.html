@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases en JavaScript</title>
+</head>
+
+<body>
+    <script>
+        class Account { //start of class
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTrasaction = 0;
+            }
+            withdraw(amount) {
+                this.balance -= amount;
+                this.numTrasaction++;
+            }
+            deposit(amount) {
+                this.balance += amount;
+                this.numTrasaction++;
+            }
+        } // End of class
+        Account.prototype.transactions = function () {
+            //alert(this.numTrasaction);
+            return this.numTrasaction;
+        }
+        /* La siguiente sintaxis no es valida para
+        // clases
+        Account.prototype = {
+            withdraw: function (amount) {
+                this.balance -= amount;
+                this.numTrasaction++;
+            },
+            deposit: function (amount) {
+                this.balance += amount;
+                this.numTrasaction++;
+            }
+        }*/
+
+        let acc1 = new Account(1, "John");
+        let acc2 = new Account(2, "Mary");
+        let acc3 = new Account(2, "Richard");
+
+        //acc3.deposit(3400);
+        acc3.withdraw(300);
+        acc1.deposit(1230);
+        acc1.withdraw(230);
+        acc2.deposit(5000);
+        acc2.withdraw(340);
+        alert(acc1.name + " - transacciones:" + acc1.transactions());
+        alert(acc2.name + " - transacciones:" + acc2.transactions());
+
+
+    </script>
+</body>
+
+</html>

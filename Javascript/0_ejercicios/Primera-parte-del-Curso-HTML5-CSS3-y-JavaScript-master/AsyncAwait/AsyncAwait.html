@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>AsyncAwait</title>
+</head>
+
+<body>
+    <script>
+        let getRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("Network error occurred, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+        let  getOtherKindOfRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("Network error occurred in getOtherKindOfRemoteData, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+        let finalResult = timeToWait => new Promise(resolve => setTimeout(resolve, timeToWait, "Resultado final"));
+        const url = "https://randomuser.me/api/?xresults=4";
+        const url2 ="https://randomuser.me/api/?xresults=3";
+        let myAsyncFunc = async function(url,url2,time)
+        {
+            try {
+                let result = await getRemoteData(url);
+                let newResult= await getOtherKindOfRemoteData(url2);
+                let resultadoFinal = await finalResult(time);
+                console.log("Primer resultado:", result);
+                console.log("Segundo resultado:", newResult);
+                console.log("Tercer resultado:",resultadoFinal);
+            } catch (error) {
+                console.log("Errores",error);
+            }
+        }
+        myAsyncFunc(url,url2,5000);
+        document.write("<p>Etiquetas en la pagina y otro codigo 1</p><br/>");
+        document.write("<p>Etiquetas en la pagina y otro codigo 2</p><br/>");
+        document.write("<p>Etiquetas en la pagina y otro codigo 3</p><br/>");
+        document.write("<p>Etiquetas en la pagina y otro codigo 4</p><br/>");
+     </script>
+</body>
+</html>

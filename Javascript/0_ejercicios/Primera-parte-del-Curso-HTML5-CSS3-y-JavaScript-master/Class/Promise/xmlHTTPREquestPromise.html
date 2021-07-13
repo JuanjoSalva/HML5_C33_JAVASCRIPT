@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>XMLHTTPRequestWithPromises</title>
+</head>
+
+<body>
+    <script>
+        let flag = false;
+        let getRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("getRemoteData: Network error occurred, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+
+        let getOtherKindOfRemoteData = (tiempo) => new Promise((resolve, rejected) =>
+            setTimeout(flag ? resolve : rejected, tiempo, flag ? " *** OKDR PROMESA CUMPLIDA ****" : "*** OKDR PROMESA NO CUMPLIDA"));
+
+        let getnewRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("getnewRemoteData: Network error occurred, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+
+        const url2 = "https://randomuser.me/api/?xresults=1";
+        const url = "https://randomuser.me/api/?xresults=4";
+        Promise.all([
+            // Proceso 1
+            getRemoteData(url),
+            // Proceso 2
+            getOtherKindOfRemoteData(5000),
+            // Proceso 3
+            getnewRemoteData(url2)
+        ]).then(result => document.write(" *** TODOS LOS PROCESOS HAN FINALIZADO ***", result))
+            .catch(erroneo => document.write(" *** TODOS LOS PROCESOS HAN FINALIZADO ***", erroneo));
+    </script>
+
+</body>
+
+</html>

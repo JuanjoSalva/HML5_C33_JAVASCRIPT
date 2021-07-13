@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+        /*cars1 = "BMW"; 
+        cars2 = "Volvo";
+        cars3 = "Saab";
+        cars4 = "Ford";*/
+
+        cars[6]="Ferrari";
+        var i = 0;
+        var text = "";
+
+        for (; cars.length<i;  ) {
+            text += cars[i] + "<br>";
+            i++;
+        }
+
+        i = 0;
+        for (; true;) {
+            text += cars[i++] + "<br>";
+            if (!cars[i])
+                break;
+        }
+
+
+        text = "";
+        for (let Nu = 0; Nu < 10; Nu++) {
+            text += "<br/>numero-" + Nu;
+        }
+
+        text = "";
+        for (let Nu = 10; Nu > 0; Nu--) {
+            text += "<br/>numero-" + Nu;
+
+        }
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits[6] = "Lemon";    // adds a new element (Lemon) to fruits
+        text = "";
+        fruits.forEach((x) => text += x + "<br>")
+
+
+    </script>
+</body>
+
+</html>

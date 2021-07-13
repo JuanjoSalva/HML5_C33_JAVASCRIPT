@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso del Apply</title>
+</head>
+
+<body>
+    <script>
+        const Point = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        Point.prototype.moveBy = function (deltaX, deltaY) {
+            this.x += deltaX;
+            this.y += deltaY;
+        }
+
+        Point.prototype.moveTo = function (otherPoint) {
+            this.x = otherPoint.x;
+            this.y = otherPoint.y;
+        }
+
+        const p1 = new Point(100, 200);
+        p1.moveBy(10, 20);
+
+        const p2 = new Point(25, 50);
+        p2.moveTo(p1);
+        alert("p2.x: " + p2.x + " p2.y: " + p2.y);
+
+        // Aqui estara un metodo que no se quiere
+        // ampliar a la definición inicila del 
+        // Objeto Point
+        function SetColor(color) {
+            this.color = color;
+        }
+        SetColor.apply(p1, ["red"]);
+        alert(p1.color); // Displays "red" 
+    </script>
+</body>
+
+</html>

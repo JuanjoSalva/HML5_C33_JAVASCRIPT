@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Promesas 2</title>
+</head>
+
+<body>
+    <script>
+        // Paso en D:\BMV\EjerciciosJScript\Class y crear una carpeta Promesas
+        // EN EL SCRIPT de la linea 40 hay un ejemplo limpio
+        flag = false; // PASO 3 al final 
+        /* PASO 1: Comienzas con esta tan simple LA DEL LIBRO PAG 105 y muestras la consola*/
+        /* let getPromise = timeToWait => new Promise(resolve => setTimeout(resolve, timeToWait, "bar"));
+        getPromise(5000).then(data => console.log(data));*/
+
+        /* PASO 2: Despues añades esto de aqui:*/
+        let getPromise = (timeToWait) => new Promise((resolve, rejected) => {
+            setTimeout((flag ? resolve : rejected), timeToWait, (flag ? " SI cumplida " : " NO cumplida"));
+        });
+        /* PASO 3: La llamada a la funcion con .catch() */
+        /* getPromise(5000).then(data => document.getElementById("p1").innerText += "-then:" + data)
+            .catch(reason => document.getElementById("p1").innerText += "-Catch:-" + reason); */
+        document.write("<p id='p1'>Esperando de la promesa:</p><br/>");
+        document.write("<p>Elemento 2</p><br/>");
+        document.write("<p>Elemento 3</p><br/>");
+        document.write("<p>Elemento 4</p><br/>");
+        /*let ResueltaErronea = () => {
+            flag = !flag; alert(flag);
+            getPromise(5000).then(data => document.getElementById("p1").innerText += "-then:" + data)
+                .catch(reason => document.getElementById("p1").innerText += "-Catch:-" + reason);
+        }*/
+    </script>
+    <!-- PASO 4:  con la creacion de la variable flag y la llamada a la funcion ResueltaErronea -->
+    <!-- <button onclick="ResueltaErronea();">Resuelta/Erronea</button> -->
+    <!-- // Borrala si la estas preparando -->
+
+    <script>
+        let getPromise = (timeToWait, flag) => new Promise((resolve, rejected) => {
+            if (flag) {
+                setTimeout(resolve, timeToWait, " promesa cumplida")
+            }
+            else {
+                setTimeout(rejected, timeToWait, " promesa no cumplida")
+            }
+        });
+        //AQUI LLAMAMOS A LA PROMESA
+        getPromise(5000, true)
+            .then(data => {
+                console.log(data);
+                document.getElementById("p1").innerHTML += data;
+            })
+            .catch(reason => {
+                console.log(reason);
+                document.getElementById("p1").innerHTML += reason;
+            }
+            );
+        document.write("<p id='p1'>Elemento 1:</p>");
+        document.write("<p>Elemento 2</p>");
+        document.write("<p>Elemento 3</p>");
+        document.write("<p>Elemento 4</p>");
+    </script>
+
+</body>
+
+</html>

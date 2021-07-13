@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simples Objects</title>
+</head>
+
+<body>
+    <script>
+        // Creación basica de objetos
+        let employee1 = new Object();
+        let employee2 = {};
+
+        employee1.name = "John Smith";
+        employee1.age = 21;
+        employee1.salary = 10000;
+        employee1.payRise = function (amount) {
+            // Inside a method, "this" means the current object.
+            this.salary += amount;
+            return this.salary;
+        }
+
+        let newSalary = employee1.payRise(1000);
+        document.write("New salary for employee1 is " + newSalary);
+
+        const employee2 = {
+            name: "Mary Jones",
+            age: 42,
+            salary: 20000,
+            payRise: function (amount) {
+                this.salary += amount;
+                return this.salary;
+            },
+            displayDetails: function () {
+                alert(this.name + " is " + this.age + " and earns " + this.salary);
+            }
+        }
+
+        // Usando constructores
+        const Account = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;
+            this.numTransactions = 0;
+        };
+
+        //let acc1 = new Account(1, "John");
+        //let acc2 = new Account(2, "Mary");
+        // Usando Prototipos
+        Account.prototype = {
+            deposit: function (amount) {
+                this.balance += amount;
+                this.numTransactions++;
+            },
+            withdraw: function (amount) {
+                this.balance -= amount;
+                this.numTransactions++;
+            },
+            displayDetails: function () {
+                alert(this.id + ", " +
+                    this.name + " balance $" +
+                    this.balance + " (" +
+                    this.numTransactions + " transactions)");
+            }
+        };
+
+        let acc1 = new Account(1, "John");
+        let acc2 = new Account(2, "Mary");
+        acc1.deposit(100);
+        acc1.displayDetails();
+        acc2.withdraw(50);
+        acc2.displayDetails();
+
+        // Usando El método Object.create para crear objetos basado en un prototipo existente
+        let obj1 = Object.create(null, {
+            prop1: { value: "hello", writable: true }, // read/write property
+            prop2: { value: "world" } // read-only property
+        });
+
+        let obj2 = Object.create(Object.getPrototypeOf(acc1));
+    </script>
+</body>
+
+</html>

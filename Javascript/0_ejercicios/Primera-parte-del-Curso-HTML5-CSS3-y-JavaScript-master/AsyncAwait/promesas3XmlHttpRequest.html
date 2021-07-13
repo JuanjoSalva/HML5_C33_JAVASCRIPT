@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>XmlHttRequest</title>
+</head>
+
+<body>
+    <script>
+        let getRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    const type = request.getResponseHeader("Content-Type");
+                    switch(type) {
+                        case "text/xml" : 
+                            resolve(type+" "+request.responseXML);
+                            break;
+                        default :
+                            resolve(type+" "+request.responseText)
+
+                    }
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("Network error occurred, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+        //const url = "https://randomuser.me/api/?results=4";
+        const url = "https://randomuser.me/api/?xresults=4";
+        getRemoteData(url)
+            .then(mensaje => document.write(mensaje))
+            .catch(error => document.write(error));
+
+        // JSON.parse(Para deserializar ese JSON)
+    </script>
+</body>
+
+</html>

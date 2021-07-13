@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>XmlHttRequest</title>
+</head>
+
+<body>
+    <script>
+        let getRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("Network error occurred, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+        let  getOtherKindOfRemoteData = url => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+
+            request.onload = () => {
+                if (request.status === 200) {
+                    resolve(request.response);
+                }
+                else {
+                    reject(Error(request.statusText));
+                }
+            };
+            // Handle network errors Este error se inicia con una llamada erronea a la url
+            request.onerror = () => {
+                reject(Error("Network error occurred in getOtherKindOfRemoteData, erronus url"));
+            };
+            request.open("GET", url);
+            request.send();
+        });
+        let finalResult = timeToWait => new Promise(resolve => setTimeout(resolve, timeToWait, "Resultado final"));
+        const url = "https://randomuser.me/api/?xresults=4";
+        const url2 ="https://randomuser.me/api/?xresults=1";
+        Promise.all([
+            getRemoteData(url),
+            getOtherKindOfRemoteData(url2),
+            finalResult(5000)
+        ]).then(results => document.write("Todos los resultados han llegado",results))
+        .catch(erroneo =>document.write("Todos los resultados han llegado, algún fallo",erroneo));
+    </script>
+</body>
+</html>

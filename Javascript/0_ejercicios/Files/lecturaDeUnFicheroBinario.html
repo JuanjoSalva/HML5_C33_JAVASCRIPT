@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura de un fichero binario.txt</title>
+    <script>
+        let CargarFicheroBinario = () => {
+            const theFileElem = document.getElementById("theBinaryFile");
+            if (theFileElem.files.length != 0 && theFileElem.files[0].type.match(/image.*/)) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const elContenidoDelFichero = document.getElementById("theImage");
+                    theImage. = e.target.result;
+                };
+                reader.onerror = (e) => {
+                    alert("No ha sido posible cargar el fichero binario");
+                }
+                reader.readAsDataURL(theFileElem.files[0]);
+            }
+            else
+                alert("Por favir selecciones un fichero de texto Binario");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="file" id="theBinaryFile" onchange="CargarFicheroBinario()"></input>
+    <img id="theImage"></img>
+</body>
+
+</html>

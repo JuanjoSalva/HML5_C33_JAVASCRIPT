@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Simples en JavaScript</title>
+</head>
+
+<body>
+    <script>
+
+        let employee1 = new Object();
+
+        let employee2 = {};
+
+        employee1.name = "Billy";
+        employee2.name = "Miguel";
+
+        employee1.age = 51;
+        employee2.age = 48;
+
+        employee1.salary = 10000;
+        employee2.salary = 12000;
+
+        employee1.payRaise = function (amount) {
+            this.salary += amount;
+            return this.salary;
+        }
+
+        employee2.payRaise = function (amount) {
+                        this.salary += amount;
+            return this.salary;
+        }
+
+        alert(employee1.name);
+        alert(employee2.name);
+
+        let newSalaray = employee1.payRaise(1000);
+
+        let newSalaray2 = employee2.payRaise(500);
+
+        alert(employee1.salary);
+        alert(employee2.salary);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

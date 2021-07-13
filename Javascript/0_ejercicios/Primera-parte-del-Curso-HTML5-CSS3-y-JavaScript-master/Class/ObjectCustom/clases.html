@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases en JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Usando Clases en ES2015 
+        class Account {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTransactions = 0;
+            }
+        }
+        let acc1 = new Account(1, "John");
+        let acc2 = new Account(2, "Mary");
+
+        class Account {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.balance = 0;
+                this.numTransactions = 0;
+            }
+            deposit(amount) {
+                this.balance += amount;
+                this.numTransactions++;
+            }
+            withdraw(amount) {
+                this.balance -= amount;
+                this.numTransactions++;
+            }
+            displayDetails() {
+                alert(this.id + ", " +
+                    this.name + " balance $" +
+                    this.balance + " (" +
+                    this.numTransactions + " transactions)");
+            }
+        }
+
+        let acc1 = new Account(1, "John");
+        let acc2 = new Account(2, "Mary");
+        acc1.deposit(100);
+        acc1.displayDetails();
+        acc2.withdraw(50);
+        acc2.displayDetails();
+
+    </script>
+</body>
+
+</html>

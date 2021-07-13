@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Promesas</title>
+</head>
+
+<body>
+    <script>
+        flag = false;
+        let getPromise = (tiempo) => new Promise((resolve,rejected) => 
+        setTimeout(flag ? resolve : rejected, tiempo, flag ? " *** PROMESA CUMPLIDA ****" : "*** PROMESA NO CUMPLIDA"));
+
+        getPromise(5000).then(data  => document.getElementById("p1").innerText += "-then:" + data)
+                       .catch(errorPR => document.getElementById("p1").innerText += "-catch:" + errorPR);
+
+        document.write("<p id='p1'> Esperando la respuesta de la promesa</p>");
+        document.write("<p> Elementos mas en la pagina</p>");
+        document.write("<p> Elemento  en la pagina</p>");
+        document.write("<p> Elemento en la pagina</p>"); 
+    </script>
+</body>
+
+</html>

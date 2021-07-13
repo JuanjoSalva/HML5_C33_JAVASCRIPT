@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Implementing Text Effects</title>
+    <style>
+        #d1 {
+            background-color: lightblue;
+            border: 1px solid rgba(255,255, 255,1);
+            text-indent: 50px;
+        }
+
+        #d2 {
+            border: 1px solid blue;
+            width: 180px;
+            hyphens: auto;
+        }
+
+        #d3 {
+            border: 1px solid blue;
+            width: 100px;
+            word-wrap: break-word;
+            text-align: justify;
+        }
+
+        #d4 {
+            border: 1px solid blue;
+            width: 100px;
+            word-spacing: 2rem;
+        }
+
+        #d5 {
+            border: 1px solid blue;
+            width: 100px;
+            text-shadow: 13px 5px 0 rebeccapurple;
+        }
+
+        #d6 {
+            border: 1px solid red;
+            outline: 1px solid green;
+            outline-offset: 5px;
+        }
+
+        #d7 {
+            border-width: 2px;
+            border-style: solid;
+            border-color: red;
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: green;
+            outline-offset: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div id="d1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis non repellat minus molestias autem. Voluptates enim, magni recusandae corporis rerum quasi, id libero deserunt sequi delectus voluptatibus, ex possimus repellendus.</div>-->
+    <!--<div id="d2"> esternocleidomas&shy;toideo una oración con muchas palabras y veremos como la recorta</div>-->
+    <!-- <div id="d3">El ministrodeJusticiaJuan Carlos Campo, ha señalado que debe normalizarse la ausencia del Rey Felipe VI en la entrega de despachos de la 69 promoción de jueces que tendrá lugar este viernes en la escuela judicial Barcelona.        En declaraciones a la Cadena Ser, Campo ha indicado que "sin duda" es una "decisión bien tomada" y ha recalcado que "la mayor obligación que tiene el Gobierno es proteger a las instituciones y la Monarquía lo es". Ante las reiteradas preguntas de la entrevistadora sobre quién adoptó esa decisión, el titular de Justicia ha rehuido a responder claramente que fuera el Ejecutivo y se ha limitado a decir que "quien tenía que tomarla la ha tomado" y que la misma obedece a "un paquete de razones" que se han valorado.</div> -->
+    <!-- <div id="d4">El ministrodeJusticiaJuan Carlos Campo, ha señalado que debe normalizarse la ausencia del Rey Felipe VI en la entrega de despachos de la 69 promoción de jueces que tendrá lugar este viernes en la escuela judicial Barcelona.        En declaraciones a la Cadena Ser, Campo ha indicado que "sin duda" es una "decisión bien tomada" y ha recalcado que "la mayor obligación que tiene el Gobierno es proteger a las instituciones y la Monarquía lo es". Ante las reiteradas preguntas de la entrevistadora sobre quién adoptó esa decisión, el titular de Justicia ha rehuido a responder claramente que fuera el Ejecutivo y se ha limitado a decir que "quien tenía que tomarla la ha tomado" y que la misma obedece a "un paquete de razones" que se han valorado.</div> -->
+    <!-- <div id="d5">El ministrode Justicia Juan Carlos Campo, .</div> -->
+    <div id="d7"></div>
+    <p>parrafo numero 1</p>
+    <p>parrafo numero 2</p>
+    <p>parrafo numero 3</p>
+    <p>parrafo numero 4</p>
+    <p>parrafo numero 5</p>
+    <p>parrafo numero 6</p>
+    <p>parrafo numero 7</p>
+    <p>parrafo numero 8</p>
+    <p>parrafo numero 9</p>
+    <p>parrafo numero 10</p>
+    <script>
+        let p = document.getElementsByTagName("p");
+        //p.forEach((x)=>x.style.color="black"); 
+        for (const key in p) {
+            if (p.hasOwnProperty(key)) {
+                const element = p[key];
+                element.style.color = "orange";
+            }
+        }  
+    </script>
+</body>
+
+</html>

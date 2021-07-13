@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicios JavaScript Básicos e Intermedios</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio No. 117
+        //Escriba un programa JavaScript para calcular la suma de tres elementos de una matriz 
+        //dada de enteros de longitud 3.
+
+        /*function SumaTresElementos(nums) {
+            if (nums.length == 3)
+                return nums[0] + nums[1] + nums[2];
+            else
+                return "No hay tres elementos en el array";
+        }
+
+        console.log(SumaTresElementos([10, 23, 20]));
+        console.log(SumaTresElementos([15, 27, 30]));
+        console.log(SumaTresElementos(90, 1)); */
+
+        // Ejercicio No. 118
+        // Escriba un programa JavaScript para encontrar que el 1 de enero será domingo entre 2014 y 2050.
+        /*function EneroUnoDomingo() {
+            console.log('--------------------');
+            for (var year = 2014; year <= 2050; year++) {
+                var d = new Date(year, 0, 1);
+                if (d.getDay() === 0)
+                    console.log("1 de enero que sea domingo:  " + year);
+            }
+            console.log('--------------------');
+        }
+        console.log(EneroUnoDomingo());*/
+
+        // Ejercicio No.119
+        // Escriba un programa JavaScript para rotar los elementos a la izquierda de una matriz dada de enteros 
+        // de longitud 3.
+        /*function rotarElementosIzquierda(array) {
+            var resultadoadoRotacion="";
+            for (i=array.length-1;i>=0;i--)
+                resultadoadoRotacion+=array[i]+",";
+            return resultadoadoRotacion;
+        }
+        console.log(rotarElementosIzquierda([3, 4, 5]));
+        console.log(rotarElementosIzquierda([0, -1, 2]));
+        console.log(rotarElementosIzquierda([7, 6, 5]));*/
+
+        // Ejercicio No. 120
+        // Escriba un programa JavaScript para verificar si 1 aparece en la primera o última posición de una matriz dada de enteros. 
+        // La longitud de la matriz debe ser mayor o igual a 1.
+
+        /* function ApareceEnLaPrimeraOUltima(nums) {
+            var pos_final = nums.length - 1;
+            var respuesta="";
+            var primera="";
+            var ultima="";
+            if (nums[0] == 1)
+                primera = "Aparece en la primera posicion";
+            if (nums[pos_final] == 1)
+                ultima = "Aparece en la ultima posicion";
+            return primera + " " + ultima;
+        }
+
+        console.log(ApareceEnLaPrimeraOUltima([1, 3, 5]));
+        console.log(ApareceEnLaPrimeraOUltima([1, 3, 5, 1]));
+        console.log(ApareceEnLaPrimeraOUltima([2, 4, 6])); */
+
+        // Ejercicio 150
+        // Escriba un programa JavaScript para comprobar si es posible 
+        // reorganizar los caracteres de una cadena dada de tal manera que se vuelva igual a otra cadena dada.
+
+        /*function reorganizarCaracteres(str1, str2) {
+
+            var primerConjunto = str1.split(''),
+                segundoConjunto = str2.split(''),
+                resultado = true;
+
+            primerConjunto.sort();
+            segundoConjunto.sort();
+
+            for (var i = 0; i < Math.max(primerConjunto.length, segundoConjunto.length); i++) {
+                if (primerConjunto[i] !== segundoConjunto[i]) {
+                    resultado = false;
+                }
+            }
+
+            return resultado;
+        }
+
+        console.log(reorganizarCaracteres("xyz", "zyx"));
+        console.log(reorganizarCaracteres("xyz", "zyp"));*/
+
+        // Ejercicio 149
+        // Escriba un programa JavaScript para cambiar entre mayúsculas y minúsculas el número mínimo posible de letras 
+        // para hacer que una cadena determinada se escriba en mayúsculas o minúsculas. 
+        // Ejemplo "Write" será write y "PHp" será "PHP"
+
+        /* function MayusculasMinusculas(cadenaACambiar) {
+            var x = 0;
+            var y = 0;
+
+            for (var i = 0; i < cadenaACambiar.length; i++) {
+                if (/[A-Z]/.test(cadenaACambiar[i])) {
+                    x++;
+                } else y++;
+            }
+
+            if (y > x) return cadenaACambiar.toLowerCase();
+            return cadenaACambiar.toUpperCase();
+        }
+
+        console.log(MayusculasMinusculas("Write"));
+        console.log(MayusculasMinusculas("PHp")); */
+
+        // Ejercicio 148
+        // Escriba un programa JavaScript para encontrar la cadena más corta posible que pueda crear una 
+        // cadena para convertirla en un palíndromo añadiendo caracteres al final.
+
+        /* function Palindromo(cadenaACambiar) {
+            var flag;
+            for (var i = cadenaACambiar.length; ; i++) {
+                flag = true;
+                for (var j = 0; j < i - j - 1; j++) {
+                    if (i - j - 1 < cadenaACambiar.length && cadenaACambiar[j] != cadenaACambiar[i - j - 1]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    for (var j = cadenaACambiar.length; j < i; j++) {
+                        cadenaACambiar += cadenaACambiar[i - j - 1];
+                    }
+                    return cadenaACambiar;
+                }
+            }
+        }
+
+        console.log(Palindromo("abcddc"));
+        console.log(Palindromo("122")); */
+
+    </script>
+</body>
+
+</html>

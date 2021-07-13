@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Ejercicio 101</title>
+</head>
+
+<!-- Readme: Encapsulacion e inicialización -->
+<!-- Que es: -->
+<!-- Es JavaScript Object Oriented? 2020-->
+<!-- https://bit.ly/32SvXlv -->
+<!-- https://www.w3spoint.com/encapsulation-javascript-js-->
+<!-- https://www.codeproject.com/Articles/108786/Encapsulation-in-JavaScript -->
+
+<body>
+    <script>
+        function Student(someName) {
+            //fullname = someName;        //A - Deja acceder al nombre
+            var fullname = someName;      //B - No Deja acceder al nombre
+            //This.fullname = someName;   //C - Error porque This no esta definido
+            //this.fullname = someName;   //D - Deja acceder al nombre
+            this.showFullName = fullname;
+        }
+        bestStudent = new Student("David Hamilton");
+        document.write(bestStudent.fullname + " is registered(1).");
+        document.write("\n" + bestStudent.showFullName + " is registered(2).")
+    </script>
+</body>
+
+</html>

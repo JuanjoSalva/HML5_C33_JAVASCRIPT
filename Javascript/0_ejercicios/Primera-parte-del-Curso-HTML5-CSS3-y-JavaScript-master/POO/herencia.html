@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia</title>
+</head>
+<body>
+    <script>
+        // 1 - Constructor Base 
+
+        const Person = function(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        // 2 - Ampliar con "Prototype" esa definción Inicial
+        Person.prototype = {
+            haveBirthday: function() {
+                this.age++;
+            }
+        }
+        // 3 - Implementar una herencia por encadenamiento de prototipos
+        const Student = function (name, age, subjetc){
+            //this.name = name;
+            //this.age = age;
+            this.subjetc = subjetc;
+        }
+        Student.prototype = new Person();
+        Student.prototype.constructor = Student;
+
+        // Creamos nuestro primer estudiante
+        let aStudent = new Student("Carlos",30,"Mathematics");
+        aStudent.haveBirthday();
+
+        let bStudent = new Student("Myriam",32,"Biologicst");
+        bStudent.haveBirthday();
+    </script>
+</body>
+</html>
