@@ -7,26 +7,25 @@ Consumimos recursos de un web appi haciendo llamadas desde javascrip, con un bot
 
 Arrancamos el servicio:
 
-<img src="https://github.com/JuanjoSalva/Consuming-Services-by-Using-JavaScript/blob/master/img/arrrancamos.PNG" alt="arrrancamos" style="zoom:50%;" />
-
-
+![Arrancamos](arrrancamos.PNG)
 
 Mostramos el index
 
-![index](https://github.com/JuanjoSalva/Consuming-Services-by-Using-JavaScript/blob/master/img/index.PNG)
+![index](index.PNG)
 
 Al pulsar el botón Get All Destination se ejecuta un javascript que consume el servicio de Todos los Destinos
 
-![getAll](https://github.com/JuanjoSalva/Consuming-Services-by-Using-JavaScript/blob/master/img/getAll.PNG)
+![getAll](getAll.PNG)
 
 
 
 El Api lo que devuelve es este json
 
-![api_destination](https://github.com/JuanjoSalva/Consuming-Services-by-Using-JavaScript/blob/master/img/api_destination.PNG)
+![api_destination](api_destination.PNG)
 
 
 
 El javascript rellena una lista dinámica con los elementos de json
 
-![lista](https://github.com/JuanjoSalva/Consuming-Services-by-Using-JavaScript/blob/master/img/lista.PNG)
+![lista](lista.PNG)
+
