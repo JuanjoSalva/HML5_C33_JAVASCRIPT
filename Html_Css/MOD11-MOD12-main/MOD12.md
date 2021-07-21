@@ -19,7 +19,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 3. In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\Transitions.html**. 
 
-   ![image-20200930114219253](image-20200930114219253.png)
+   ![image-20200930114219253](img/image-20200930114219253.png)
 
 4. If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 
@@ -28,10 +28,10 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 - The background color transitions to red over a period of 3.75 seconds.
 
-  ![image-20200930114307010](image-20200930114307010.png)
+  ![image-20200930114307010](img/image-20200930114307010.png)
 6. Move the mouse pointer away from the upper rectangle. Verify that the rectangle reverts to its original appearance, over the same period of time.
 
-   ![image-20200930114353431](image-20200930114353431.png)
+   ![image-20200930114353431](img/image-20200930114353431.png)
 
 7. Repeat the previous two steps for the second rectangle. Verify that the same animations apply.
 
@@ -44,13 +44,13 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 - The **div:hover** rule defines the final values for the **width**, **height**, **font-size**, and **background-color** CSS properties when the user places the mouse pointer over a **&lt;div&gt**
 
-  ![image-20200930114533825](image-20200930114533825.png)
+  ![image-20200930114533825](img/image-20200930114533825.png)
 
 #### Handle the Transitionend Event
 
 1. In Microsoft Edge, expand the drop-down list box. Verify that it displays messages for all the transitions that have ended. The list includes events for the original transitions when you place the mouse pointer over a rectangle, as well as events for the reverse transitions when you move the mouse pointer away from a rectangle.
 
-   ![image-20200930114623580](image-20200930114623580.png)
+   ![image-20200930114623580](img/image-20200930114623580.png)
 
 2. Switch to the source window.
 
@@ -59,7 +59,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 - The **onTransitionend()** function displays information about the **transitionend** event, by using the **propertyName** and **elapsedTime** properties of the event argument.
 
-  ![image-20200930114706510](image-20200930114706510.png)
+  ![image-20200930114706510](img/image-20200930114706510.png)
 4.	Close the source window.
 5.	Close Microsoft Edge.
 
@@ -83,7 +83,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 4. If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 
-   ![image-20200930114746583](image-20200930114746583.png)
+   ![image-20200930114746583](img/image-20200930114746583.png)
 
 5. Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D translation by using the **translate()**, **translateX()**, or **translateY()** functions. The text message inside each rectangle describes the transformation for that rectangle.
 
@@ -91,7 +91,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 7. In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
 
-   ![image-20200930114901154](image-20200930114901154.png)
+   ![image-20200930114901154](img/image-20200930114901154.png)
 
 8. Scroll up to the top of the code, and then locate the **&lt;style&gt;** element. The CSS rules implement translations for all the **&lt;div&gt;** elements. The CSS rules set the standard **transform** property as well as the following vendor-specific properties:
 - **-ms-transform**: Perform a transformation on Microsoft Edge 9.
@@ -102,7 +102,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 - **-o-transform**: Perform a transformation on Opera browsers.
 
-  ![image-20200930114926324](image-20200930114926324.png)
+  ![image-20200930114926324](img/image-20200930114926324.png)
 9.	Close the source window.
 
 #### Perform 2D Scaling Transformations
@@ -111,17 +111,17 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 2. Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D scaling transformation by using the **scale()**, **scaleX()**, or **scaleY()** functions. The text message inside each rectangle describes the transformation for that rectangle. 
 
-   ![image-20200930115722668](image-20200930115722668.png)
+   ![image-20200930115722668](img/image-20200930115722668.png)
 
 3. Right-click in the browser window, and then select **View source**. 
 
 4. In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
 
-   ![image-20200930115808085](image-20200930115808085.png)
+   ![image-20200930115808085](img/image-20200930115808085.png)
 
 5. Scroll up to the top of the code and locate the **&lt;style&gt;** element. The CSS rules implement scaling transformations for all the **&lt;div&gt;** elements. The CSS rules set the standard **transform** property as well as vendor-specific properties.
 
-   ![image-20200930115840787](image-20200930115840787.png)
+   ![image-20200930115840787](img/image-20200930115840787.png)
 
 6. Close the source window.
 
@@ -131,17 +131,17 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 2. Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D rotation by using the **rotate()** function. The fourth rectangle also shows how to perform multiple transformations, and how to change the origin of the transformation to the top left of the target element.
 
-   ![image-20200930115901258](image-20200930115901258.png)
+   ![image-20200930115901258](img/image-20200930115901258.png)
 
 3. Right-click in the browser window, and then select **View source**. 
 
 4. In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
 
-   ![image-20200930115936730](image-20200930115936730.png)
+   ![image-20200930115936730](img/image-20200930115936730.png)
 
 5. Scroll up to the top of the code, and then locate the **&lt;style&gt;** element. The CSS rules implement rotations for all the **&lt;div&gt;** elements. The CSS rules set the standard **transform** property as well as vendor-specific properties. The final CSS rule shows how to apply multiple transformations, specifically a translation followed by a rotation. The final CSS rule also shows how to set change the origin of the transformation by setting the **transform-origin** property and its vendor-specific equivalent properties.
 
-   ![image-20200930120011581](image-20200930120011581.png)
+   ![image-20200930120011581](img/image-20200930120011581.png)
 
 6. Close the source window.
 
@@ -151,17 +151,17 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 2. Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D skewing operation by using the **skew()**, **skewX()**, or **skewY()** functions. 
 
-   ![image-20200930120042255](image-20200930120042255.png)
+   ![image-20200930120042255](img/image-20200930120042255.png)
 
 3. Right-click in the browser window, and then select **View source**. 
 
 4. In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
 
-   ![image-20200930120119781](image-20200930120119781.png)
+   ![image-20200930120119781](img/image-20200930120119781.png)
 
 5. Scroll up to the top of the code, and then locate the **&lt;style&gt;** element. The CSS rules implement skewing transformations for all the **&lt;div&gt;** elements. 
 
-   ![image-20200930120147056](image-20200930120147056.png)
+   ![image-20200930120147056](img/image-20200930120147056.png)
 
 6. Close the source window.
 
@@ -189,52 +189,52 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 5. Verify that the browser displays a cube. There are six faces to the cube, each of which displays text and has a different background color. The front face is partially transparent so that it does not completely obscure the other faces.
 
-   ![image-20200930120211540](image-20200930120211540.png)
+   ![image-20200930120211540](img/image-20200930120211540.png)
 
 6. Place the mouse pointer over the cube. Verify that it rotates by 90 degrees over a period of five seconds. Then, move the mouse pointer off the cube, and then verify that the cube rotates smoothly back to its original position.
 
-7. ![image-20200930120308504](image-20200930120308504.png)
+7. ![image-20200930120308504](img/image-20200930120308504.png)
 
-   ![image-20200930120347479](image-20200930120347479.png)
+   ![image-20200930120347479](img/image-20200930120347479.png)
 
 8. Right-click in the browser window, and then select **View source**. 
 
 9. In the source window, scroll down to the bottom of the document. Note that the body of the document has six **&lt;div&gt;** elements that represent the six faces of the cube. These **&lt;div&gt;** elements are contained in a parent **&lt;div&gt;** element named **container**.
 
-   ![image-20200930120426080](image-20200930120426080.png)
+   ![image-20200930120426080](img/image-20200930120426080.png)
 
 10. Scroll up to the top of the code, and then locate the **&lt;style&gt;** element. Note the following CSS rules:
 - **#container**: Specifies a perspective for all the child elements of the **container** element, and a transition of five seconds for transformations.
 
-  ![image-20200930120447985](image-20200930120447985.png)
+  ![image-20200930120447985](img/image-20200930120447985.png)
 
 - **#container:hover**: Specifies a rotation of 90 degrees when the user places the mouse pointer over the **container** element.
 
-  ![image-20200930120456836](image-20200930120456836.png)
+  ![image-20200930120456836](img/image-20200930120456836.png)
 
 - **#rightFace**: Transforms the **rightFace** element in 3D space, so that it appears on the right side of the cube.
 
-  ![image-20200930120505833](image-20200930120505833.png)
+  ![image-20200930120505833](img/image-20200930120505833.png)
 
 - **#leftFace**: Transforms the **leftFace** element in 3D space, so that it appears on the left side of the cube.
 
-  ![image-20200930120514705](image-20200930120514705.png)
+  ![image-20200930120514705](img/image-20200930120514705.png)
 
 - **#topFace**: Transforms the **topFace** element in 3D space, so that it appears on the top of the cube.
 
-  ![image-20200930120535990](image-20200930120535990.png)
+  ![image-20200930120535990](img/image-20200930120535990.png)
 
 - **#bottomFace**: Transforms the **bottomFace** element in 3D space, so that it appears on the bottom of the cube.
 
-  ![image-20200930120545197](image-20200930120545197.png)
+  ![image-20200930120545197](img/image-20200930120545197.png)
 
 - **#backFace**: Transforms the **backFace** element in 3D space, so that it appears at the back of the cube.
 
-  ![image-20200930120552557](image-20200930120552557.png)
+  ![image-20200930120552557](img/image-20200930120552557.png)
 
 - **#frontFace**: Transforms the **frontFace** element in 3D space, so that it appears at the front of the cube. The background color is partially transparent.
 
-  ![image-20200930120559971](image-20200930120559971.png)
+  ![image-20200930120559971](img/image-20200930120559971.png)
 10. Close the source window.
 11. Close Microsoft Edge.
 
@@ -260,20 +260,20 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 5. Verify that a green rectangle appears on the page, with a small white circle in the top left corner. The green rectangle represents a pool table and the white circle represents a ball. There is also a button that enables you to start the animation.
 
-   ![image-20200930120624421](image-20200930120624421.png)
+   ![image-20200930120624421](img/image-20200930120624421.png)
 
 6. Click **Start Animation**. 
 - After three seconds, the ball starts moving diagonally on the pool table. The color of the pool table also changes to blue and a message appears at the bottom of the page to indicate the start time of the animation.
 
-  ![image-20200930120700925](image-20200930120700925.png)
+  ![image-20200930120700925](img/image-20200930120700925.png)
 
-  ![image-20200930120708805](image-20200930120708805.png)
+  ![image-20200930120708805](img/image-20200930120708805.png)
 
-  ![image-20200930120716443](image-20200930120716443.png)
+  ![image-20200930120716443](img/image-20200930120716443.png)
 
-  ![image-20200930120759770](image-20200930120759770.png)
+  ![image-20200930120759770](img/image-20200930120759770.png)
 
-  ![image-20200930120832751](image-20200930120832751.png)
+  ![image-20200930120832751](img/image-20200930120832751.png)
 
 - As the animation proceeds, the ball appears to bounce off the sides of the pool table and the color of the ball varies from white to yellow, then to orange, then to red, and then finally to purple.
 
@@ -284,32 +284,32 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 8. In the source window, scroll down to the bottom of the document. Note that the body of the document has a **&lt;div&gt;** element named **pooltable** that represents the pool table and a nested **&lt;div&gt;** named **ball** that represents the ball on the pool table. There is also a **&lt;button&gt;** element to start the animation, and a **&lt;div&gt;** named **messageLabel** where messages are displayed.
 
-   ![image-20200930120919096](image-20200930120919096.png)
+   ![image-20200930120919096](img/image-20200930120919096.png)
 
 9. Scroll up to the top of the file, and then locate the **&lt;style&gt;** element. Note the following CSS rules:
 - **#pooltable**: Specifies the initial appearance of the pool table.
 
-  ![image-20200930120934535](image-20200930120934535.png)
+  ![image-20200930120934535](img/image-20200930120934535.png)
 
 - **#pooltable.animate**: Specifies a different color for the pool table during an animation. There is JavaScript code elsewhere in the document that programmatically adds the **animate** class to the **pooltable** element when an animation starts to cause the pool table to turn blue during an animation.
 
-  ![image-20200930120942398](image-20200930120942398.png)
+  ![image-20200930120942398](img/image-20200930120942398.png)
 
 - **#ball**: Specifies the initial appearance of the ball.
 
-  ![image-20200930120952041](image-20200930120952041.png)
+  ![image-20200930120952041](img/image-20200930120952041.png)
 
 - **@-ms-keyframes ballmovement**: Defines a keyframe animation named **ballmovement**. The first rule-set specifies the original color and location of the ball. Each subsequent rule-set simulates the ball hitting one of the sides of the pool table and causes the ball to change color during each part of its journey. The final rule-set specifies the final color and location of the ball.
 
-  ![image-20200930121038798](image-20200930121038798.png)
+  ![image-20200930121038798](img/image-20200930121038798.png)
 
 - **#ball.animate**: Applies the **ballmovement** keyframe animation to a ball when the ball has the **animate** class. There is JavaScript code elsewhere in the document that programmatically adds the **animate** class to the **ball** element when the user clicks the **Start Animation** button to trigger the animation.
 
-  ![image-20200930121052855](image-20200930121052855.png)
+  ![image-20200930121052855](img/image-20200930121052855.png)
 10. Locate the **&lt;script&gt;** element. Note that:
 - The **init()** function, invoked as soon as the page has loaded, establishes event-handler functions for the **MSAnimationStart**, **MSAnimationIteration**, and **MSAnimationEnd** events on the **ball** element: 
 
-  ![image-20200930121121851](image-20200930121121851.png)
+  ![image-20200930121121851](img/image-20200930121121851.png)
 
 - The **MSAnimationStart** event-handler function is called when an animation starts on the **ball** element. The function adds the **animate** class to the pool table so that the pool table becomes blue. The function also displays a message to indicate the time when the animation started.
 
